@@ -1,65 +1,381 @@
-import Image from "next/image";
+import Link from 'next/link';
+
+const services = [
+  {
+    title: 'Carrelage & Faïence',
+    description: 'Pose traditionnelle, grands formats, finitions soignées et conseils personnalisés pour un résultat durable et harmonieux.',
+    href: '/services/carrelage-faience',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Mosaïque',
+    description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces : salle de bain, cuisine, piscine.',
+    href: '/services/mosaique',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Salles de Bain',
+    description: 'Conception complète ou rénovation, création de douches à l\'italienne, étanchéité, faïence, sol et mur.',
+    href: '/services/salles-de-bain',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Terrasses & Extérieurs',
+    description: 'Pose de carrelage extérieur, margelles, escaliers, terrasses et piscines adaptées aux contraintes climatiques.',
+    href: '/services/exterieurs',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M9 8h6M9 12h6M9 16h6M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Travaux de Préparation',
+    description: 'Ragréage, chapes, nivellement du support, conseils techniques pour garantir une pose parfaite.',
+    href: '/services/preparation',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+  },
+];
+
+const strengths = [
+  {
+    number: '20+',
+    title: 'Années d\'expérience',
+    description: 'Une expertise acquise sur de nombreux chantiers, avec une parfaite maîtrise des techniques et matériaux.',
+  },
+  {
+    number: '100%',
+    title: 'Projets personnalisés',
+    description: 'Chaque espace est unique : accompagnement dans les choix esthétiques et techniques pour un résultat à votre image.',
+  },
+  {
+    number: '∞',
+    title: 'Passion & Précision',
+    description: 'Chaque projet est réalisé avec précision, passion et sens du détail pour un rendu irréprochable.',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#2C2C2C' }}>
+        {/* Background avec pattern */}
+        <div className="absolute inset-0 bg-tile-pattern-dark opacity-50"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center py-20">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8" style={{ background: 'rgba(201, 169, 98, 0.1)', border: '1px solid rgba(201, 169, 98, 0.3)' }}>
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#C9A962' }}></span>
+            <span className="text-sm font-medium tracking-wide" style={{ color: '#C9A962' }}>Artisan Carreleur Mosaïste depuis 2011</span>
+          </div>
+
+          {/* Titre principal */}
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+            L&apos;As Du Carreau
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          {/* Séparateur */}
+          <div className="separator separator-center mb-8"></div>
+
+          {/* Sous-titre */}
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-4 font-light" style={{ color: '#9CA3AF' }}>
+            Un savoir-faire de plus de 20 ans,<br className="hidden md:block" /> au service de vos projets
           </p>
+
+          <p className="text-lg max-w-2xl mx-auto mb-12" style={{ color: 'rgba(156, 163, 175, 0.8)' }}>
+            Carrelage, faïence, mosaïque, douches à l&apos;italienne, salles de bain et extérieurs.
+            <br />Chaque détail compte.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="btn-primary">
+              Demander un Devis Gratuit
+            </Link>
+            <Link href="/a-propos" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+              Découvrir mon parcours
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Section Présentation */}
+      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Texte */}
+            <div>
+              <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+                Qui suis-je
+              </span>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">
+                La passion du métier,<br />l&apos;excellence du résultat
+              </h2>
+              <div className="separator mb-8"></div>
+              <p className="text-slate leading-relaxed mb-6">
+                Artisan carreleur mosaïste depuis plus de 20 ans, j&apos;ai fait de ce métier 
+                ma passion et ma seule activité professionnelle depuis mon entrée dans la vie active. 
+                En 2011, j&apos;ai créé <strong className="text-charcoal">L&apos;As Du Carreau</strong> pour 
+                mettre mon savoir-faire, mon exigence et mon sens du détail au service de tous vos projets.
+              </p>
+              <p className="text-slate leading-relaxed mb-8">
+                La précision des découpes, le soin des finitions et le respect des délais sont au 
+                cœur de mes engagements. Je travaille avec sérieux, méthode et passion, afin de 
+                garantir un rendu irréprochable et à la hauteur de votre confiance.
+              </p>
+              <Link href="/a-propos" className="inline-flex items-center gap-2 text-gold font-semibold hover:gap-4 transition-all duration-300">
+                En savoir plus sur mon parcours
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Image placeholder / Stats */}
+            <div className="relative">
+              <div className="bg-charcoal aspect-[4/5] relative overflow-hidden">
+                {/* Placeholder pour photo - pattern en attendant */}
+                <div className="absolute inset-0 bg-tile-pattern-dark"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4">
+                      <span className="font-serif text-4xl text-gold">A</span>
+                    </div>
+                    <p className="text-warm-gray text-sm tracking-wide">Photo à venir</p>
+                  </div>
+                </div>
+                {/* Cadre décoratif */}
+                <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 -z-10"></div>
+              </div>
+
+              {/* Badge flottant */}
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl">
+                <p className="font-serif text-4xl font-bold text-gold">20+</p>
+                <p className="text-charcoal font-medium">Années d&apos;expérience</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Section Services */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Mes Prestations
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">
+              Des services complets<br />pour tous vos projets
+            </h2>
+            <div className="separator separator-center mb-6"></div>
+            <p className="text-slate max-w-2xl mx-auto">
+              De la préparation du support à la finition la plus minutieuse, 
+              je vous accompagne à chaque étape de votre projet.
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="card-elegant p-8 hover-lift group"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-16 h-16 bg-cream flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-all duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="font-serif text-2xl font-semibold text-charcoal mb-4 group-hover:text-gold transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-slate leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <span className="inline-flex items-center gap-2 text-gold font-medium text-sm group-hover:gap-3 transition-all duration-300">
+                  En savoir plus
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-16">
+            <Link href="/services" className="btn-secondary">
+              Voir tous les services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Pourquoi Choisir */}
+      <section className="py-24 lg:py-32 section-dark bg-tile-pattern-dark">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Mes Engagements
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-cream mb-6">
+              Pourquoi choisir<br />L&apos;As Du Carreau ?
+            </h2>
+            <div className="separator separator-center"></div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {strengths.map((strength, index) => (
+              <div
+                key={strength.title}
+                className="text-center p-8 border border-white/10 hover:border-gold/30 transition-all duration-300"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <p className="font-serif text-6xl md:text-7xl font-bold text-gold mb-4">
+                  {strength.number}
+                </p>
+                <h3 className="font-serif text-xl font-semibold text-cream mb-3">
+                  {strength.title}
+                </h3>
+                <p className="text-warm-gray leading-relaxed">
+                  {strength.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Liste des avantages */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              'Travail artisanal soigné avec sens du détail',
+              'Matériaux professionnels de qualité',
+              'Respect strict des délais',
+              'Accompagnement personnalisé',
+              'Conseils techniques et esthétiques',
+              'Devis gratuit et transparent',
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-4 text-cream/90">
+                <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section Zone d'intervention */}
+      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Google Maps */}
+            <div className="relative">
+              <div className="bg-white shadow-lg overflow-hidden" style={{ aspectRatio: '1/1' }}>
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=5.4%2C45.1%2C5.9%2C45.35&layer=mapnik&marker=45.2333%2C5.6833"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, filter: 'grayscale(20%) contrast(1.1)' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Zone d'intervention - Saint-Égrève et région Grenobloise"
+                ></iframe>
+              </div>
+              {/* Décoration */}
+              <div className="absolute -top-4 -left-4 w-full h-full border-2 -z-10" style={{ borderColor: 'rgba(201, 169, 98, 0.2)' }}></div>
+            </div>
+
+            {/* Texte */}
+            <div>
+              <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+                Zone d&apos;intervention
+              </span>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">
+                À votre service dans toute la région
+              </h2>
+              <div className="separator mb-8"></div>
+              <p className="text-slate leading-relaxed mb-6">
+                Basé à <strong className="text-charcoal">Saint-Égrève</strong>, j&apos;interviens 
+                dans toute la région grenobloise pour répondre à vos besoins, que ce soit pour 
+                une construction, une rénovation ou un projet sur mesure.
+              </p>
+              <p className="text-slate leading-relaxed mb-8">
+                Grenoble et son agglomération, ainsi que les communes environnantes : 
+                je me déplace pour étudier votre projet et vous proposer un devis adapté.
+              </p>
+
+              <div className="flex flex-wrap gap-3 mb-8">
+                {['Saint-Égrève', 'Grenoble', 'Meylan', 'La Tronche', 'Fontaine', 'Sassenage'].map((city) => (
+                  <span key={city} className="px-4 py-2 bg-white border border-gold/20 text-charcoal text-sm">
+                    {city}
+                  </span>
+                ))}
+                <span className="px-4 py-2 bg-gold/10 border border-gold/30 text-gold text-sm font-medium">
+                  + Alentours
+                </span>
+              </div>
+
+              <Link href="/contact" className="btn-primary">
+                Demander un Devis
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section CTA Final */}
+      <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
+        {/* Background décoratif */}
+        <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #C9A962, transparent)' }}></div>
+        
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <span className="quote-mark block mb-4">&ldquo;</span>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight" style={{ color: '#FAF9F6' }}>
+            Parce que chaque détail compte,<br />
+            donnons vie ensemble à vos projets.
+          </h2>
+          <div className="separator separator-center mb-8"></div>
+          <p className="text-xl mb-10 max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+            Vous avez un projet de carrelage, une rénovation ou une création de salle de bain ? 
+            Je suis à votre écoute pour vous conseiller et vous accompagner.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="btn-primary">
+              Demander un Devis Gratuit
+            </Link>
+            <Link href="/services" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+              Découvrir mes services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
