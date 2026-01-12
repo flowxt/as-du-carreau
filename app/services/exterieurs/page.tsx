@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
+import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
   title: "Terrasses, Piscines & Extérieurs | L'As Du Carreau",
@@ -40,11 +42,27 @@ const constraints = [
   { title: 'Durabilité', desc: 'Matériaux résistants aux UV et aux intempéries' },
 ];
 
+const galleryPhotos = [
+  { src: '/photo/ext-60_60.jpg', alt: 'Carrelage extérieur 60x60' },
+  { src: '/photo/apres3.jpg', alt: 'Réalisation terrasse' },
+  { src: '/photo/apres4.jpg', alt: 'Aménagement extérieur' },
+  { src: '/photo/apres5.jpg', alt: 'Finition extérieure' },
+];
+
 export default function ExterieursPage() {
   return (
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+        <div className="absolute inset-0">
+          <Image
+            src="/photo/ext-60_60.jpg"
+            alt="Carrelage extérieur"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -98,15 +116,16 @@ export default function ExterieursPage() {
               </div>
             </div>
 
-            <div className="bg-charcoal aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-tile-pattern-dark"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-20 h-20 text-gold/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 21h18M9 8h6M9 12h6M9 16h6M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16" />
-                  </svg>
-                  <p className="text-warm-gray text-sm">Photo à venir</p>
-                </div>
+            <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
+              <Image
+                src="/photo/ext-60_60.jpg"
+                alt="Carrelage terrasse extérieure"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded">
+                <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">LDC</span>
               </div>
             </div>
           </div>
@@ -138,6 +157,29 @@ export default function ExterieursPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Galerie */}
+      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Nos Réalisations
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              Aménagements extérieurs
+            </h2>
+            <div className="separator separator-center"></div>
+          </div>
+
+          <PhotoGallery photos={galleryPhotos} columns={2} />
+
+          <div className="text-center mt-12">
+            <Link href="/realisations" className="btn-secondary">
+              Voir toutes nos réalisations
+            </Link>
           </div>
         </div>
       </section>
@@ -194,5 +236,3 @@ export default function ExterieursPage() {
     </>
   );
 }
-
-

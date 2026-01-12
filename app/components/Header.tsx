@@ -17,6 +17,7 @@ const navigation = [
       { name: 'Travaux de Préparation', href: '/services/preparation' },
     ],
   },
+  { name: 'Réalisations', href: '/realisations' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -212,5 +213,3 @@ export default function Header() {
     </header>
   );
 }
-
-

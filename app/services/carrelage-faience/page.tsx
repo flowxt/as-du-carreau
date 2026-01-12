@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
+import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
   title: "Carrelage & Faïence | L'As Du Carreau - Pose Traditionnelle & Grands Formats",
@@ -42,11 +44,31 @@ const applications = [
   'Pièces à vivre',
 ];
 
+const galleryPhotos = [
+  { src: '/photo/carreaux-80-80.jpg', alt: 'Carrelage grand format 80x80' },
+  { src: '/photo/carreau-80_80.jpg', alt: 'Pose carreaux 80x80' },
+  { src: '/photo/carrelage-effet-carreau-de-ciment.jpg', alt: 'Carrelage effet carreau de ciment' },
+  { src: '/photo/zellige.jpg', alt: 'Zellige artisanal' },
+  { src: '/photo/zellige2.jpg', alt: 'Pose de zellige' },
+  { src: '/photo/faience-gres-cerame.jpg', alt: 'Faïence grès cérame' },
+  { src: '/photo/faience-metro-blanc.jpg', alt: 'Faïence métro blanc' },
+  { src: '/photo/faience-metro.jpg', alt: 'Faïence métro' },
+];
+
 export default function CarrelageFaiencePage() {
   return (
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+        <div className="absolute inset-0">
+          <Image
+            src="/photo/carreaux-80-80.jpg"
+            alt="Carrelage grand format"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -100,15 +122,16 @@ export default function CarrelageFaiencePage() {
               </div>
             </div>
 
-            <div className="bg-charcoal aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-tile-pattern-dark"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-20 h-20 text-gold/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
-                  </svg>
-                  <p className="text-warm-gray text-sm">Photo à venir</p>
-                </div>
+            <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
+              <Image
+                src="/photo/zellige.jpg"
+                alt="Zellige artisanal"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded">
+                <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">LDC</span>
               </div>
             </div>
           </div>
@@ -140,6 +163,29 @@ export default function CarrelageFaiencePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Galerie */}
+      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Nos Réalisations
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              Carrelages & faïences posés
+            </h2>
+            <div className="separator separator-center"></div>
+          </div>
+
+          <PhotoGallery photos={galleryPhotos} columns={3} />
+
+          <div className="text-center mt-12">
+            <Link href="/realisations" className="btn-secondary">
+              Voir toutes nos réalisations
+            </Link>
           </div>
         </div>
       </section>
@@ -197,5 +243,3 @@ export default function CarrelageFaiencePage() {
     </>
   );
 }
-
-

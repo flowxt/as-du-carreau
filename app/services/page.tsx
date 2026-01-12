@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,57 +12,36 @@ const services = [
     title: 'Carrelage & Faïence',
     description: 'Pose traditionnelle, grands formats, travertin, zellige... Des finitions soignées et des conseils personnalisés pour un résultat durable et harmonieux.',
     href: '/services/carrelage-faience',
+    image: '/photo/carreaux-80-80.jpg',
     features: ['Pose traditionnelle', 'Grands formats', 'Travertin & zellige', 'Conseils personnalisés'],
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
-      </svg>
-    ),
   },
   {
     title: 'Mosaïque',
     description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces. Création personnalisée pour salle de bain, cuisine, piscine et éléments décoratifs.',
     href: '/services/mosaique',
+    image: '/photo/pose-credence-mosaique.jpg',
     features: ['Créations personnalisées', 'Salles de bain', 'Piscines', 'Éléments décoratifs'],
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-      </svg>
-    ),
   },
   {
     title: 'Douches à l\'Italienne & Salles de Bain',
     description: 'Conception complète ou rénovation, création de douches à l\'italienne, étanchéité parfaite, faïence, sol et mur. Possibilité de salles de bain clé en main.',
     href: '/services/salles-de-bain',
+    image: '/photo/sdb9.jpg',
     features: ['Douches à l\'italienne', 'Étanchéité garantie', 'Rénovation complète', 'Clé en main'],
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
   },
   {
     title: 'Terrasses, Piscines & Extérieurs',
     description: 'Pose de carrelage extérieur, margelles, escaliers, terrasses et zones piscine. Solutions adaptées aux contraintes climatiques et de sécurité.',
     href: '/services/exterieurs',
+    image: '/photo/ext-60_60.jpg',
     features: ['Terrasses', 'Piscines & margelles', 'Escaliers extérieurs', 'Antidérapant'],
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M9 8h6M9 12h6M9 16h6M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16" />
-      </svg>
-    ),
   },
   {
     title: 'Travaux de Préparation',
     description: 'Ragréage, chapes, nivellement du support, conseils techniques... Une préparation rigoureuse des surfaces pour garantir une pose parfaite et durable.',
     href: '/services/preparation',
+    image: '/photo/ragréage.jpg',
     features: ['Ragréage', 'Chapes', 'Nivellement', 'Conseils techniques'],
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
   },
 ];
 
@@ -70,6 +50,15 @@ export default function ServicesPage() {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+        <div className="absolute inset-0">
+          <Image
+            src="/photo/sdb17.jpg"
+            alt="Réalisation L'As Du Carreau"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -89,6 +78,31 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Badge Pro & Particuliers */}
+      <section className="py-6 bg-gold">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
+            <div className="flex items-center gap-3">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+              <span className="text-white font-semibold">Professionnels</span>
+            </div>
+            <span className="hidden md:block text-white/60">&</span>
+            <div className="flex items-center gap-3">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              <span className="text-white font-semibold">Particuliers</span>
+            </div>
+            <span className="hidden md:block text-white/40">|</span>
+            <p className="text-white/90 text-sm">
+              Agences, syndics, copropriétés bienvenues
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Services List */}
       <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -100,17 +114,19 @@ export default function ServicesPage() {
                   index % 2 === 1 ? 'lg:grid-flow-dense' : ''
                 }`}
               >
-                {/* Image placeholder */}
+                {/* Image */}
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="bg-charcoal aspect-[4/3] relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-tile-pattern-dark"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-20 h-20 border border-gold/30 flex items-center justify-center mx-auto mb-4 text-gold/50 group-hover:text-gold group-hover:border-gold transition-all duration-300">
-                          {service.icon}
-                        </div>
-                        <p className="text-warm-gray text-sm">Photo à venir</p>
-                      </div>
+                  <div className="relative aspect-[4/3] overflow-hidden shadow-xl group">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    {/* Filigrane LDC */}
+                    <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded z-10">
+                      <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">LDC</span>
                     </div>
                   </div>
                 </div>
@@ -198,15 +214,18 @@ export default function ServicesPage() {
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
             Contactez-moi pour discuter de votre projet et obtenir un devis gratuit personnalisé. 
-            Je suis à votre écoute pour vous conseiller et vous accompagner.
+            Professionnels et particuliers, je suis à votre écoute.
           </p>
-          <Link href="/contact" className="btn-primary">
-            Demander un Devis Gratuit
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="btn-primary">
+              Demander un Devis Gratuit
+            </Link>
+            <Link href="/realisations" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+              Voir nos réalisations
+            </Link>
+          </div>
         </div>
       </section>
     </>
   );
 }
-
-

@@ -1,10 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import BeforeAfterSlider from './components/BeforeAfterSlider';
 
 const services = [
   {
     title: 'Carrelage & Faïence',
     description: 'Pose traditionnelle, grands formats, finitions soignées et conseils personnalisés pour un résultat durable et harmonieux.',
     href: '/services/carrelage-faience',
+    image: '/photo/faience-metro.jpg',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
@@ -15,6 +18,7 @@ const services = [
     title: 'Mosaïque',
     description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces : salle de bain, cuisine, piscine.',
     href: '/services/mosaique',
+    image: '/photo/pose-credence-mosaique.jpg',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -25,6 +29,7 @@ const services = [
     title: 'Salles de Bain',
     description: 'Conception complète ou rénovation, création de douches à l\'italienne, étanchéité, faïence, sol et mur.',
     href: '/services/salles-de-bain',
+    image: '/photo/renov-sdb4.jpg',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -35,6 +40,7 @@ const services = [
     title: 'Terrasses & Extérieurs',
     description: 'Pose de carrelage extérieur, margelles, escaliers, terrasses et piscines adaptées aux contraintes climatiques.',
     href: '/services/exterieurs',
+    image: '/photo/ext-60_60.jpg',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M9 8h6M9 12h6M9 16h6M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16" />
@@ -45,6 +51,7 @@ const services = [
     title: 'Travaux de Préparation',
     description: 'Ragréage, chapes, nivellement du support, conseils techniques pour garantir une pose parfaite.',
     href: '/services/preparation',
+    image: '/photo/ragréage.jpg',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -72,12 +79,25 @@ const strengths = [
   },
 ];
 
+const featuredBeforeAfter = [
+  {
+    before: '/photo/avant1.jpg',
+    after: '/photo/apres1.jpg',
+    title: 'Rénovation salle de bain',
+  },
+  {
+    before: '/photo/avant3.jpg',
+    after: '/photo/apres3.jpg',
+    title: 'Transformation complète',
+  },
+];
+
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#2C2C2C' }}>
-        {/* Background avec pattern */}
+        {/* Background pattern sobre */}
         <div className="absolute inset-0 bg-tile-pattern-dark opacity-50"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center py-20">
@@ -100,18 +120,25 @@ export default function Home() {
             Un savoir-faire de plus de 20 ans,<br className="hidden md:block" /> au service de vos projets
           </p>
 
-          <p className="text-lg max-w-2xl mx-auto mb-12" style={{ color: 'rgba(156, 163, 175, 0.8)' }}>
+          <p className="text-lg max-w-2xl mx-auto mb-6" style={{ color: 'rgba(156, 163, 175, 0.8)' }}>
             Carrelage, faïence, mosaïque, douches à l&apos;italienne, salles de bain et extérieurs.
             <br />Chaque détail compte.
           </p>
+
+          {/* Badge Pro & Particuliers */}
+          <div className="inline-flex items-center gap-4 mb-12 px-6 py-3 bg-gold/10 border border-gold/30 rounded-full">
+            <span className="text-gold font-medium">Professionnels</span>
+            <span className="text-gold/50">&</span>
+            <span className="text-gold font-medium">Particuliers</span>
+          </div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary">
               Demander un Devis Gratuit
             </Link>
-            <Link href="/a-propos" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
-              Découvrir mon parcours
+            <Link href="/realisations" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+              Voir nos réalisations
             </Link>
           </div>
         </div>
@@ -149,18 +176,21 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Image placeholder / Stats */}
+            {/* Image */}
             <div className="relative">
-              <div className="bg-charcoal aspect-[4/5] relative overflow-hidden">
-                {/* Placeholder pour photo - pattern en attendant */}
-                <div className="absolute inset-0 bg-tile-pattern-dark"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4">
-                      <span className="font-serif text-4xl text-gold">A</span>
-                    </div>
-                    <p className="text-warm-gray text-sm tracking-wide">Photo à venir</p>
-                  </div>
+              <div className="aspect-[4/5] relative overflow-hidden shadow-xl">
+                <Image
+                  src="/photo/sdb21.jpg"
+                  alt="Salle de bain - L'As Du Carreau"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                {/* Filigrane LDC */}
+                <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded">
+                  <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">
+                    LDC
+                  </span>
                 </div>
                 {/* Cadre décoratif */}
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 -z-10"></div>
@@ -176,8 +206,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Services */}
+      {/* Section Avant/Après Preview */}
       <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Transformations
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">
+              Avant / Après
+            </h2>
+            <div className="separator separator-center mb-6"></div>
+            <p className="text-slate max-w-2xl mx-auto">
+              Glissez le curseur pour découvrir nos transformations spectaculaires.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {featuredBeforeAfter.map((project, index) => (
+              <div key={index} className="bg-cream p-4 shadow-lg hover-lift">
+                <BeforeAfterSlider
+                  beforeImage={project.before}
+                  afterImage={project.after}
+                  beforeAlt={`${project.title} - Avant`}
+                  afterAlt={`${project.title} - Après`}
+                />
+                <p className="mt-4 text-center font-serif text-xl text-charcoal">{project.title}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/realisations" className="btn-primary">
+              Voir toutes nos réalisations
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Services */}
+      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
@@ -200,24 +268,44 @@ export default function Home() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="card-elegant p-8 hover-lift group"
+                className="card-elegant group overflow-hidden hover-lift"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-16 h-16 bg-cream flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-all duration-300">
-                  {service.icon}
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/90 flex items-center justify-center text-gold">
+                    {service.icon}
+                  </div>
+                  {/* Filigrane LDC */}
+                  <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-2 py-1 rounded">
+                    <span className="text-white/70 font-serif text-xs font-semibold tracking-wider">
+                      LDC
+                    </span>
+                  </div>
                 </div>
-                <h3 className="font-serif text-2xl font-semibold text-charcoal mb-4 group-hover:text-gold transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-slate leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-gold font-medium text-sm group-hover:gap-3 transition-all duration-300">
-                  En savoir plus
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
+                
+                <div className="p-6">
+                  <h3 className="font-serif text-2xl font-semibold text-charcoal mb-3 group-hover:text-gold transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate leading-relaxed mb-4">
+                    {service.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-gold font-medium text-sm group-hover:gap-3 transition-all duration-300">
+                    En savoir plus
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -275,6 +363,8 @@ export default function Home() {
               'Accompagnement personnalisé',
               'Conseils techniques et esthétiques',
               'Devis gratuit et transparent',
+              'Intervention pour professionnels & particuliers',
+              'Agences, syndics et copropriétés bienvenues',
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-4 text-cream/90">
                 <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">

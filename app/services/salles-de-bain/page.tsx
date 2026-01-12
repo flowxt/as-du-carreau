@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
+import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
   title: "Salles de Bain & Douches à l'Italienne | L'As Du Carreau",
@@ -40,11 +42,35 @@ const process = [
   { step: '04', title: 'Finitions', desc: 'Joints, silicone, nettoyage et contrôle qualité' },
 ];
 
+const galleryPhotos = [
+  { src: '/photo/sdb.jpg', alt: 'Salle de bain moderne' },
+  { src: '/photo/sdb8.jpg', alt: 'Douche à l\'italienne' },
+  { src: '/photo/sdb9.jpg', alt: 'Faïence contemporaine' },
+  { src: '/photo/sdb10.jpg', alt: 'Carrelage grand format' },
+  { src: '/photo/sdb11.jpg', alt: 'Rénovation salle de bain' },
+  { src: '/photo/sdb12.jpg', alt: 'Douche design' },
+  { src: '/photo/sdb13.jpg', alt: 'Salle d\'eau moderne' },
+  { src: '/photo/sdb14.jpg', alt: 'Finitions soignées' },
+  { src: '/photo/sdb15.jpg', alt: 'Carrelage mural' },
+  { src: '/photo/sdb16.jpg', alt: 'Espace douche' },
+  { src: '/photo/sdb17.jpg', alt: 'Salle de bain rénovée' },
+  { src: '/photo/sdb18.jpg', alt: 'Design contemporain' },
+];
+
 export default function SallesDeBainPage() {
   return (
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+        <div className="absolute inset-0">
+          <Image
+            src="/photo/sdb17.jpg"
+            alt="Salle de bain réalisée par L'As Du Carreau"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -99,15 +125,16 @@ export default function SallesDeBainPage() {
               </div>
             </div>
 
-            <div className="bg-charcoal aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-tile-pattern-dark"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-20 h-20 text-gold/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                  <p className="text-warm-gray text-sm">Photo à venir</p>
-                </div>
+            <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
+              <Image
+                src="/photo/douche.jpg"
+                alt="Douche à l'italienne"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded">
+                <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">LDC</span>
               </div>
             </div>
           </div>
@@ -143,6 +170,29 @@ export default function SallesDeBainPage() {
         </div>
       </section>
 
+      {/* Galerie */}
+      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Nos Réalisations
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              Salles de bain réalisées
+            </h2>
+            <div className="separator separator-center"></div>
+          </div>
+
+          <PhotoGallery photos={galleryPhotos} columns={3} />
+
+          <div className="text-center mt-12">
+            <Link href="/realisations" className="btn-secondary">
+              Voir toutes nos réalisations
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Process */}
       <section className="py-24 lg:py-32 section-dark bg-tile-pattern-dark">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -171,9 +221,9 @@ export default function SallesDeBainPage() {
       </section>
 
       {/* Étanchéité */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="bg-white p-8 md:p-12 shadow-lg border-l-4 border-gold">
+          <div className="bg-cream p-8 md:p-12 shadow-lg border-l-4 border-gold">
             <h3 className="font-serif text-2xl font-bold text-charcoal mb-4">
               L&apos;importance de l&apos;étanchéité
             </h3>
@@ -216,5 +266,3 @@ export default function SallesDeBainPage() {
     </>
   );
 }
-
-
