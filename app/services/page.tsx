@@ -3,45 +3,52 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Nos Services | L'As Du Carreau - Carrelage, Mosaïque, Salles de Bain",
-  description: "Découvrez tous les services de L'As Du Carreau : pose de carrelage, faïence, mosaïque, douches à l'italienne, salles de bain clé en main, terrasses et extérieurs.",
+  title: "Nos Prestations | L'as du Carreau - Carrelage, Mosaïque, Salles de Bain",
+  description: "Découvrez toutes les prestations de L'as du Carreau : pose de carrelage, faïence, mosaïque, isolation phonique, revêtements de sols, douches à l'italienne, terrasses.",
 };
 
 const services = [
   {
-    title: 'Carrelage & Faïence',
-    description: 'Pose traditionnelle, grands formats, travertin, zellige... Des finitions soignées et des conseils personnalisés pour un résultat durable et harmonieux.',
+    title: 'Pose de Carrelage & Faïence',
+    description: 'Pose traditionnelle, grands formats, murs et sols, avec un travail soigné et des conseils personnalisés pour un résultat harmonieux et durable.',
     href: '/services/carrelage-faience',
-    image: '/photo/carreaux-80-80.jpg',
-    features: ['Pose traditionnelle', 'Grands formats', 'Travertin & zellige', 'Conseils personnalisés'],
+    image: '/photo/faience-metro.jpg',
+    features: ['Pose traditionnelle', 'Grands formats', 'Murs et sols', 'Conseils personnalisés'],
   },
   {
-    title: 'Mosaïque',
-    description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces. Création personnalisée pour salle de bain, cuisine, piscine et éléments décoratifs.',
+    title: 'Revêtements de Sols',
+    description: 'Parquet contrecollé, parquet massif en pose flottante, lames PVC clipsables. Solutions pratiques, résistantes et esthétiques pour tous types d\'intérieurs.',
+    href: '/services/revetements-sols',
+    image: '/photo/parquet-contrecolle-chene-massif.jpg',
+    features: ['Parquet contrecollé', 'Parquet massif', 'Lames PVC clipsables', 'Pose flottante'],
+  },
+  {
+    title: 'Mosaïque & Créations Personnalisées',
+    description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces : salles de bain, cuisines, piscines, crédences et éléments décoratifs sur mesure.',
     href: '/services/mosaique',
     image: '/photo/pose-credence-mosaique.jpg',
-    features: ['Créations personnalisées', 'Salles de bain', 'Piscines', 'Éléments décoratifs'],
+    features: ['Créations personnalisées', 'Salles de bain', 'Cuisines & crédences', 'Piscines'],
   },
   {
     title: 'Douches à l\'Italienne & Salles de Bain',
-    description: 'Conception complète ou rénovation, création de douches à l\'italienne, étanchéité parfaite, faïence, sol et mur. Possibilité de salles de bain clé en main.',
+    description: 'Création ou rénovation complète de salles de bain, conception de douches à l\'italienne, étanchéité, faïence, sols et murs. Possibilité de salle de bain clé en main.',
     href: '/services/salles-de-bain',
     image: '/photo/sdb9.jpg',
     features: ['Douches à l\'italienne', 'Étanchéité garantie', 'Rénovation complète', 'Clé en main'],
   },
   {
     title: 'Terrasses, Piscines & Extérieurs',
-    description: 'Pose de carrelage extérieur, margelles, escaliers, terrasses et zones piscine. Solutions adaptées aux contraintes climatiques et de sécurité.',
+    description: 'Pose de carrelage extérieur, terrasses, margelles, escaliers, plages de piscine et zones techniques, avec des matériaux adaptés aux contraintes climatiques et de sécurité.',
     href: '/services/exterieurs',
     image: '/photo/ext-60_60.jpg',
     features: ['Terrasses', 'Piscines & margelles', 'Escaliers extérieurs', 'Antidérapant'],
   },
   {
     title: 'Travaux de Préparation',
-    description: 'Ragréage, chapes, nivellement du support, conseils techniques... Une préparation rigoureuse des surfaces pour garantir une pose parfaite et durable.',
+    description: 'Ragréage, réalisation de chapes, étanchéité des surfaces, nivellement précis des supports. La base indispensable d\'un résultat fiable et durable.',
     href: '/services/preparation',
     image: '/photo/ragréage.jpg',
-    features: ['Ragréage', 'Chapes', 'Nivellement', 'Conseils techniques'],
+    features: ['Ragréage', 'Chapes', 'Étanchéité', 'Nivellement'],
   },
 ];
 
@@ -50,21 +57,12 @@ export default function ServicesPage() {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
-        <div className="absolute inset-0">
-          <Image
-            src="/photo/sdb17.jpg"
-            alt="Réalisation L'As Du Carreau"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-        </div>
         <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#C9A962' }}>
-              Nos Services
+              Mes Prestations
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
               Un savoir-faire complet pour tous vos projets
@@ -171,8 +169,71 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Section Isolation Phonique */}
       <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+                Prestation complémentaire
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                Isolation Phonique sous Carrelage
+              </h2>
+              <div className="separator mb-8"></div>
+              <div className="space-y-4 text-slate leading-relaxed">
+                <p>
+                  L&apos;isolation phonique sous carrelage permet de réduire efficacement les bruits d&apos;impact 
+                  (pas, chocs, déplacements de meubles) tout en conservant un sol esthétique et durable.
+                </p>
+                <p>
+                  Elle est idéale en appartement, maison à étage et logement collectif, en rénovation comme 
+                  en construction neuve.
+                </p>
+                <p className="font-medium text-charcoal">
+                  Une solution acoustique performante
+                </p>
+                <p>
+                  Grâce à la pose d&apos;une sous-couche acoustique sous carrelage, le carrelage est désolidarisé 
+                  du support, limitant la transmission du bruit.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-cream p-8 md:p-12">
+              <h3 className="font-serif text-xl font-bold text-charcoal mb-6">Avantages</h3>
+              <ul className="space-y-4">
+                {[
+                  'Réduction des bruits d\'impact',
+                  'Amélioration du confort acoustique',
+                  'Compatible chauffage au sol',
+                  'Pose durable et conforme aux normes',
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-charcoal">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="mt-8 pt-8 border-t border-gold/20">
+                <h4 className="font-semibold text-charcoal mb-2">Pose professionnelle</h4>
+                <p className="text-slate text-sm">
+                  Grâce à la pose d&apos;une sous-couche acoustique, le revêtement est désolidarisé du support, 
+                  ce qui limite efficacement la transmission des bruits d&apos;impact.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">

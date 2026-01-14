@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
-  title: "Carrelage & Faïence | L'As Du Carreau - Pose Traditionnelle & Grands Formats",
-  description: "Pose de carrelage et faïence par un artisan expert. Pose traditionnelle, grands formats, travertin, zellige. Finitions soignées et conseils personnalisés à Saint-Égrève.",
+  title: "Pose de Carrelage & Faïence | L'as du Carreau - Pose Traditionnelle & Grands Formats",
+  description: "Pose de carrelage et faïence par un artisan expert. Pose traditionnelle, grands formats, travertin, zellige, isolation phonique. Finitions soignées à Saint-Égrève.",
 };
 
 const features = [
@@ -23,7 +23,7 @@ const features = [
   },
   {
     title: 'Zellige',
-    description: 'Art du zellige marocain pour des créations uniques et authentiques.',
+    description: 'Art du zellige pour des créations uniques et authentiques.',
   },
   {
     title: 'Finitions Soignées',
@@ -167,8 +167,60 @@ export default function CarrelageFaiencePage() {
         </div>
       </section>
 
-      {/* Galerie */}
+      {/* Isolation Phonique */}
       <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+                Prestation complémentaire
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                Isolation Phonique sous Carrelage
+              </h2>
+              <div className="separator mb-8"></div>
+              <div className="space-y-4 text-slate leading-relaxed">
+                <p>
+                  L&apos;isolation phonique sous carrelage permet de réduire efficacement les bruits d&apos;impact 
+                  (pas, chocs, déplacements de meubles) tout en conservant un sol esthétique et durable.
+                </p>
+                <p>
+                  Elle est idéale en appartement, maison à étage et logement collectif, en rénovation comme 
+                  en construction neuve.
+                </p>
+                <p>
+                  Grâce à la pose d&apos;une sous-couche acoustique, le revêtement est désolidarisé du support, 
+                  ce qui limite efficacement la transmission des bruits d&apos;impact.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 md:p-12 shadow-lg">
+              <h3 className="font-serif text-xl font-bold text-charcoal mb-6">Avantages</h3>
+              <ul className="space-y-4">
+                {[
+                  'Réduction des bruits d\'impact',
+                  'Amélioration du confort acoustique',
+                  'Compatible chauffage au sol',
+                  'Pose durable et conforme aux normes',
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-charcoal">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Galerie */}
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">

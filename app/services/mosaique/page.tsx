@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
-  title: "Mosaïque | L'As Du Carreau - Créations Personnalisées",
+  title: "Mosaïque & Créations Personnalisées | L'as du Carreau",
   description: "Création de mosaïques personnalisées pour salle de bain, cuisine, piscine et éléments décoratifs. Artisan mosaïste expert à Saint-Égrève et région grenobloise.",
 };
 

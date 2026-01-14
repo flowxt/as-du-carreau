@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contact & Devis Gratuit | L'As Du Carreau",
-  description: "Contactez L'As Du Carreau pour votre projet de carrelage. Devis gratuit et personnalisé. Artisan carreleur mosaïste à Saint-Égrève et région grenobloise.",
+  title: "Contact & Devis Gratuit | L'as du Carreau",
+  description: "Contactez L'as du Carreau pour votre projet de carrelage. Devis gratuit et personnalisé. Artisan carreleur mosaïste à Saint-Égrève et région grenobloise.",
 };
 
 const reasons = [
@@ -212,7 +212,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm text-slate mb-1">Email</p>
-                      <p className="font-semibold text-charcoal">À venir</p>
+                      <a href="mailto:ldc38120@gmail.com" className="font-semibold text-charcoal hover:text-gold transition-colors">
+                        ldc38120@gmail.com
+                      </a>
                     </div>
                   </div>
 

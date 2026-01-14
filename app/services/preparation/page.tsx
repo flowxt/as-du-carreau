@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
-  title: "Travaux de Préparation | L'As Du Carreau - Ragréage, Chapes",
-  description: "Préparation des supports avant pose de carrelage : ragréage, chapes, nivellement. Une base parfaite pour une pose durable par un artisan expert.",
+  title: "Travaux de Préparation | L'as du Carreau - Ragréage, Chapes, Étanchéité",
+  description: "Préparation des supports : ragréage, chapes, étanchéité, nivellement. La base indispensable d'un résultat fiable et durable par un artisan expert.",
 };
 
 const services = [
@@ -82,8 +82,8 @@ export default function PreparationPage() {
             </h1>
             <div className="separator mb-8"></div>
             <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
-              Ragréage, chapes, nivellement du support et conseils techniques. 
-              Une préparation rigoureuse pour garantir une pose parfaite.
+              La qualité d&apos;une pose de carrelage repose avant tout sur une préparation soignée : 
+              la base indispensable d&apos;un résultat fiable et pérenne.
             </p>
           </div>
         </div>
@@ -100,19 +100,19 @@ export default function PreparationPage() {
               <div className="separator mb-8"></div>
               <div className="space-y-6 text-slate leading-relaxed">
                 <p>
-                  Une pose de carrelage de qualité commence toujours par une préparation 
-                  irréprochable du support. C&apos;est une étape souvent invisible dans le 
-                  résultat final, mais absolument déterminante pour la durabilité de l&apos;ouvrage.
+                  J&apos;assure l&apos;ensemble des travaux de préparation nécessaires à une mise en œuvre 
+                  durable et conforme aux normes en vigueur : ragréage, réalisation de chapes, 
+                  étanchéité des surfaces, nivellement précis des supports et conseils techniques personnalisés.
                 </p>
                 <p>
-                  Fort de plus de 20 ans d&apos;expérience, je sais qu&apos;un support mal préparé 
-                  entraîne inévitablement des problèmes : carreaux qui sonnent creux, fissures, 
-                  décollements... C&apos;est pourquoi j&apos;accorde une attention particulière à 
-                  cette phase cruciale.
+                  Ces étapes sont essentielles, notamment dans les pièces humides (salles de bain, 
+                  douches à l&apos;italienne, cuisines) et les zones techniques, afin de garantir la 
+                  longévité de l&apos;ouvrage et la protection des supports.
                 </p>
                 <p>
-                  Ragréage, chapes, traitement des supports anciens : je maîtrise toutes 
-                  les techniques pour créer une base parfaite, quelle que soit la configuration.
+                  Chaque projet fait l&apos;objet d&apos;une analyse précise des contraintes techniques et 
+                  esthétiques, avec une organisation rigoureuse du chantier. Cette exigence de préparation 
+                  permet d&apos;obtenir un rendu final soigné, fiable et parfaitement intégré à votre espace.
                 </p>
               </div>
             </div>

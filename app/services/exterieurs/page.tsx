@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
-  title: "Terrasses, Piscines & Extérieurs | L'As Du Carreau",
+  title: "Terrasses, Piscines & Extérieurs | L'as du Carreau",
   description: "Pose de carrelage extérieur, terrasses, piscines, margelles et escaliers. Solutions adaptées aux contraintes climatiques par un artisan expert à Saint-Égrève.",
 };
 
