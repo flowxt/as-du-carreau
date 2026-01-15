@@ -108,7 +108,7 @@ export default function Home() {
 
           {/* Titre principal */}
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
-            L&apos;as du Carreau
+            L&apos;as Du Carreau
           </h1>
 
           {/* Séparateur */}
@@ -163,14 +163,14 @@ export default function Home() {
                   complète des techniques de pose de carrelage et de mosaïque, en neuf comme en rénovation.
                 </p>
                 <p>
-                  Depuis 2011, je poursuis cette passion en tant qu&apos;artisan indépendant avec <strong className="text-charcoal">L&apos;as du Carreau</strong>, 
+                  Depuis 2011, je poursuis cette passion en tant qu&apos;artisan indépendant avec <strong className="text-charcoal">L&apos;as Du Carreau</strong>, 
                   garantissant des réalisations précises, durables et sur mesure.
-                </p>
+              </p>
                 <p>
                   Le carrelage est mon unique métier, celui que j&apos;ai choisi et auquel je me consacre pleinement, 
                   chantier après chantier. Chaque projet est conçu comme une réalisation sur mesure, avec un objectif 
                   constant : un rendu esthétique, durable et parfaitement exécuté, à la hauteur de votre confiance.
-                </p>
+              </p>
               </div>
               <Link href="/a-propos" className="inline-flex items-center gap-2 text-gold font-semibold hover:gap-4 transition-all duration-300 mt-8">
                 En savoir plus sur mon parcours
@@ -185,7 +185,7 @@ export default function Home() {
               <div className="aspect-[4/5] relative overflow-hidden shadow-xl">
                 <Image
                   src="/photo/sdb21.jpg"
-                  alt="Salle de bain - L'as du Carreau"
+                  alt="Salle de bain - L'as Du Carreau"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -322,7 +322,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/90 flex items-center justify-center text-gold">
-                    {service.icon}
+                  {service.icon}
                   </div>
                   {/* Filigrane LDC */}
                   <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-2 py-1 rounded">
@@ -334,17 +334,17 @@ export default function Home() {
                 
                 <div className="p-6">
                   <h3 className="font-serif text-2xl font-semibold text-charcoal mb-3 group-hover:text-gold transition-colors">
-                    {service.title}
-                  </h3>
+                  {service.title}
+                </h3>
                   <p className="text-slate leading-relaxed mb-4">
-                    {service.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-gold font-medium text-sm group-hover:gap-3 transition-all duration-300">
-                    En savoir plus
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
+                  {service.description}
+                </p>
+                <span className="inline-flex items-center gap-2 text-gold font-medium text-sm group-hover:gap-3 transition-all duration-300">
+                  En savoir plus
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
                 </div>
               </Link>
             ))}
@@ -368,7 +368,7 @@ export default function Home() {
               Mes Engagements
             </span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-cream mb-6">
-              Pourquoi choisir<br />L&apos;as du Carreau ?
+              Pourquoi choisir<br />L&apos;as Du Carreau ?
             </h2>
             <div className="separator separator-center mb-8"></div>
             <p className="text-warm-gray max-w-2xl mx-auto">
@@ -454,19 +454,34 @@ export default function Home() {
                   <p className="text-slate text-sm">
                     Grenoble, Saint-Égrève, Fontaine, Sassenage, Saint-Martin-le-Vinoux, Seyssinet-Pariset, 
                     Seyssins, Échirolles, Eybens, Saint-Martin-d&apos;Hères, Le Pont-de-Claix, La Tronche, 
-                    Corenc, Noyarey, Fontanil-Cornillon...
+                    Corenc, Poisat, Bresson, Brié-et-Angonnes, Venon, Noyarey, Fontanil-Cornillon.
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-charcoal mb-2">Grésivaudan & Vallée de l&apos;Isère</h4>
                   <p className="text-slate text-sm">
-                    Meylan, Gières, Domène, Saint-Ismier, Biviers, Crolles, Villard-Bonnot, Pontcharra...
+                    Meylan, Gières, Domène, Le Versoud, Saint-Ismier, Biviers, Montbonnot-Saint-Martin, 
+                    Saint-Nazaire-les-Eymes, Crolles, Villard-Bonnot, Froges, Lumbin, Le Touvet, Goncelin, 
+                    Pontcharra, La Terrasse, Theys, Plateau des Petites Roches.
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-charcoal mb-2">Voironnais & Nord Isère</h4>
                   <p className="text-slate text-sm">
-                    Voiron, Voreppe, Moirans, Tullins, Rives, Vinay...
+                    Voiron, Voreppe, Moirans, Saint-Jean-de-Moirans, Tullins, Rives, Vinay et communes environnantes.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-charcoal mb-2">Sud Grenoblois</h4>
+                  <p className="text-slate text-sm">
+                    Claix, Varces-Allières-et-Risset, Vif, Vizille, Jarrie, Champagnier, Saint-Paul-de-Varces, 
+                    Saint-Georges-de-Commiers, Vaulnaveys-le-Haut, Vaulnaveys-le-Bas.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-charcoal mb-2">Chartreuse & Vercors</h4>
+                  <p className="text-slate text-sm">
+                    Quaix-en-Chartreuse, Le Sappey-en-Chartreuse, Proveysieux, Engins, Saint-Nizier-du-Moucherotte, Villard-de-Lans.
                   </p>
                 </div>
               </div>
@@ -493,7 +508,7 @@ export default function Home() {
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="quote-mark block mb-4">&ldquo;</span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight" style={{ color: '#FAF9F6' }}>
-            L&apos;as du Carreau, c&apos;est la promesse d&apos;un artisanat authentique, 
+            L&apos;as Du Carreau, c&apos;est la promesse d&apos;un artisanat authentique, 
             d&apos;un travail précis et d&apos;un accompagnement sérieux.
           </h2>
           <div className="separator separator-center mb-8"></div>

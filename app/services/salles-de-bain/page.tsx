@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
-  title: "Salles de Bain & Douches à l'Italienne | L'as du Carreau",
+  title: "Salles de Bain & Douches à l'Italienne | L'as Du Carreau",
   description: "Création et rénovation de salles de bain, douches à l'italienne avec étanchéité parfaite. Salles de bain clé en main en partenariat avec plombier professionnel.",
 };
 
@@ -65,7 +65,7 @@ export default function SallesDeBainPage() {
         <div className="absolute inset-0">
           <Image
             src="/photo/sdb17.jpg"
-            alt="Salle de bain réalisée par L'as du Carreau"
+            alt="Salle de bain réalisée par L'as Du Carreau"
             fill
             className="object-cover opacity-20"
             priority

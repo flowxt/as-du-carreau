@@ -4,8 +4,8 @@ import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import PhotoGallery from '../components/PhotoGallery';
 
 export const metadata: Metadata = {
-  title: "Nos Réalisations | L'as du Carreau - Avant/Après & Galerie Photos",
-  description: "Découvrez les réalisations de L'as du Carreau : transformations avant/après spectaculaires, salles de bain, carrelage, mosaïque. Plus de 20 ans de savoir-faire.",
+  title: "Nos Réalisations | L'as Du Carreau - Avant/Après & Galerie Photos",
+  description: "Découvrez les réalisations de L'as Du Carreau : transformations avant/après spectaculaires, salles de bain, carrelage, mosaïque. Plus de 20 ans de savoir-faire.",
 };
 
 const beforeAfterProjects = [
@@ -157,7 +157,7 @@ export default function RealisationsPage() {
             <div className="separator separator-center mb-6"></div>
             <p className="text-slate max-w-2xl mx-auto">
               Glissez le curseur sur les images pour découvrir les transformations spectaculaires 
-              réalisées par L&apos;as du Carreau.
+              réalisées par L&apos;as Du Carreau.
             </p>
           </div>
 

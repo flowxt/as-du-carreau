@@ -70,7 +70,7 @@ export default function Header() {
                   isScrolled ? 'text-charcoal' : 'text-white'
                 }`}
               >
-                L&apos;as du Carreau
+                L&apos;as Du Carreau
               </span>
               <span
                 className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${

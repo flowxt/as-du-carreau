@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Revêtements de Sols | L'as du Carreau - Parquet, PVC Clipsable",
+  title: "Revêtements de Sols | L'as Du Carreau - Parquet, PVC Clipsable",
   description: "Pose de revêtements de sols : parquet contrecollé, parquet massif en pose flottante, lames PVC clipsables. Solutions durables et esthétiques à Saint-Égrève.",
 };
 

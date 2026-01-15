@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
-  title: "Pose de Carrelage & Faïence | L'as du Carreau - Pose Traditionnelle & Grands Formats",
+  title: "Pose de Carrelage & Faïence | L'as Du Carreau - Pose Traditionnelle & Grands Formats",
   description: "Pose de carrelage et faïence par un artisan expert. Pose traditionnelle, grands formats, travertin, zellige, isolation phonique. Finitions soignées à Saint-Égrève.",
 };
 

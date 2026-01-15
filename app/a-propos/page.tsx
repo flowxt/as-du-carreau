@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "À Propos | L'as du Carreau - Artisan Carreleur depuis 20 ans",
-  description: "Découvrez le parcours et l'engagement de L'as du Carreau, artisan carreleur mosaïste passionné depuis plus de 20 ans à Saint-Égrève.",
+  title: "À Propos | L'as Du Carreau - Artisan Carreleur depuis 20 ans",
+  description: "Découvrez le parcours et l'engagement de L'as Du Carreau, artisan carreleur mosaïste passionné depuis plus de 20 ans à Saint-Égrève.",
 };
 
 const timeline = [
@@ -78,7 +78,7 @@ export default function AProposPage() {
                   des réalisations haut de gamme, élégantes et durables.
                 </p>
                 <p>
-                  En 2011, j&apos;ai fondé <strong className="text-charcoal">L&apos;as du Carreau</strong> avec 
+                  En 2011, j&apos;ai fondé <strong className="text-charcoal">L&apos;as Du Carreau</strong> avec 
                   une ambition claire : proposer un service artisanal d&apos;excellence, où la précision, 
                   l&apos;écoute et la maîtrise des matériaux se conjuguent pour créer des espaces uniques.
                 </p>
@@ -216,7 +216,7 @@ export default function AProposPage() {
 
           <div className="mt-12 p-8 bg-white shadow-lg border-l-4 border-gold">
             <p className="font-serif text-2xl text-charcoal italic leading-relaxed">
-                    &ldquo;L&apos;as du Carreau, c&apos;est la promesse d&apos;un artisanat authentique, d&apos;une expertise 
+                    &ldquo;L&apos;as Du Carreau, c&apos;est la promesse d&apos;un artisanat authentique, d&apos;une expertise 
               reconnue et d&apos;un engagement constant : sublimer vos espaces, carreau après carreau, 
               avec élégance et précision.&rdquo;
             </p>

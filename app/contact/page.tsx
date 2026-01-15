@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contact & Devis Gratuit | L'as du Carreau",
-  description: "Contactez L'as du Carreau pour votre projet de carrelage. Devis gratuit et personnalisé. Artisan carreleur mosaïste à Saint-Égrève et région grenobloise.",
+  title: "Contact & Devis Gratuit | L'as Du Carreau",
+  description: "Contactez L'as Du Carreau pour votre projet de carrelage. Devis gratuit et personnalisé. Artisan carreleur mosaïste à Saint-Égrève et région grenobloise.",
 };
 
 const reasons = [
@@ -275,32 +275,124 @@ export default function ContactPage() {
               Zone d&apos;intervention
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-              J&apos;interviens dans toute la région
+              Carreleur à Saint-Égrève et région Grenobloise
             </h2>
             <div className="separator separator-center mb-8"></div>
             <p className="text-slate max-w-2xl mx-auto">
-              Basé à Saint-Égrève, je me déplace dans toute l&apos;agglomération grenobloise 
-              et les communes environnantes pour étudier votre projet.
+              Basé à Saint-Égrève (38), j&apos;interviens dans toute la région pour vos projets 
+              de carrelage et de mosaïque, en neuf comme en rénovation.
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {[
-              'Saint-Égrève', 'Grenoble', 'Meylan', 'La Tronche', 'Fontaine', 
-              'Sassenage', 'Seyssinet-Pariset', 'Échirolles', 'Eybens', 'Gières',
-              'Saint-Martin-d\'Hères', 'Corenc', 'Le Fontanil-Cornillon', 'Noyarey',
-              'Veurey-Voroize', 'Voreppe', 'Moirans'
-            ].map((city) => (
-              <span 
-                key={city} 
-                className="px-4 py-2 bg-cream border border-gold/20 text-charcoal text-sm hover:border-gold/50 transition-colors"
-              >
-                {city}
-              </span>
-            ))}
-            <span className="px-4 py-2 bg-gold/10 border border-gold/30 text-gold text-sm font-medium">
-              + Autres communes sur demande
-            </span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Agglomération Grenobloise */}
+            <div className="bg-cream p-6 border-l-4 border-gold">
+              <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Agglomération Grenobloise</h3>
+              <p className="text-slate text-sm leading-relaxed">
+                Grenoble, Saint-Égrève, Fontaine, Sassenage, Saint-Martin-le-Vinoux, Seyssinet-Pariset, 
+                Seyssins, Échirolles, Eybens, Saint-Martin-d&apos;Hères, Le Pont-de-Claix, La Tronche, 
+                Corenc, Poisat, Bresson, Brié-et-Angonnes, Venon, Noyarey, Fontanil-Cornillon.
+              </p>
+            </div>
+
+            {/* Grésivaudan & Vallée de l'Isère */}
+            <div className="bg-cream p-6 border-l-4 border-gold">
+              <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Grésivaudan & Vallée de l&apos;Isère</h3>
+              <p className="text-slate text-sm leading-relaxed">
+                Meylan, Gières, Domène, Le Versoud, Saint-Ismier, Biviers, Montbonnot-Saint-Martin, 
+                Saint-Nazaire-les-Eymes, Crolles, Villard-Bonnot, Froges, Lumbin, Le Touvet, Goncelin, 
+                Pontcharra, La Terrasse, Theys, Plateau des Petites Roches.
+              </p>
+            </div>
+
+            {/* Voironnais & Nord Isère */}
+            <div className="bg-cream p-6 border-l-4 border-gold">
+              <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Voironnais & Nord Isère</h3>
+              <p className="text-slate text-sm leading-relaxed">
+                Voiron, Voreppe, Moirans, Saint-Jean-de-Moirans, Tullins, Rives, Vinay et communes environnantes.
+              </p>
+            </div>
+
+            {/* Sud Grenoblois */}
+            <div className="bg-cream p-6 border-l-4 border-gold">
+              <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Sud Grenoblois</h3>
+              <p className="text-slate text-sm leading-relaxed">
+                Claix, Varces-Allières-et-Risset, Vif, Vizille, Jarrie, Champagnier, Saint-Paul-de-Varces, 
+                Saint-Georges-de-Commiers, Vaulnaveys-le-Haut, Vaulnaveys-le-Bas.
+              </p>
+            </div>
+
+            {/* Chartreuse & Vercors */}
+            <div className="bg-cream p-6 border-l-4 border-gold">
+              <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Chartreuse & Vercors</h3>
+              <p className="text-slate text-sm leading-relaxed">
+                Quaix-en-Chartreuse, Le Sappey-en-Chartreuse, Proveysieux, Engins, Saint-Nizier-du-Moucherotte, 
+                Villard-de-Lans.
+              </p>
+            </div>
+
+            {/* Hors Secteur */}
+            <div className="bg-gold/10 p-6 border-l-4 border-gold">
+              <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Hors Secteur</h3>
+              <p className="text-slate text-sm leading-relaxed">
+                Votre commune n&apos;est pas mentionnée ? Des interventions sont possibles au-delà de 50 km 
+                (Annecy, Chambéry, Valence, Gap...). Étude personnalisée sur demande.
+              </p>
+            </div>
+          </div>
+
+          {/* Hors secteur détaillé */}
+          <div className="bg-white border border-gold/20 p-8 max-w-4xl mx-auto">
+            <h3 className="font-serif text-xl font-semibold text-charcoal mb-4 text-center">Intervention Hors Secteur</h3>
+            <p className="text-slate text-sm mb-6 text-center">
+              Pour tout chantier situé au-delà des secteurs listés, une étude personnalisée sera réalisée 
+              afin d&apos;évaluer la faisabilité, les besoins techniques et les conditions spécifiques du chantier.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <p className="text-charcoal font-medium text-sm mb-3">Cette étude pourra se faire via :</p>
+                <ul className="space-y-2 text-slate text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold">•</span>
+                    Appels téléphoniques pour échanger sur vos besoins
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold">•</span>
+                    Plans et photos pour visualiser le chantier
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold">•</span>
+                    Tout document utile pour un devis précis
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-charcoal font-medium text-sm mb-3">Interventions possibles (+50 km) :</p>
+                <ul className="space-y-2 text-slate text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold">•</span>
+                    Au nord : Annecy, Chambéry, Genève...
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold">•</span>
+                    Au sud : Valence, Romans-sur-Isère, Gap...
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold">•</span>
+                    À l&apos;est : Aix-les-Bains, Thonon-les-Bains...
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold">•</span>
+                    À l&apos;ouest : Bourgoin-Jallieu, La Tour-du-Pin...
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <p className="text-slate text-xs text-center italic">
+              Les frais de déplacement et d&apos;hébergement éventuels seront pris en compte lors de l&apos;étude et du devis.
+            </p>
           </div>
         </div>
       </section>

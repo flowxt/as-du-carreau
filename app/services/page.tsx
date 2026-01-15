@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Nos Prestations | L'as du Carreau - Carrelage, Mosaïque, Salles de Bain",
-  description: "Découvrez toutes les prestations de L'as du Carreau : pose de carrelage, faïence, mosaïque, isolation phonique, revêtements de sols, douches à l'italienne, terrasses.",
+  title: "Nos Prestations | L'as Du Carreau - Carrelage, Mosaïque, Salles de Bain",
+  description: "Découvrez toutes les prestations de L'as Du Carreau : pose de carrelage, faïence, mosaïque, isolation phonique, revêtements de sols, douches à l'italienne, terrasses.",
 };
 
 const services = [
@@ -278,9 +278,9 @@ export default function ServicesPage() {
             Professionnels et particuliers, je suis à votre écoute.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Demander un Devis Gratuit
-            </Link>
+          <Link href="/contact" className="btn-primary">
+            Demander un Devis Gratuit
+          </Link>
             <Link href="/realisations" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
               Voir nos réalisations
             </Link>

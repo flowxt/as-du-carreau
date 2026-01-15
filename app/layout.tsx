@@ -19,12 +19,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "L'as du Carreau | Artisan Carreleur Mosaïste à Saint-Égrève (Isère)",
+  title: "L'as Du Carreau | Artisan Carreleur Mosaïste à Saint-Égrève (Isère)",
   description: "Artisan carreleur mosaïste depuis plus de 20 ans à Saint-Égrève. Pose de carrelage, faïence, mosaïque, douches à l'italienne, salles de bain, terrasses. Région Grenobloise.",
   keywords: "carreleur, mosaïste, Saint-Égrève, Grenoble, Isère, carrelage, faïence, mosaïque, douche italienne, salle de bain, terrasse, artisan",
-  authors: [{ name: "L'as du Carreau" }],
+  authors: [{ name: "L'as Du Carreau" }],
   openGraph: {
-    title: "L'as du Carreau | Artisan Carreleur Mosaïste",
+    title: "L'as Du Carreau | Artisan Carreleur Mosaïste",
     description: "Plus de 20 ans d'expertise au service de vos projets de carrelage",
     locale: "fr_FR",
     type: "website",

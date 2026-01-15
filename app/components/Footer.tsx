@@ -53,7 +53,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-semibold tracking-wide text-cream">
-                  L&apos;as du Carreau
+                  L&apos;as Du Carreau
                 </span>
                 <span className="text-xs tracking-[0.2em] uppercase text-warm-gray">
                   Artisan Carreleur
@@ -157,7 +157,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-warm-gray text-sm">
-              © {new Date().getFullYear()} L&apos;as du Carreau. Tous droits réservés.
+              © {new Date().getFullYear()} L&apos;as Du Carreau. Tous droits réservés.
             </p>
             <div className="flex items-center gap-6 text-sm text-warm-gray">
               <span>Artisan Carreleur Mosaïste</span>

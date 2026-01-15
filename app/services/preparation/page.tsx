@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
 
 export const metadata: Metadata = {
-  title: "Travaux de Préparation | L'as du Carreau - Ragréage, Chapes, Étanchéité",
+  title: "Travaux de Préparation | L'as Du Carreau - Ragréage, Chapes, Étanchéité",
   description: "Préparation des supports : ragréage, chapes, étanchéité, nivellement. La base indispensable d'un résultat fiable et durable par un artisan expert.",
 };
 
@@ -32,6 +32,24 @@ const services = [
   {
     title: 'Conseils Techniques',
     description: 'Diagnostic et recommandations pour choisir la meilleure solution de préparation.',
+  },
+];
+
+const specializedServices = [
+  {
+    title: 'Sous-couche de Désolidarisation',
+    description: 'Pour les sols soumis à des contraintes mécaniques ou thermiques, nous réalisons la pose d\'une sous-couche de désolidarisation. Cette technique permet de compenser les mouvements du support, de prévenir les fissurations et d\'assurer une excellente tenue du carrelage dans le temps.',
+    note: 'Particulièrement recommandée sur chapes récentes, planchers chauffants, supports anciens ou hétérogènes.',
+  },
+  {
+    title: 'Rattrapage des Supports Muraux',
+    description: 'Lorsque les murs présentent des défauts de planéité, nous procédons au rattrapage des surfaces murales à l\'aide de matériaux de compensation techniques, tels que les panneaux de type Wedi. Ces solutions permettent de corriger les irrégularités, d\'assurer une parfaite étanchéité et d\'offrir un support idéal pour la pose de carrelage mural.',
+    note: 'Idéal pour les pièces humides.',
+  },
+  {
+    title: 'Replâtrage Manuel des Supports',
+    description: 'En complément, un replâtrage manuel des murs peut être réalisé lorsque l\'état du support l\'exige. Cette intervention artisanale permet de redresser les aplombs, corriger les défauts structurels et garantir une surface parfaitement préparée avant la pose du carrelage.',
+    note: 'Intervention artisanale et sur mesure.',
   },
 ];
 
@@ -162,8 +180,59 @@ export default function PreparationPage() {
         </div>
       </section>
 
-      {/* Galerie */}
+      {/* Services Spécialisés */}
       <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Prestations Spécialisées
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              Techniques de préparation avancées
+            </h2>
+            <div className="separator separator-center mb-6"></div>
+            <p className="text-slate max-w-2xl mx-auto">
+              Chaque chantier débute par une analyse technique du support afin de déterminer 
+              la méthode de préparation la plus adaptée, en conformité avec les normes en vigueur.
+            </p>
+          </div>
+
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {specializedServices.map((service, index) => (
+              <div key={service.title} className="bg-white p-8 shadow-lg border-l-4 border-gold">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gold/10 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-xl font-bold text-gold">0{index + 1}</span>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-charcoal mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-slate leading-relaxed mb-3">
+                      {service.description}
+                    </p>
+                    <p className="text-gold text-sm font-medium italic">
+                      {service.note}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Texte de conclusion */}
+          <div className="mt-16 p-8 bg-white shadow-lg max-w-4xl mx-auto text-center">
+            <p className="font-serif text-xl text-charcoal leading-relaxed">
+              Grâce à une maîtrise complète des techniques de préparation des sols et murs, 
+              <span className="text-gold font-semibold"> L&apos;as Du Carreau</span> garantit des réalisations 
+              durables, esthétiques et adaptées aux exigences des projets les plus haut de gamme.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Galerie */}
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
