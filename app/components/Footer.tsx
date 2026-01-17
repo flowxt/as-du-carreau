@@ -13,6 +13,7 @@ const quickLinks = [
   { name: 'À Propos', href: '/a-propos' },
   { name: 'Nos Services', href: '/services' },
   { name: 'Réalisations', href: '/realisations' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -74,7 +75,7 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h4 className="font-serif text-lg font-semibold text-cream mb-6">
+            <h4 className="font-serif text-lg font-semibold mb-6" style={{ color: '#FAF9F6' }}>
               Nos Services
             </h4>
             <ul className="space-y-3">
@@ -93,7 +94,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-lg font-semibold text-cream mb-6">
+            <h4 className="font-serif text-lg font-semibold mb-6" style={{ color: '#FAF9F6' }}>
               Liens Rapides
             </h4>
             <ul className="space-y-3">
@@ -112,7 +113,7 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div>
-            <h4 className="font-serif text-lg font-semibold text-cream mb-6">
+            <h4 className="font-serif text-lg font-semibold mb-6" style={{ color: '#FAF9F6' }}>
               Contact
             </h4>
             <ul className="space-y-4">

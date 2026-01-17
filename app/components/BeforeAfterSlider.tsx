@@ -98,10 +98,6 @@ export default function BeforeAfterSlider({
             LDC
           </span>
         </div>
-        {/* Label Après */}
-        <div className="absolute bottom-4 left-4 bg-green-600/90 backdrop-blur-sm px-4 py-2 z-10">
-          <span className="text-white font-semibold text-sm uppercase tracking-wide">Après</span>
-        </div>
       </div>
 
       {/* Image Avant (au-dessus avec clip) */}
@@ -117,16 +113,22 @@ export default function BeforeAfterSlider({
           sizes="(max-width: 768px) 100vw, 50vw"
           draggable={false}
         />
-        {/* Filigrane LDC */}
-        <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded z-10">
-          <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">
-            LDC
-          </span>
-        </div>
-        {/* Label Avant */}
-        <div className="absolute bottom-4 left-4 bg-red-600/90 backdrop-blur-sm px-4 py-2 z-10">
-          <span className="text-white font-semibold text-sm uppercase tracking-wide">Avant</span>
-        </div>
+      </div>
+
+      {/* Label Avant - à gauche, visible uniquement si le slider laisse de la place */}
+      <div 
+        className="absolute bottom-4 left-4 bg-red-600/90 backdrop-blur-sm px-4 py-2 z-20 transition-opacity duration-200"
+        style={{ opacity: sliderPosition > 15 ? 1 : 0 }}
+      >
+        <span className="text-white font-semibold text-sm uppercase tracking-wide">Avant</span>
+      </div>
+
+      {/* Label Après - à droite, visible uniquement si le slider laisse de la place */}
+      <div 
+        className="absolute bottom-4 right-4 bg-green-600/90 backdrop-blur-sm px-4 py-2 z-20 transition-opacity duration-200"
+        style={{ opacity: sliderPosition < 85 ? 1 : 0, marginRight: '60px' }}
+      >
+        <span className="text-white font-semibold text-sm uppercase tracking-wide">Après</span>
       </div>
 
       {/* Ligne de séparation */}

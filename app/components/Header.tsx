@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
 const navigation = [
@@ -18,6 +19,7 @@ const navigation = [
     ],
   },
   { name: 'Réalisations', href: '/realisations' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -25,6 +27,15 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  // Vérifie si un lien est actif
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,13 +106,21 @@ export default function Header() {
                   href={item.href}
                   className={`px-5 py-2 text-sm font-medium tracking-wide uppercase transition-all duration-300 relative group ${
                     isScrolled
-                      ? 'text-charcoal hover:text-gold'
-                      : 'text-white/90 hover:text-white'
+                      ? isActive(item.href)
+                        ? 'text-gold'
+                        : 'text-charcoal hover:text-gold'
+                      : isActive(item.href)
+                        ? 'text-gold-light'
+                        : 'text-white/90 hover:text-white'
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 transition-all duration-300 ${
+                      isActive(item.href) 
+                        ? 'w-full' 
+                        : 'w-0 group-hover:w-full'
+                    } ${
                       isScrolled ? 'bg-gold' : 'bg-gold-light'
                     }`}
                   ></span>
@@ -115,7 +134,11 @@ export default function Header() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-6 py-3 text-sm text-charcoal hover:text-gold hover:bg-cream transition-all duration-200"
+                          className={`block px-6 py-3 text-sm transition-all duration-200 ${
+                            isActive(subItem.href)
+                              ? 'text-gold bg-cream border-l-2 border-gold'
+                              : 'text-charcoal hover:text-gold hover:bg-cream'
+                          }`}
                         >
                           {subItem.name}
                         </Link>
@@ -177,7 +200,11 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-6 py-4 text-charcoal font-medium border-b border-gray-100 hover:text-gold transition-colors"
+                    className={`block px-6 py-4 font-medium border-b border-gray-100 transition-colors ${
+                      isActive(item.href)
+                        ? 'text-gold border-l-4 border-l-gold bg-gold/5'
+                        : 'text-charcoal hover:text-gold'
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -188,7 +215,11 @@ export default function Header() {
                           key={subItem.name}
                           href={subItem.href}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="block px-10 py-3 text-sm text-slate hover:text-gold transition-colors"
+                          className={`block px-10 py-3 text-sm transition-colors ${
+                            isActive(subItem.href)
+                              ? 'text-gold font-medium border-l-2 border-gold bg-gold/5'
+                              : 'text-slate hover:text-gold'
+                          }`}
                         >
                           {subItem.name}
                         </Link>

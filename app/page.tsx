@@ -415,10 +415,10 @@ export default function Home() {
       {/* Section Zone d'intervention */}
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Google Maps */}
-            <div className="relative">
-              <div className="bg-white shadow-lg overflow-hidden" style={{ aspectRatio: '1/1' }}>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Carte */}
+            <div className="relative order-2 lg:order-1">
+              <div className="bg-white shadow-lg overflow-hidden" style={{ aspectRatio: '4/3' }}>
                 <iframe
                   src="https://www.openstreetmap.org/export/embed.html?bbox=5.4%2C45.1%2C5.9%2C45.35&layer=mapnik&marker=45.2333%2C5.6833"
                   width="100%"
@@ -431,64 +431,65 @@ export default function Home() {
                 ></iframe>
               </div>
               {/* Décoration */}
-              <div className="absolute -top-4 -left-4 w-full h-full border-2 -z-10" style={{ borderColor: 'rgba(201, 169, 98, 0.2)' }}></div>
+              <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-gold/20 -z-10"></div>
             </div>
 
             {/* Texte */}
-            <div>
+            <div className="order-1 lg:order-2">
               <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                 Zone d&apos;intervention
               </span>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">
                 Carreleur à Saint-Égrève<br />et région Grenobloise
               </h2>
-              <div className="separator mb-8"></div>
+              <div className="separator mb-6"></div>
               <p className="text-slate leading-relaxed mb-6">
                 Basé à <strong className="text-charcoal">Saint-Égrève (38)</strong>, j&apos;interviens dans toute 
                 la région pour vos projets de carrelage et de mosaïque, en neuf comme en rénovation.
               </p>
 
-              <div className="space-y-4 mb-8">
-                <div>
-                  <h4 className="font-semibold text-charcoal mb-2">Agglomération Grenobloise</h4>
-                  <p className="text-slate text-sm">
-                    Grenoble, Saint-Égrève, Fontaine, Sassenage, Saint-Martin-le-Vinoux, Seyssinet-Pariset, 
-                    Seyssins, Échirolles, Eybens, Saint-Martin-d&apos;Hères, Le Pont-de-Claix, La Tronche, 
-                    Corenc, Poisat, Bresson, Brié-et-Angonnes, Venon, Noyarey, Fontanil-Cornillon.
-                  </p>
+              {/* Zones compactes */}
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold text-charcoal">Agglomération Grenobloise : </span>
+                    <span className="text-slate text-sm">Grenoble, Saint-Égrève, Fontaine, Sassenage, Échirolles, Eybens...</span>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-charcoal mb-2">Grésivaudan & Vallée de l&apos;Isère</h4>
-                  <p className="text-slate text-sm">
-                    Meylan, Gières, Domène, Le Versoud, Saint-Ismier, Biviers, Montbonnot-Saint-Martin, 
-                    Saint-Nazaire-les-Eymes, Crolles, Villard-Bonnot, Froges, Lumbin, Le Touvet, Goncelin, 
-                    Pontcharra, La Terrasse, Theys, Plateau des Petites Roches.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold text-charcoal">Grésivaudan & Vallée de l&apos;Isère : </span>
+                    <span className="text-slate text-sm">Meylan, Gières, Crolles, Pontcharra, La Terrasse...</span>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-charcoal mb-2">Voironnais & Nord Isère</h4>
-                  <p className="text-slate text-sm">
-                    Voiron, Voreppe, Moirans, Saint-Jean-de-Moirans, Tullins, Rives, Vinay et communes environnantes.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold text-charcoal">Voironnais & Nord Isère : </span>
+                    <span className="text-slate text-sm">Voiron, Voreppe, Moirans, Tullins, Rives...</span>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-charcoal mb-2">Sud Grenoblois</h4>
-                  <p className="text-slate text-sm">
-                    Claix, Varces-Allières-et-Risset, Vif, Vizille, Jarrie, Champagnier, Saint-Paul-de-Varces, 
-                    Saint-Georges-de-Commiers, Vaulnaveys-le-Haut, Vaulnaveys-le-Bas.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold text-charcoal">Sud Grenoblois : </span>
+                    <span className="text-slate text-sm">Claix, Vif, Vizille, Jarrie, Champagnier...</span>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-charcoal mb-2">Chartreuse & Vercors</h4>
-                  <p className="text-slate text-sm">
-                    Quaix-en-Chartreuse, Le Sappey-en-Chartreuse, Proveysieux, Engins, Saint-Nizier-du-Moucherotte, Villard-de-Lans.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold text-charcoal">Chartreuse & Vercors : </span>
+                    <span className="text-slate text-sm">Le Sappey, Villard-de-Lans, Saint-Nizier...</span>
+                  </div>
                 </div>
               </div>
 
               <p className="text-slate text-sm mb-6 p-4 bg-white border-l-4 border-gold">
-                <strong>Hors secteur ?</strong> Des interventions sont possibles au-delà (Annecy, Chambéry, 
-                Valence, Romans-sur-Isère...). Contactez-moi pour une étude personnalisée.
+                <strong>Hors secteur ?</strong> Interventions possibles au-delà (Annecy, Chambéry, 
+                Valence...). Contactez-moi pour une étude personnalisée.
               </p>
 
               <Link href="/contact" className="btn-primary">
