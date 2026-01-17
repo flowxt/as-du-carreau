@@ -63,7 +63,7 @@ export default function ExterieursPage() {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
+        <div className="absolute inset-0  opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <Link href="/services" className="inline-flex items-center gap-2 transition-colors mb-8" style={{ color: '#C9A962' }}>
@@ -90,7 +90,7 @@ export default function ExterieursPage() {
       </section>
 
       {/* Introduction */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -162,7 +162,7 @@ export default function ExterieursPage() {
       </section>
 
       {/* Galerie */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
@@ -185,7 +185,7 @@ export default function ExterieursPage() {
       </section>
 
       {/* Contraintes */}
-      <section className="py-24 lg:py-32 section-dark bg-tile-pattern-dark">
+      <section className="py-24 lg:py-32 section-dark ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
@@ -214,7 +214,7 @@ export default function ExterieursPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-cream bg-tile-pattern">
+      <section className="py-24 bg-cream">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
             Projet d&apos;aménagement extérieur ?

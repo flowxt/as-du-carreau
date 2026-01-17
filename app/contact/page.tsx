@@ -25,7 +25,6 @@ export default function ContactPage() {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
-        <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -45,7 +44,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Formulaire */}

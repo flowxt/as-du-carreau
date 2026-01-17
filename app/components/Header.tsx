@@ -77,7 +77,7 @@ export default function Header() {
                   isScrolled ? 'text-slate' : 'text-white/70'
                 }`}
               >
-                Artisan Carreleur
+                Carreleur Mosaïste
               </span>
             </div>
           </Link>

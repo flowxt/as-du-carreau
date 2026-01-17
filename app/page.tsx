@@ -96,14 +96,12 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#2C2C2C' }}>
-        {/* Background pattern sobre */}
-        <div className="absolute inset-0 bg-tile-pattern-dark opacity-50"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center py-20">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-8" style={{ background: 'rgba(201, 169, 98, 0.1)', border: '1px solid rgba(201, 169, 98, 0.3)' }}>
             <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#C9A962' }}></span>
-            <span className="text-sm font-medium tracking-wide" style={{ color: '#C9A962' }}>Artisan Carreleur Mosaïste à Saint-Égrève (Isère)</span>
+            <span className="text-sm font-medium tracking-wide" style={{ color: '#C9A962' }}>Artisan à Saint-Égrève (Isère)</span>
           </div>
 
           {/* Titre principal */}
@@ -119,9 +117,11 @@ export default function Home() {
             Plus de 20 ans d&apos;expérience au service de vos projets.
           </p>
 
-          <p className="text-lg max-w-2xl mx-auto mb-6" style={{ color: 'rgba(156, 163, 175, 0.8)' }}>
+          <p className="text-lg max-w-2xl mx-auto mb-4" style={{ color: 'rgba(156, 163, 175, 0.8)' }}>
             Carrelage, faïence, mosaïque, douches à l&apos;italienne, salles de bain et extérieurs.
-            <br />La précision d&apos;un artisan, la passion d&apos;un métier.
+          </p>
+          <p className="text-xl md:text-2xl font-serif italic mb-6" style={{ color: '#C9A962' }}>
+            La précision d&apos;un artisan, la passion d&apos;un métier.
           </p>
 
           {/* Badge Pro & Particuliers */}
@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* Section Présentation */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Texte */}
@@ -247,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* Section Avant/Après Preview */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
@@ -360,7 +360,7 @@ export default function Home() {
       </section>
 
       {/* Section Engagements */}
-      <section className="py-24 lg:py-32 section-dark bg-tile-pattern-dark">
+      <section className="py-24 lg:py-32 section-dark">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
@@ -413,7 +413,7 @@ export default function Home() {
       </section>
 
       {/* Section Zone d'intervention */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Google Maps */}
@@ -502,7 +502,6 @@ export default function Home() {
       {/* Section CTA Final */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
         {/* Background décoratif */}
-        <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #C9A962, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">

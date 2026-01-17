@@ -41,7 +41,7 @@ export default function AProposPage() {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
-        <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
+        <div className="absolute inset-0  opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -61,7 +61,7 @@ export default function AProposPage() {
       </section>
 
       {/* Histoire */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Texte principal */}
@@ -98,7 +98,7 @@ export default function AProposPage() {
             {/* Image placeholder */}
             <div className="relative lg:sticky lg:top-32">
               <div className="bg-charcoal aspect-[3/4] relative overflow-hidden">
-                <div className="absolute inset-0 bg-tile-pattern-dark"></div>
+                <div className="absolute inset-0 "></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="w-32 h-32 border-2 border-gold/30 flex items-center justify-center mx-auto mb-6">
@@ -156,7 +156,7 @@ export default function AProposPage() {
       </section>
 
       {/* Expertise */}
-      <section className="py-24 lg:py-32 section-dark bg-tile-pattern-dark">
+      <section className="py-24 lg:py-32 section-dark ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -190,7 +190,7 @@ export default function AProposPage() {
       </section>
 
       {/* Accompagnement */}
-      <section className="py-24 lg:py-32 bg-cream bg-tile-pattern">
+      <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
             Mon Engagement
@@ -226,7 +226,7 @@ export default function AProposPage() {
 
       {/* CTA */}
       <section className="py-24 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
-        <div className="absolute inset-0 bg-tile-pattern-dark opacity-30"></div>
+        <div className="absolute inset-0  opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #C9A962, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">

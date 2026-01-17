@@ -18,7 +18,7 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-cream bg-tile-pattern-dark">
+    <footer className="bg-charcoal text-cream">
       {/* Bandeau Professionnels & Particuliers */}
       <div className="bg-gold/10 border-b border-gold/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4">
@@ -61,8 +61,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-warm-gray leading-relaxed mb-6">
-              Artisan carreleur mosaïste depuis plus de 20 ans, au service de vos projets 
-              avec passion et excellence.
+              Artisan carreleur mosaïste depuis 2011, fort de plus de 20 ans d&apos;expérience, 
+              je mets un savoir-faire d&apos;exception au service de réalisations élégantes et durables.
             </p>
             <div className="flex items-center gap-2 text-gold">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
