@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -95,18 +96,21 @@ export default function AProposPage() {
               </div>
             </div>
 
-            {/* Image placeholder */}
+            {/* Image */}
             <div className="relative lg:sticky lg:top-32">
-              <div className="bg-charcoal aspect-[3/4] relative overflow-hidden">
-                <div className="absolute inset-0 "></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 border-2 border-gold/30 flex items-center justify-center mx-auto mb-6">
-                      <span className="font-serif text-5xl text-gold">A</span>
-                    </div>
-                    <p className="text-warm-gray text-sm tracking-wide mb-2">Photo à venir</p>
-                    <p className="text-gold/60 text-xs">Portrait de l&apos;artisan</p>
-                  </div>
+              <div className="aspect-[3/4] relative overflow-hidden shadow-xl">
+                <Image
+                  src="/photo/sdb21.jpg"
+                  alt="Réalisation L'as Du Carreau"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                {/* Filigrane LDC */}
+                <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded">
+                  <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">
+                    LDC
+                  </span>
                 </div>
               </div>
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/20 -z-10"></div>
