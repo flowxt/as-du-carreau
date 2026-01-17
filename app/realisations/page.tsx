@@ -53,8 +53,8 @@ const beforeAfterProjects = [
   },
   {
     id: 7,
-    before: '/photo/avant7.jpg',
-    after: '/photo/apres7.jpg',
+    before: '/photo/avant9.jpg',
+    after: '/photo/apres9.jpg',
     title: 'Rénovation design',
     description: 'Finitions soignées et style contemporain',
   },
