@@ -100,8 +100,8 @@ export default function AProposPage() {
             <div className="relative lg:sticky lg:top-32">
               <div className="aspect-[3/4] relative overflow-hidden shadow-xl">
                 <Image
-                  src="/photo/sdb21.jpg"
-                  alt="Réalisation L'as Du Carreau"
+                  src="/photo/mickael.jpg"
+                  alt="Mickael, fondateur de L'as Du Carreau"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

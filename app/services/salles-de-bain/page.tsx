@@ -23,7 +23,7 @@ const services = [
   },
   {
     title: 'Sols de Salle de Bain',
-    description: 'Carrelage antidérapant et résistant à l\'humidité, adapté aux contraintes des pièces d\'eau.',
+    description: 'Le carrelage de sol permet d\'assurer une continuité esthétique entre les différentes pièces de l\'habitation. Décliné en de nombreux formats, textures et finitions, il s\'adapte aussi bien aux ambiances modernes que traditionnelles.',
   },
   {
     title: 'Niches & Rangements',

@@ -199,7 +199,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm text-slate mb-1">Téléphone</p>
-                      <p className="font-semibold text-charcoal">À venir</p>
+                      <a href="tel:0629937294" className="font-semibold text-charcoal hover:text-gold transition-colors">
+                        06 29 93 72 94
+                      </a>
                     </div>
                   </div>
 
