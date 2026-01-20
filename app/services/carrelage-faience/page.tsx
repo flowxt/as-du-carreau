@@ -26,6 +26,10 @@ const features = [
     description: 'Art du zellige pour des créations uniques et authentiques.',
   },
   {
+    title: 'Escalier Intérieur',
+    description: 'Habillage et pose de carrelage sur escaliers intérieurs : traitement des nez de marche, finitions sécurisées et rendu esthétique harmonieux.',
+  },
+  {
     title: 'Finitions Soignées',
     description: 'Attention particulière aux joints, découpes et finitions pour un rendu parfait.',
   },
