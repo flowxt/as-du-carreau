@@ -19,7 +19,7 @@ const navigation = [
     ],
   },
   { name: 'Réalisations', href: '/realisations' },
-  { name: 'FAQ', href: '/faq' },
+  { name: 'Avis', href: '/avis' },
   { name: 'Contact', href: '/contact' },
 ];
 

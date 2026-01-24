@@ -13,6 +13,7 @@ const quickLinks = [
   { name: 'À Propos', href: '/a-propos' },
   { name: 'Nos Services', href: '/services' },
   { name: 'Réalisations', href: '/realisations' },
+  { name: 'Avis & Partenaires', href: '/avis' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },
 ];
