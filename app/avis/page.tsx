@@ -78,11 +78,15 @@ const reviews = [
 
 const partners = [
   {
-    name: 'Richardson',
-    location: 'Grenoble',
-    description: 'Showroom carrelage et salle de bain',
-    logo: '/partenaires/richardson.png',
-    mapUrl: 'https://maps.google.com/?q=Richardson+Grenoble',
+    name: 'Point P',
+    locations: [
+      { name: 'Saint-Martin-d\'Hères', mapUrl: 'https://maps.google.com/?q=Point+P+Saint-Martin-d%27Hères', preferred: true },
+      { name: 'Saint-Égrève', mapUrl: 'https://maps.google.com/?q=Point+P+Saint-Égrève' },
+      { name: 'Voiron', mapUrl: 'https://maps.google.com/?q=Point+P+Voiron' },
+      { name: 'Grenoble', mapUrl: 'https://maps.google.com/?q=Point+P+Grenoble' },
+    ],
+    description: 'Matériaux de construction',
+    logo: '/partenaires/point_p.png',
   },
   {
     name: 'Proalp Carrelages',
@@ -108,15 +112,11 @@ const partners = [
     mapUrl: 'https://maps.google.com/?q=Carrelage+et+Bain+Grenoble',
   },
   {
-    name: 'Point P',
-    locations: [
-      { name: 'Saint-Martin-d\'Hères', mapUrl: 'https://maps.google.com/?q=Point+P+Saint-Martin-d%27Hères', preferred: true },
-      { name: 'Saint-Égrève', mapUrl: 'https://maps.google.com/?q=Point+P+Saint-Égrève' },
-      { name: 'Voiron', mapUrl: 'https://maps.google.com/?q=Point+P+Voiron' },
-      { name: 'Grenoble', mapUrl: 'https://maps.google.com/?q=Point+P+Grenoble' },
-    ],
-    description: 'Matériaux de construction',
-    logo: '/partenaires/point_p.png',
+    name: 'Richardson',
+    location: 'Grenoble',
+    description: 'Showroom carrelage et salle de bain',
+    logo: '/partenaires/richardson.png',
+    mapUrl: 'https://maps.google.com/?q=Richardson+Grenoble',
   },
 ];
 
