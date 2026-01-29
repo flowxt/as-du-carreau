@@ -183,7 +183,7 @@ const beforeAfterProjects = [
 ];
 
 const galleryPhotos = [
-  // Nouvelles réalisations du dossier as-realisation
+  // Réalisations du dossier as-realisation
   { src: '/as-realisation/1000069758.jpg', alt: 'Réalisation carrelage' },
   { src: '/as-realisation/1000069769.jpg', alt: 'Pose carrelage' },
   { src: '/as-realisation/1000069773.jpg', alt: 'Carrelage intérieur' },
@@ -223,7 +223,17 @@ const galleryPhotos = [
   { src: '/as-realisation/1000070368.jpg', alt: 'Rénovation totale' },
   { src: '/as-realisation/1000070369.jpg', alt: 'Carrelage qualité' },
   { src: '/as-realisation/1000070378.jpg', alt: 'Pose professionnelle' },
-  // Anciennes photos
+  // Piscines
+  { src: '/piscine.png', alt: 'Piscine carrelée' },
+  { src: '/piscine1.png', alt: 'Aménagement piscine' },
+  { src: '/piscine2.png', alt: 'Tour de piscine' },
+  // Parements
+  { src: '/parement.png', alt: 'Parement mural' },
+  { src: '/photo/parement.jpg', alt: 'Parement décoratif' },
+  { src: '/photo/parement2.jpg', alt: 'Parement pierre' },
+  { src: '/photo/parement3.jpg', alt: 'Parement intérieur' },
+  { src: '/photo/parement-pierre-nat.jpg', alt: 'Parement pierre naturelle' },
+  // Salles de bain
   { src: '/photo/sdb.jpg', alt: 'Salle de bain moderne' },
   { src: '/photo/sdb8.jpg', alt: 'Douche à l\'italienne' },
   { src: '/photo/sdb9.jpg', alt: 'Faïence contemporaine' },
@@ -237,6 +247,8 @@ const galleryPhotos = [
   { src: '/photo/sdb17.jpg', alt: 'Salle de bain rénovée' },
   { src: '/photo/sdb18.jpg', alt: 'Design contemporain' },
   { src: '/photo/sdb19.jpg', alt: 'Travail artisanal' },
+  { src: '/photo/sdb21.jpg', alt: 'Salle de bain élégante' },
+  { src: '/photo/sdb24.jpg', alt: 'Salle de bain luxe' },
   { src: '/photo/renov-sdb.jpg', alt: 'Rénovation complète' },
   { src: '/photo/renov-sdb1.jpg', alt: 'Transformation salle de bain' },
   { src: '/photo/renov-sdb2.jpg', alt: 'Nouvelle salle d\'eau' },
@@ -246,9 +258,42 @@ const galleryPhotos = [
   { src: '/photo/renov-sdb6.jpg', alt: 'Finition professionnelle' },
   { src: '/photo/renov-sdb7.jpg', alt: 'Espace optimisé' },
   { src: '/photo/renov-wc.jpg', alt: 'Rénovation WC' },
+  // Douches
   { src: '/photo/douche.jpg', alt: 'Douche moderne' },
   { src: '/photo/douche1.jpg', alt: 'Installation douche' },
   { src: '/photo/douche2.jpg', alt: 'Douche design' },
+  // Carrelage & faïence
+  { src: '/photo/carreau-80_80.jpg', alt: 'Carrelage 80x80' },
+  { src: '/photo/carreaux-80-80.jpg', alt: 'Grands carreaux 80x80' },
+  { src: '/photo/carrelage-effet-carreau-de-ciment.jpg', alt: 'Carrelage effet carreau de ciment' },
+  { src: '/photo/carrelage-imitation-bois.jpg', alt: 'Carrelage imitation bois' },
+  { src: '/photo/faience-gres-cerame.jpg', alt: 'Faïence grès cérame' },
+  { src: '/photo/faience-metro-blanc.jpg', alt: 'Faïence métro blanc' },
+  { src: '/photo/faience-metro.jpg', alt: 'Faïence métro' },
+  { src: '/photo/zellige.jpg', alt: 'Zellige artisanal' },
+  { src: '/photo/zellige2.jpg', alt: 'Pose de zellige' },
+  // Crédences & mosaïque
+  { src: '/photo/credence-sur-mesure.jpg', alt: 'Crédence sur mesure' },
+  { src: '/photo/pose-credence-mosaique.jpg', alt: 'Crédence mosaïque' },
+  // Extérieur
+  { src: '/photo/ext-60_60.jpg', alt: 'Carrelage extérieur 60x60' },
+  // Revêtements de sol
+  { src: '/photo/lame-pvc-clipsable.jpg', alt: 'Lame PVC clipsable' },
+  { src: '/photo/parquet-contrecolle-chene-massif.jpg', alt: 'Parquet contrecollé chêne' },
+  // Préparation & technique
+  { src: '/photo/chape.jpg', alt: 'Réalisation chape' },
+  { src: '/photo/ragréage.jpg', alt: 'Ragréage sol' },
+  // Après (résultats finaux)
+  { src: '/photo/apres1.jpg', alt: 'Résultat final rénovation' },
+  { src: '/photo/apres2.jpg', alt: 'Transformation réussie' },
+  { src: '/photo/apres3.jpg', alt: 'Aménagement extérieur fini' },
+  { src: '/photo/apres4.jpg', alt: 'Habillage muret terminé' },
+  { src: '/photo/apres5.jpg', alt: 'Terrasse rénovée' },
+  { src: '/photo/apres6-1.jpg', alt: 'Projet finalisé' },
+  { src: '/photo/apres7.jpg', alt: 'Rénovation achevée' },
+  { src: '/photo/apres8.jpg', alt: 'Finitions parfaites' },
+  { src: '/photo/apres9.jpg', alt: 'Design final' },
+  { src: '/photo/1000069811.jpg', alt: 'Réalisation professionnelle' },
 ];
 
 export default function RealisationsPage() {
@@ -353,7 +398,7 @@ export default function RealisationsPage() {
             <div className="separator separator-center mb-6"></div>
             <p className="text-slate max-w-2xl mx-auto">
               Un aperçu de la qualité et du soin apportés à chaque réalisation. 
-              Cliquez sur une image pour l&apos;agrandir.
+              Cliquez sur une image pour l&apos;agrandir et naviguez avec les flèches.
             </p>
           </div>
 

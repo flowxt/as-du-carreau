@@ -52,6 +52,7 @@ const galleryPhotos = [
   { src: '/photo/carreaux-80-80.jpg', alt: 'Carrelage grand format 80x80' },
   { src: '/photo/carreau-80_80.jpg', alt: 'Pose carreaux 80x80' },
   { src: '/photo/carrelage-effet-carreau-de-ciment.jpg', alt: 'Carrelage effet carreau de ciment' },
+  { src: '/parement.png', alt: 'Parement mural' },
   { src: '/photo/zellige.jpg', alt: 'Zellige artisanal' },
   { src: '/photo/zellige2.jpg', alt: 'Pose de zellige' },
   { src: '/photo/faience-gres-cerame.jpg', alt: 'Faïence grès cérame' },

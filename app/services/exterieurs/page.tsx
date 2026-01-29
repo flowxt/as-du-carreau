@@ -43,6 +43,9 @@ const constraints = [
 ];
 
 const galleryPhotos = [
+  { src: '/piscine.png', alt: 'Piscine avec carrelage' },
+  { src: '/piscine1.png', alt: 'Aménagement piscine' },
+  { src: '/piscine2.png', alt: 'Réalisation tour de piscine' },
   { src: '/photo/ext-60_60.jpg', alt: 'Carrelage extérieur 60x60' },
   { src: '/photo/apres3.jpg', alt: 'Réalisation terrasse' },
   { src: '/photo/apres4.jpg', alt: 'Aménagement extérieur' },

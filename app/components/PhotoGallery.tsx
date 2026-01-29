@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 interface Photo {
@@ -19,7 +19,7 @@ export default function PhotoGallery({
   columns = 3,
   className = '',
 }: PhotoGalleryProps) {
-  const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const gridCols = {
     2: 'md:grid-cols-2',
@@ -27,14 +27,66 @@ export default function PhotoGallery({
     4: 'md:grid-cols-2 lg:grid-cols-4',
   };
 
+  const goToPrevious = useCallback(() => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === 0 ? photos.length - 1 : selectedIndex - 1);
+    }
+  }, [selectedIndex, photos.length]);
+
+  const goToNext = useCallback(() => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === photos.length - 1 ? 0 : selectedIndex + 1);
+    }
+  }, [selectedIndex, photos.length]);
+
+  const closeLightbox = useCallback(() => {
+    setSelectedIndex(null);
+  }, []);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+      
+      switch (e.key) {
+        case 'ArrowLeft':
+          goToPrevious();
+          break;
+        case 'ArrowRight':
+          goToNext();
+          break;
+        case 'Escape':
+          closeLightbox();
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedIndex, goToPrevious, goToNext, closeLightbox]);
+
+  // Disable body scroll when lightbox is open
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedIndex]);
+
+  const selectedPhoto = selectedIndex !== null ? photos[selectedIndex] : null;
+
   return (
     <>
       <div className={`grid grid-cols-1 ${gridCols[columns]} gap-4 ${className}`}>
         {photos.map((photo, index) => (
           <div
             key={index}
-            className="relative aspect-[4/3] overflow-hidden cursor-pointer group"
-            onClick={() => setSelectedPhoto(photo)}
+            className="relative aspect-4/3 overflow-hidden cursor-pointer group"
+            onClick={() => setSelectedIndex(index)}
           >
             <Image
               src={photo.src}
@@ -65,41 +117,95 @@ export default function PhotoGallery({
         ))}
       </div>
 
-      {/* Modal lightbox */}
-      {selectedPhoto && (
+      {/* Modal lightbox avec navigation */}
+      {selectedPhoto && selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-          onClick={() => setSelectedPhoto(null)}
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          onClick={closeLightbox}
         >
+          {/* Bouton fermer */}
           <button
-            className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors"
-            onClick={() => setSelectedPhoto(null)}
+            className="absolute top-4 right-4 md:top-6 md:right-6 z-10 text-white/80 hover:text-white transition-colors p-2"
+            onClick={closeLightbox}
+            aria-label="Fermer"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
+
+          {/* Compteur */}
+          <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10 text-white/70 text-sm font-medium">
+            {selectedIndex + 1} / {photos.length}
+          </div>
+
+          {/* Bouton précédent */}
+          <button
+            className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group"
+            onClick={(e) => {
+              e.stopPropagation();
+              goToPrevious();
+            }}
+            aria-label="Photo précédente"
+          >
+            <svg className="w-6 h-6 md:w-8 md:h-8 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Bouton suivant */}
+          <button
+            className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group"
+            onClick={(e) => {
+              e.stopPropagation();
+              goToNext();
+            }}
+            aria-label="Photo suivante"
+          >
+            <svg className="w-6 h-6 md:w-8 md:h-8 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
           
-          <div className="relative max-w-5xl max-h-[90vh] w-full h-full">
+          {/* Image principale */}
+          <div 
+            className="relative w-full h-full max-w-6xl max-h-[85vh] mx-4 md:mx-16"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image
               src={selectedPhoto.src}
               alt={selectedPhoto.alt}
               fill
               className="object-contain"
               sizes="100vw"
+              priority
             />
             
             {/* Filigrane LDC en grand */}
-            <div className="absolute bottom-6 right-6 bg-black/40 backdrop-blur-sm px-4 py-2 rounded">
+            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-black/40 backdrop-blur-sm px-4 py-2 rounded">
               <span className="text-white/90 font-serif text-lg font-semibold tracking-wider">
                 LDC
               </span>
             </div>
           </div>
           
-          <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm">
+          {/* Description de l'image */}
+          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm text-center max-w-md px-4">
             {selectedPhoto.alt}
           </p>
+
+          {/* Indication navigation clavier (desktop) */}
+          <div className="hidden md:flex absolute bottom-4 right-6 items-center gap-3 text-white/40 text-xs">
+            <span className="flex items-center gap-1">
+              <kbd className="px-2 py-1 bg-white/10 rounded">←</kbd>
+              <kbd className="px-2 py-1 bg-white/10 rounded">→</kbd>
+              Navigation
+            </span>
+            <span className="flex items-center gap-1">
+              <kbd className="px-2 py-1 bg-white/10 rounded">Esc</kbd>
+              Fermer
+            </span>
+          </div>
         </div>
       )}
     </>
