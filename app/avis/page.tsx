@@ -106,10 +106,10 @@ const partners = [
   },
   {
     name: 'Carrelage et Bain',
-    location: 'Grenoble',
+    location: 'Saint-Égrève',
     description: 'Showroom salle de bain et carrelage',
     logo: '/partenaires/carrelage_et_bain.png',
-    mapUrl: 'https://maps.google.com/?q=Carrelage+et+Bain+Grenoble',
+    mapUrl: 'https://maps.google.com/?q=Carrelage+et+Bain+Saint-Égrève',
   },
   {
     name: 'Richardson',
@@ -342,7 +342,7 @@ export default function AvisPage() {
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Nos Fournisseurs
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
               Partenaires de Confiance
             </h2>
             <div className="separator separator-center mb-6"></div>

@@ -183,6 +183,13 @@ const beforeAfterProjects = [
 ];
 
 const galleryPhotos = [
+  // Nouvelles photos
+  { src: '/photo/balcon.jpg', alt: 'Carrelage balcon extérieur' },
+  { src: '/photo/credence-magnifique.jpg', alt: 'Crédence cuisine design' },
+  { src: '/photo/douche-new.jpg', alt: 'Douche moderne carrelée' },
+  { src: '/photo/full-douche.jpg', alt: 'Salle de bain complète' },
+  { src: '/photo/mur.jpg', alt: 'Faïence murale noire' },
+  { src: '/photo/new-douche.jpg', alt: 'Douche travertin et mosaïque' },
   // Réalisations du dossier as-realisation
   { src: '/as-realisation/1000069758.jpg', alt: 'Réalisation carrelage' },
   { src: '/as-realisation/1000069769.jpg', alt: 'Pose carrelage' },
