@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FloatingFAQButton from "./components/FloatingFAQButton";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingFAQButton />
       </body>
     </html>
   );
