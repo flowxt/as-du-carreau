@@ -9,298 +9,246 @@ export const metadata: Metadata = {
 };
 
 const beforeAfterProjects = [
-  // Nouveaux avant/après du dossier ascarreau2 avant apres
   {
     id: 1,
-    before: '/ascarreau2 avant apres/avant_1.jpg',
-    after: '/ascarreau2 avant apres/apres_1.jpg',
-    title: 'Rénovation carrelage',
-    description: 'Avant / après pour révéler un rendu net et harmonieux',
+    before: '/avant-apres/avant1.jpg',
+    after: '/avant-apres/apres1.jpg',
+    title: 'Transformation compl\u00e8te',
+    description: 'R\u00e9novation int\u00e9grale avec un r\u00e9sultat soign\u00e9 et durable',
   },
   {
     id: 2,
-    before: '/ascarreau2 avant apres/avant_2.jpg',
-    after: '/ascarreau2 avant apres/apres_2.jpg',
-    title: 'Pose soignée',
-    description: 'Mise en valeur des finitions et de l’alignement',
+    before: '/avant-apres/avant2.jpg',
+    after: '/avant-apres/apres2.jpg',
+    title: 'R\u00e9novation moderne',
+    description: 'Un espace repens\u00e9 avec des finitions contemporaines',
   },
   {
     id: 3,
-    before: '/ascarreau2 avant apres/avant_3.jpg',
-    after: '/ascarreau2 avant apres/apres_3.jpg',
-    title: 'Transformation intérieure',
-    description: 'Un espace modernisé avec un carrelage raffiné',
+    before: '/avant-apres/avant3.jpg',
+    after: '/avant-apres/apres3.jpg',
+    title: 'Pose soign\u00e9e',
+    description: 'Mise en valeur des surfaces avec un carrelage raffin\u00e9',
   },
   {
     id: 4,
-    before: '/ascarreau2 avant apres/avant_4.jpg',
-    after: '/ascarreau2 avant apres/apres_4.jpg',
-    title: 'Relooking complet',
-    description: 'Un avant/après qui change l’ambiance de la pièce',
+    before: '/avant-apres/avant4.jpg',
+    after: '/avant-apres/apres4.jpg',
+    title: 'Relooking int\u00e9rieur',
+    description: 'Un avant/apr\u00e8s qui change l\'ambiance de la pi\u00e8ce',
   },
   {
     id: 5,
-    before: '/ascarreau2 avant apres/avant_5.jpg',
-    after: '/ascarreau2 avant apres/apres_5.jpg',
-    title: 'Rénovation lumineuse',
-    description: 'Un sol plus clair pour un espace plus chaleureux',
+    before: '/avant-apres/avant5.jpg',
+    after: '/avant-apres/apres5.jpg',
+    title: 'R\u00e9novation lumineuse',
+    description: 'Un espace plus clair et plus chaleureux',
   },
   {
     id: 6,
-    before: '/ascarreau2 avant apres/avant_6.jpg',
-    after: '/ascarreau2 avant apres/apres_6.jpg',
+    before: '/avant-apres/avant6.jpg',
+    after: '/avant-apres/apres6.jpg',
     title: 'Carrelage contemporain',
-    description: 'Un style actuel et des finitions précises',
+    description: 'Un style actuel et des finitions pr\u00e9cises',
   },
   {
     id: 7,
-    before: '/ascarreau2 avant apres/avant_7.jpg',
-    after: '/ascarreau2 avant apres/apres_7.jpg',
-    title: 'Chantier modernisé',
+    before: '/avant-apres/avant7.jpg',
+    after: '/avant-apres/apres7.jpg',
+    title: 'Chantier modernis\u00e9',
     description: 'Une pose nette pour un rendu durable',
   },
   {
     id: 8,
-    before: '/ascarreau2 avant apres/avant_8.jpg',
-    after: '/ascarreau2 avant apres/apres_8.jpg',
-    title: 'Rénovation élégante',
-    description: 'Des lignes propres et un rendu homogène',
+    before: '/avant-apres/avant8.jpg',
+    after: '/avant-apres/apres8.jpg',
+    title: 'R\u00e9novation \u00e9l\u00e9gante',
+    description: 'Des lignes propres et un rendu homog\u00e8ne',
   },
   {
     id: 9,
-    before: '/ascarreau2 avant apres/avant_9.jpg',
-    after: '/ascarreau2 avant apres/apres_9.jpg',
+    before: '/avant-apres/avant9.jpg',
+    after: '/avant-apres/apres9.jpg',
     title: 'Mise en valeur',
-    description: 'Le détail qui fait toute la différence',
+    description: 'Le d\u00e9tail qui fait toute la diff\u00e9rence',
   },
   {
     id: 10,
-    before: '/ascarreau2 avant apres/avant_10.jpg',
-    after: '/ascarreau2 avant apres/apres_10.jpg',
-    title: 'Rénovation soignée',
-    description: 'Un rendu propre et parfaitement aligné',
+    before: '/avant-apres/avant10.jpg',
+    after: '/avant-apres/apres10.jpg',
+    title: 'Finitions impeccables',
+    description: 'Un rendu propre et parfaitement align\u00e9',
   },
   {
     id: 11,
-    before: '/ascarreau2 avant apres/avant_11.jpg',
-    after: '/ascarreau2 avant apres/apres_11.jpg',
-    title: 'Finitions impeccables',
-    description: 'Des joints maîtrisés pour un résultat premium',
+    before: '/avant-apres/avant11.jpg',
+    after: '/avant-apres/apres11.jpg',
+    title: 'Transformation r\u00e9ussie',
+    description: 'Des joints ma\u00eetris\u00e9s pour un r\u00e9sultat premium',
   },
   {
     id: 12,
-    before: '/ascarreau2 avant apres/avant_12.jpg',
-    after: '/ascarreau2 avant apres/apres_12.jpg',
-    title: 'Transformation complète',
-    description: 'Un résultat net et durable, du sol aux détails',
+    before: '/avant-apres/avant12.jpg',
+    after: '/avant-apres/apres12.jpg',
+    title: 'R\u00e9novation compl\u00e8te',
+    description: 'Du sol aux murs, une transformation int\u00e9grale',
   },
-  // Nouveaux avant/après du dossier asavantapres
   {
     id: 13,
-    before: '/asavantapres/avant-1.jpg',
-    after: '/asavantapres/apres-1.jpg',
-    title: 'Rénovation salle de bain',
-    description: 'Transformation complète avec douche à l\'italienne et faïence moderne',
+    before: '/avant-apres/avant13.jpg',
+    after: '/avant-apres/apres13.jpg',
+    title: 'Espace repens\u00e9',
+    description: 'Un r\u00e9sultat net et durable, du sol aux d\u00e9tails',
   },
   {
     id: 14,
-    before: '/asavantapres/avant-2.jpg',
-    after: '/asavantapres/apres-2.jpg',
-    title: 'Carrelage pièce de vie',
-    description: 'Pose de carrelage grand format pour un espace lumineux et contemporain',
+    before: '/avant-apres/avant14.jpg',
+    after: '/avant-apres/apres14.jpg',
+    title: 'Carrelage haut de gamme',
+    description: 'Pose de carrelage pour un espace lumineux et contemporain',
   },
   {
     id: 15,
-    before: '/asavantapres/avant-3.jpg',
-    after: '/asavantapres/apres-3.jpg',
-    title: 'Aménagement espace douche',
-    description: 'Création d\'un espace douche fonctionnel avec finitions soignées',
+    before: '/avant-apres/avant15.jpg',
+    after: '/avant-apres/apres15.jpg',
+    title: 'Am\u00e9nagement soign\u00e9',
+    description: 'Cr\u00e9ation d\'un espace fonctionnel avec finitions soign\u00e9es',
   },
   {
     id: 16,
-    before: '/asavantapres/avant-4.jpg',
-    after: '/asavantapres/apres-4.jpg',
-    title: 'Rénovation complète',
-    description: 'Du sol aux murs, une transformation intégrale',
+    before: '/avant-apres/avant16.jpg',
+    after: '/avant-apres/apres16.jpg',
+    title: 'R\u00e9novation design',
+    description: 'Un espace enti\u00e8rement repens\u00e9 avec un rendu moderne',
   },
   {
     id: 17,
-    before: '/asavantapres/avant-5.jpg',
-    after: '/asavantapres/apres-5.jpg',
-    title: 'Modernisation sol',
-    description: 'Remplacement du revêtement pour un rendu moderne et élégant',
-  },
-  {
-    id: 18,
-    before: '/asavantapres/avant-6.jpg',
-    after: '/asavantapres/apres-6.jpg',
+    before: '/avant-apres/avant17.jpg',
+    after: '/avant-apres/apres17.jpg',
     title: 'Transformation totale',
-    description: 'Un espace entièrement repensé avec carrelage haut de gamme',
-  },
-  // Anciens avant/après
-  {
-    id: 19,
-    before: '/photo/avant1.jpg',
-    after: '/photo/apres1.jpg',
-    title: 'Rénovation pièce à vivre',
-    description: 'Pose de carrelage grand format pour un espace modernisé',
-  },
-  {
-    id: 20,
-    before: '/photo/avant2.jpg',
-    after: '/photo/apres2.jpg',
-    title: 'Carrelage contemporain',
-    description: 'Transformation complète du sol avec finitions soignées',
-  },
-  {
-    id: 21,
-    before: '/photo/avant3.jpg',
-    after: '/photo/apres3.jpg',
-    title: 'Aménagement extérieur',
-    description: 'Pose de carrelage pour terrasse et espaces extérieurs',
-  },
-  {
-    id: 22,
-    before: '/photo/avant4.jpg',
-    after: '/photo/apres4.jpg',
-    title: 'Habillage muret',
-    description: 'Création et finition d\'un muret avec carrelage décoratif',
-  },
-  {
-    id: 23,
-    before: '/photo/avant5.jpg',
-    after: '/photo/apres5.jpg',
-    title: 'Terrasse extérieure',
-    description: 'Rénovation complète avec carrelage adapté aux contraintes extérieures',
-  },
-  {
-    id: 24,
-    before: '/photo/avant9.jpg',
-    after: '/photo/apres9.jpg',
-    title: 'Rénovation design',
-    description: 'Finitions soignées et style contemporain',
+    description: 'Un savoir-faire artisanal pour un r\u00e9sultat d\'exception',
   },
 ];
 
 const galleryPhotos = [
   // Nouvelles photos
-  { src: '/photo/balcon.jpg', alt: 'Carrelage balcon extérieur' },
-  { src: '/photo/credence-magnifique.jpg', alt: 'Crédence cuisine design' },
-  { src: '/photo/douche-new.jpg', alt: 'Douche moderne carrelée' },
-  { src: '/photo/full-douche.jpg', alt: 'Salle de bain complète' },
-  { src: '/photo/mur.jpg', alt: 'Faïence murale noire' },
-  { src: '/photo/new-douche.jpg', alt: 'Douche travertin et mosaïque' },
-  // Réalisations du dossier as-realisation
-  { src: '/as-realisation/1000069758.jpg', alt: 'Réalisation carrelage' },
+  { src: '/photo/balcon.jpg', alt: 'Carrelage balcon ext\u00e9rieur' },
+  { src: '/photo/credence-magnifique.jpg', alt: 'Cr\u00e9dence cuisine design' },
+  { src: '/photo/douche-new.jpg', alt: 'Douche moderne carrel\u00e9e' },
+  { src: '/photo/full-douche.jpg', alt: 'Salle de bain compl\u00e8te' },
+  { src: '/photo/mur.jpg', alt: 'Fa\u00efence murale noire' },
+  { src: '/photo/new-douche.jpg', alt: 'Douche travertin et mosa\u00efque' },
+  // R\u00e9alisations du dossier as-realisation
+  { src: '/as-realisation/1000069758.jpg', alt: 'R\u00e9alisation carrelage' },
   { src: '/as-realisation/1000069769.jpg', alt: 'Pose carrelage' },
-  { src: '/as-realisation/1000069773.jpg', alt: 'Carrelage intérieur' },
+  { src: '/as-realisation/1000069773.jpg', alt: 'Carrelage int\u00e9rieur' },
   { src: '/as-realisation/1000069774.jpg', alt: 'Finitions carrelage' },
-  { src: '/as-realisation/1000069775.jpg', alt: 'Rénovation sol' },
+  { src: '/as-realisation/1000069775.jpg', alt: 'R\u00e9novation sol' },
   { src: '/as-realisation/1000069780.jpg', alt: 'Travaux carrelage' },
   { src: '/as-realisation/1000069795.jpg', alt: 'Carrelage moderne' },
   { src: '/as-realisation/1000069811.jpg', alt: 'Pose professionnelle' },
-  { src: '/as-realisation/1000070335.jpg', alt: 'Réalisation artisanale' },
+  { src: '/as-realisation/1000070335.jpg', alt: 'R\u00e9alisation artisanale' },
   { src: '/as-realisation/1000070336.jpg', alt: 'Carrelage design' },
-  { src: '/as-realisation/1000070338.jpg', alt: 'Sol carrelé' },
+  { src: '/as-realisation/1000070338.jpg', alt: 'Sol carrel\u00e9' },
   { src: '/as-realisation/1000070339.jpg', alt: 'Pose carrelage grand format' },
-  { src: '/as-realisation/1000070340.jpg', alt: 'Finitions soignées' },
+  { src: '/as-realisation/1000070340.jpg', alt: 'Finitions soign\u00e9es' },
   { src: '/as-realisation/1000070341.jpg', alt: 'Carrelage salle de bain' },
-  { src: '/as-realisation/1000070345.jpg', alt: 'Rénovation carrelage' },
-  { src: '/as-realisation/1000070347.jpg', alt: 'Pose faïence' },
+  { src: '/as-realisation/1000070345.jpg', alt: 'R\u00e9novation carrelage' },
+  { src: '/as-realisation/1000070347.jpg', alt: 'Pose fa\u00efence' },
   { src: '/as-realisation/1000070348.jpg', alt: 'Carrelage mural' },
   { src: '/as-realisation/1000070349.jpg', alt: 'Travail artisan' },
   { src: '/as-realisation/1000070350.jpg', alt: 'Pose traditionnelle' },
   { src: '/as-realisation/1000070351.jpg', alt: 'Carrelage contemporain' },
-  { src: '/as-realisation/1000070352.jpg', alt: 'Réalisation L\'as Du Carreau' },
+  { src: '/as-realisation/1000070352.jpg', alt: 'R\u00e9alisation L\'as Du Carreau' },
   { src: '/as-realisation/1000070353.jpg', alt: 'Pose experte' },
   { src: '/as-realisation/1000070354.jpg', alt: 'Carrelage haut de gamme' },
   { src: '/as-realisation/1000070355.jpg', alt: 'Finition professionnelle' },
-  { src: '/as-realisation/1000070356.jpg', alt: 'Carrelage élégant' },
+  { src: '/as-realisation/1000070356.jpg', alt: 'Carrelage \u00e9l\u00e9gant' },
   { src: '/as-realisation/1000070357.jpg', alt: 'Pose carreleur' },
-  { src: '/as-realisation/1000070358.jpg', alt: 'Travaux rénovation' },
-  { src: '/as-realisation/1000070359.jpg', alt: 'Carrelage intérieur' },
+  { src: '/as-realisation/1000070358.jpg', alt: 'Travaux r\u00e9novation' },
+  { src: '/as-realisation/1000070359.jpg', alt: 'Carrelage int\u00e9rieur' },
   { src: '/as-realisation/1000070360.jpg', alt: 'Sol moderne' },
   { src: '/as-realisation/1000070361.jpg', alt: 'Carrelage tendance' },
-  { src: '/as-realisation/1000070362.jpg', alt: 'Pose soignée' },
-  { src: '/as-realisation/1000070363.jpg', alt: 'Réalisation carrelage' },
+  { src: '/as-realisation/1000070362.jpg', alt: 'Pose soign\u00e9e' },
+  { src: '/as-realisation/1000070363.jpg', alt: 'R\u00e9alisation carrelage' },
   { src: '/as-realisation/1000070364.jpg', alt: 'Carrelage premium' },
   { src: '/as-realisation/1000070365.jpg', alt: 'Finitions parfaites' },
   { src: '/as-realisation/1000070366.jpg', alt: 'Pose carrelage expertise' },
   { src: '/as-realisation/1000070367.jpg', alt: 'Carrelage artisanal' },
-  { src: '/as-realisation/1000070368.jpg', alt: 'Rénovation totale' },
-  { src: '/as-realisation/1000070369.jpg', alt: 'Carrelage qualité' },
+  { src: '/as-realisation/1000070368.jpg', alt: 'R\u00e9novation totale' },
+  { src: '/as-realisation/1000070369.jpg', alt: 'Carrelage qualit\u00e9' },
   { src: '/as-realisation/1000070378.jpg', alt: 'Pose professionnelle' },
   // Piscines
-  { src: '/piscine.png', alt: 'Piscine carrelée' },
-  { src: '/piscine1.png', alt: 'Aménagement piscine' },
+  { src: '/piscine.png', alt: 'Piscine carrel\u00e9e' },
+  { src: '/piscine1.png', alt: 'Am\u00e9nagement piscine' },
   { src: '/piscine2.png', alt: 'Tour de piscine' },
   // Parements
   { src: '/parement.png', alt: 'Parement mural' },
-  { src: '/photo/parement.jpg', alt: 'Parement décoratif' },
+  { src: '/photo/parement.jpg', alt: 'Parement d\u00e9coratif' },
   { src: '/photo/parement2.jpg', alt: 'Parement pierre' },
-  { src: '/photo/parement3.jpg', alt: 'Parement intérieur' },
+  { src: '/photo/parement3.jpg', alt: 'Parement int\u00e9rieur' },
   { src: '/photo/parement-pierre-nat.jpg', alt: 'Parement pierre naturelle' },
   // Salles de bain
   { src: '/photo/sdb.jpg', alt: 'Salle de bain moderne' },
-  { src: '/photo/sdb8.jpg', alt: 'Douche à l\'italienne' },
-  { src: '/photo/sdb9.jpg', alt: 'Faïence contemporaine' },
+  { src: '/photo/sdb8.jpg', alt: 'Douche \u00e0 l\'italienne' },
+  { src: '/photo/sdb9.jpg', alt: 'Fa\u00efence contemporaine' },
   { src: '/photo/sdb10.jpg', alt: 'Carrelage grand format' },
-  { src: '/photo/sdb11.jpg', alt: 'Rénovation salle de bain' },
+  { src: '/photo/sdb11.jpg', alt: 'R\u00e9novation salle de bain' },
   { src: '/photo/sdb12.jpg', alt: 'Douche design' },
   { src: '/photo/sdb13.jpg', alt: 'Salle d\'eau moderne' },
-  { src: '/photo/sdb14.jpg', alt: 'Finitions soignées' },
+  { src: '/photo/sdb14.jpg', alt: 'Finitions soign\u00e9es' },
   { src: '/photo/sdb15.jpg', alt: 'Carrelage mural' },
   { src: '/photo/sdb16.jpg', alt: 'Espace douche' },
-  { src: '/photo/sdb17.jpg', alt: 'Salle de bain rénovée' },
+  { src: '/photo/sdb17.jpg', alt: 'Salle de bain r\u00e9nov\u00e9e' },
   { src: '/photo/sdb18.jpg', alt: 'Design contemporain' },
   { src: '/photo/sdb19.jpg', alt: 'Travail artisanal' },
-  { src: '/photo/sdb21.jpg', alt: 'Salle de bain élégante' },
+  { src: '/photo/sdb21.jpg', alt: 'Salle de bain \u00e9l\u00e9gante' },
   { src: '/photo/sdb24.jpg', alt: 'Salle de bain luxe' },
-  { src: '/photo/renov-sdb.jpg', alt: 'Rénovation complète' },
+  { src: '/photo/renov-sdb.jpg', alt: 'R\u00e9novation compl\u00e8te' },
   { src: '/photo/renov-sdb1.jpg', alt: 'Transformation salle de bain' },
   { src: '/photo/renov-sdb2.jpg', alt: 'Nouvelle salle d\'eau' },
-  { src: '/photo/renov-sdb3.jpg', alt: 'Aménagement moderne' },
+  { src: '/photo/renov-sdb3.jpg', alt: 'Am\u00e9nagement moderne' },
   { src: '/photo/renov-sdb4.jpg', alt: 'Douche italienne' },
-  { src: '/photo/renov-sdb5.jpg', alt: 'Carrelage et faïence' },
+  { src: '/photo/renov-sdb5.jpg', alt: 'Carrelage et fa\u00efence' },
   { src: '/photo/renov-sdb6.jpg', alt: 'Finition professionnelle' },
-  { src: '/photo/renov-sdb7.jpg', alt: 'Espace optimisé' },
-  { src: '/photo/renov-wc.jpg', alt: 'Rénovation WC' },
+  { src: '/photo/renov-sdb7.jpg', alt: 'Espace optimis\u00e9' },
+  { src: '/photo/renov-wc.jpg', alt: 'R\u00e9novation WC' },
   // Douches
   { src: '/photo/douche.jpg', alt: 'Douche moderne' },
   { src: '/photo/douche1.jpg', alt: 'Installation douche' },
   { src: '/photo/douche2.jpg', alt: 'Douche design' },
-  // Carrelage & faïence
+  // Carrelage & fa\u00efence
   { src: '/photo/carreau-80_80.jpg', alt: 'Carrelage 80x80' },
   { src: '/photo/carreaux-80-80.jpg', alt: 'Grands carreaux 80x80' },
   { src: '/photo/carrelage-effet-carreau-de-ciment.jpg', alt: 'Carrelage effet carreau de ciment' },
   { src: '/photo/carrelage-imitation-bois.jpg', alt: 'Carrelage imitation bois' },
-  { src: '/photo/faience-gres-cerame.jpg', alt: 'Faïence grès cérame' },
-  { src: '/photo/faience-metro-blanc.jpg', alt: 'Faïence métro blanc' },
-  { src: '/photo/faience-metro.jpg', alt: 'Faïence métro' },
+  { src: '/photo/faience-gres-cerame.jpg', alt: 'Fa\u00efence gr\u00e8s c\u00e9rame' },
+  { src: '/photo/faience-metro-blanc.jpg', alt: 'Fa\u00efence m\u00e9tro blanc' },
+  { src: '/photo/faience-metro.jpg', alt: 'Fa\u00efence m\u00e9tro' },
   { src: '/photo/zellige.jpg', alt: 'Zellige artisanal' },
   { src: '/photo/zellige2.jpg', alt: 'Pose de zellige' },
-  // Crédences & mosaïque
-  { src: '/photo/credence-sur-mesure.jpg', alt: 'Crédence sur mesure' },
-  { src: '/photo/pose-credence-mosaique.jpg', alt: 'Crédence mosaïque' },
-  // Extérieur
-  { src: '/photo/ext-60_60.jpg', alt: 'Carrelage extérieur 60x60' },
-  // Revêtements de sol
+  // Cr\u00e9dences & mosa\u00efque
+  { src: '/photo/credence-sur-mesure.jpg', alt: 'Cr\u00e9dence sur mesure' },
+  { src: '/photo/pose-credence-mosaique.jpg', alt: 'Cr\u00e9dence mosa\u00efque' },
+  // Ext\u00e9rieur
+  { src: '/photo/ext-60_60.jpg', alt: 'Carrelage ext\u00e9rieur 60x60' },
+  // Rev\u00eatements de sol
   { src: '/photo/lame-pvc-clipsable.jpg', alt: 'Lame PVC clipsable' },
-  { src: '/photo/parquet-contrecolle-chene-massif.jpg', alt: 'Parquet contrecollé chêne' },
-  // Préparation & technique
-  { src: '/photo/chape.jpg', alt: 'Réalisation chape' },
-  { src: '/photo/ragréage.jpg', alt: 'Ragréage sol' },
-  // Après (résultats finaux)
-  { src: '/photo/apres1.jpg', alt: 'Résultat final rénovation' },
-  { src: '/photo/apres2.jpg', alt: 'Transformation réussie' },
-  { src: '/photo/apres3.jpg', alt: 'Aménagement extérieur fini' },
-  { src: '/photo/apres4.jpg', alt: 'Habillage muret terminé' },
-  { src: '/photo/apres5.jpg', alt: 'Terrasse rénovée' },
-  { src: '/photo/apres6-1.jpg', alt: 'Projet finalisé' },
-  { src: '/photo/apres7.jpg', alt: 'Rénovation achevée' },
+  { src: '/photo/parquet-contrecolle-chene-massif.jpg', alt: 'Parquet contrecoll\u00e9 ch\u00eane' },
+  // Pr\u00e9paration & technique
+  { src: '/photo/chape.jpg', alt: 'R\u00e9alisation chape' },
+  { src: '/photo/ragr\u00e9age.jpg', alt: 'Ragr\u00e9age sol' },
+  // Apr\u00e8s (r\u00e9sultats finaux)
+  { src: '/photo/apres1.jpg', alt: 'R\u00e9sultat final r\u00e9novation' },
+  { src: '/photo/apres2.jpg', alt: 'Transformation r\u00e9ussie' },
+  { src: '/photo/apres3.jpg', alt: 'Am\u00e9nagement ext\u00e9rieur fini' },
+  { src: '/photo/apres4.jpg', alt: 'Habillage muret termin\u00e9' },
+  { src: '/photo/apres5.jpg', alt: 'Terrasse r\u00e9nov\u00e9e' },
+  { src: '/photo/apres6-1.jpg', alt: 'Projet finalis\u00e9' },
+  { src: '/photo/apres7.jpg', alt: 'R\u00e9novation achev\u00e9e' },
   { src: '/photo/apres8.jpg', alt: 'Finitions parfaites' },
   { src: '/photo/apres9.jpg', alt: 'Design final' },
-  { src: '/photo/1000069811.jpg', alt: 'Réalisation professionnelle' },
+  { src: '/photo/1000069811.jpg', alt: 'R\u00e9alisation professionnelle' },
 ];
 
 export default function RealisationsPage() {
@@ -313,15 +261,15 @@ export default function RealisationsPage() {
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#C9A962' }}>
-              Nos Réalisations
+              Nos R\u00e9alisations
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
               Plus de 20 ans de savoir-faire
             </h1>
             <div className="separator mb-8"></div>
             <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
-              Découvrez quelques-unes de nos réalisations et transformations. 
-              Chaque projet témoigne de notre passion pour le métier et notre souci du détail.
+              D\u00e9couvrez quelques-unes de nos r\u00e9alisations et transformations. 
+              Chaque projet t\u00e9moigne de notre passion pour le m\u00e9tier et notre souci du d\u00e9tail.
             </p>
           </div>
         </div>
@@ -346,13 +294,13 @@ export default function RealisationsPage() {
             </div>
             <span className="hidden md:block text-white/40">|</span>
             <p className="text-white/90 text-sm md:text-base">
-              Agences immobilières, syndics, copropriétés... Nous intervenons pour tous vos projets
+              Agences immobili\u00e8res, syndics, copropri\u00e9t\u00e9s... Nous intervenons pour tous vos projets
             </p>
           </div>
         </div>
       </section>
 
-      {/* Section Avant/Après */}
+      {/* Section Avant/Apr\u00e8s */}
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -360,12 +308,12 @@ export default function RealisationsPage() {
               Transformations
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-              Avant / Après
+              Avant / Apr\u00e8s
             </h2>
             <div className="separator separator-center mb-6"></div>
             <p className="text-slate max-w-2xl mx-auto">
-              Glissez le curseur sur les images pour découvrir les transformations spectaculaires 
-              réalisées par L&apos;as Du Carreau.
+              Glissez le curseur sur les images pour d\u00e9couvrir les transformations spectaculaires 
+              r\u00e9alis\u00e9es par L&apos;as Du Carreau.
             </p>
           </div>
 
@@ -376,7 +324,7 @@ export default function RealisationsPage() {
                   beforeImage={project.before}
                   afterImage={project.after}
                   beforeAlt={`${project.title} - Avant`}
-                  afterAlt={`${project.title} - Après`}
+                  afterAlt={`${project.title} - Apr\u00e8s`}
                 />
                 <div className="pt-4">
                   <h3 className="font-serif text-xl font-semibold text-charcoal mb-2">
@@ -404,8 +352,8 @@ export default function RealisationsPage() {
             </h2>
             <div className="separator separator-center mb-6"></div>
             <p className="text-slate max-w-2xl mx-auto">
-              Un aperçu de la qualité et du soin apportés à chaque réalisation. 
-              Cliquez sur une image pour l&apos;agrandir et naviguez avec les flèches.
+              Un aper\u00e7u de la qualit\u00e9 et du soin apport\u00e9s \u00e0 chaque r\u00e9alisation. 
+              Cliquez sur une image pour l&apos;agrandir et naviguez avec les fl\u00e8ches.
             </p>
           </div>
 
@@ -431,7 +379,7 @@ export default function RealisationsPage() {
               Demander un Devis Gratuit
             </Link>
             <Link href="/services" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
-              Découvrir nos services
+              D\u00e9couvrir nos services
             </Link>
           </div>
         </div>
