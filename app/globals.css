@@ -54,9 +54,14 @@ body {
 
 /* Typographie */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
   font-weight: 600;
   line-height: 1.2;
   color: var(--charcoal);
+}
+
+p, li, span, a, label, input, textarea, select, blockquote {
+  font-family: var(--font-sans);
 }
 
 /* Animations */

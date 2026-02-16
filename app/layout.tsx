@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Cinzel, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingFAQButton from "./components/FloatingFAQButton";
 
-const cormorant = Cormorant_Garamond({
+const cinzel = Cinzel({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
-const montserrat = Montserrat({
+const baskerville = Libre_Baskerville({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -39,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${cormorant.variable} ${montserrat.variable} font-sans antialiased`}>
+      <body className={`${cinzel.variable} ${baskerville.variable} font-sans antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />
