@@ -11,19 +11,11 @@ export const metadata: Metadata = {
 const services = [
   {
     title: 'Ragréage',
-    description: 'Mise à niveau des sols irréguliers avec des produits de ragréage adaptés au support et à l\'usage.',
+    description: 'Mise à niveau des sols irréguliers avec des produits de ragréage adaptés au support et à l\'usage. Correction des défauts de planéité pour garantir une pose de carrelage sans faille.',
   },
   {
     title: 'Chapes',
     description: 'Réalisation de chapes traditionnelles ou allégées pour créer une base de pose parfaite.',
-  },
-  {
-    title: 'Nivellement',
-    description: 'Correction des défauts de planéité pour garantir une pose de carrelage sans faille.',
-  },
-  {
-    title: 'Traitement des Supports',
-    description: 'Préparation adaptée selon le type de support : béton, ancien carrelage, plancher...',
   },
   {
     title: 'Primaire d\'Accrochage',

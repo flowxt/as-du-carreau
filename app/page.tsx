@@ -1,61 +1,66 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import BeforeAfterSlider from './components/BeforeAfterSlider';
 
 const services = [
   {
-    title: 'Carrelage & Faïence',
-    description: 'Pose traditionnelle, grands formats, murs et sols, avec un travail soigné et des conseils personnalisés pour un résultat harmonieux et durable.',
-    href: '/services/carrelage-faience',
-    image: '/photo/faience-metro.jpg',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Mosaïque & Créations',
-    description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces : salles de bain, cuisines, piscines, crédences et éléments décoratifs sur mesure.',
-    href: '/services/mosaique',
-    image: '/photo/pose-credence-mosaique.jpg',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Salles de Bain',
+    title: 'Salles de bain & Douches à l\'italienne',
     description: 'Création ou rénovation complète de salles de bain, conception de douches à l\'italienne, étanchéité, faïence, sols et murs. Possibilité de clé en main.',
     href: '/services/salles-de-bain',
-    image: '/photo/renov-sdb4.jpg',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2m0 14v2m-7-9H3m18 0h-2M7.05 7.05L5.636 5.636m12.728 12.728L16.95 16.95M7.05 16.95l-1.414 1.414M18.364 5.636L16.95 7.05" />
+        <circle cx="12" cy="12" r="4" />
       </svg>
     ),
   },
   {
-    title: 'Terrasses & Extérieurs',
-    description: 'Pose de carrelage extérieur, terrasses, margelles, escaliers, plages de piscine et zones techniques, avec des matériaux adaptés aux contraintes climatiques.',
-    href: '/services/exterieurs',
-    image: '/photo/ext-60_60.jpg',
+    title: 'Carrelages & Faïences',
+    description: 'Pose traditionnelle, grands formats, murs et sols, avec un travail soigné et des conseils personnalisés pour un résultat harmonieux et durable.',
+    href: '/services/carrelage-faience',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M9 8h6M9 12h6M9 16h6M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16" />
+      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
       </svg>
     ),
   },
   {
-    title: 'Travaux de Préparation',
+    title: 'Mosaïques et créations personnalisées',
+    description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces : salles de bain, cuisines, piscines, crédences et éléments décoratifs sur mesure.',
+    href: '/services/mosaique',
+    icon: (
+      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Revêtements de sols',
+    description: 'Parquet contrecollé, parquet massif en pose flottante, lames PVC clipsables. Solutions pratiques, résistantes et esthétiques pour tous vos intérieurs.',
+    href: '/services/revetements-sols',
+    icon: (
+      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h7v7H3V3zM14 3h7v7h-7V3zM3 14h7v7H3v-7zM14 14h7v7h-7v-7z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Travaux de préparation',
     description: 'Ragréage, chapes, étanchéité des surfaces, nivellement précis des supports. La base indispensable d\'un résultat fiable et durable.',
     href: '/services/preparation',
-    image: '/photo/ragréage.jpg',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Terrasses, Piscines et Extérieurs',
+    description: 'Pose de carrelage extérieur, terrasses, margelles, escaliers, plages de piscine et zones techniques, avec des matériaux adaptés aux contraintes climatiques.',
+    href: '/services/exterieurs',
+    icon: (
+      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M9 8h6M9 12h6M9 16h6M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16" />
       </svg>
     ),
   },
@@ -78,18 +83,6 @@ const savoirFaire = [
   'Escaliers et zones extérieures',
 ];
 
-const featuredBeforeAfter = [
-  {
-    before: '/photo/avant1.jpg',
-    after: '/photo/apres1.jpg',
-    title: 'Rénovation salle de bain',
-  },
-  {
-    before: '/photo/avant3.jpg',
-    after: '/photo/apres3.jpg',
-    title: 'Transformation complète',
-  },
-];
 
 export default function Home() {
   return (
@@ -125,7 +118,7 @@ export default function Home() {
           </p>
 
           {/* Badge Pro & Particuliers */}
-          <div className="inline-flex items-center gap-4 mb-12 px-6 py-3 bg-gold/10 border border-gold/30 rounded-full">
+          <div className="inline-flex items-center gap-4 mb-12 px-6 py-3 bg-gold/10 border border-gold/30">
             <span className="text-gold font-medium">Professionnels</span>
             <span className="text-gold/50">&</span>
             <span className="text-gold font-medium">Particuliers</span>
@@ -246,44 +239,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Avant/Après Preview */}
-      <section className="py-24 lg:py-32 bg-cream">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
-              Transformations
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">
-              Avant / Après
-            </h2>
-            <div className="separator separator-center mb-6"></div>
-            <p className="text-slate max-w-2xl mx-auto">
-              Glissez le curseur pour découvrir nos transformations spectaculaires.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {featuredBeforeAfter.map((project, index) => (
-              <div key={index} className="bg-white p-4 shadow-lg hover-lift">
-                <BeforeAfterSlider
-                  beforeImage={project.before}
-                  afterImage={project.after}
-                  beforeAlt={`${project.title} - Avant`}
-                  afterAlt={`${project.title} - Après`}
-                />
-                <p className="mt-4 text-center font-serif text-xl text-charcoal">{project.title}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link href="/realisations" className="btn-primary">
-              Voir toutes nos réalisations
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Section Services */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -308,35 +263,17 @@ export default function Home() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="card-elegant group overflow-hidden hover-lift"
+                className="card-elegant group overflow-hidden hover-lift p-8 text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/90 flex items-center justify-center text-gold">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gold/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all duration-300">
                   {service.icon}
-                  </div>
-                  {/* Filigrane LDC */}
-                  <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-2 py-1 rounded">
-                    <span className="text-white/70 font-serif text-xs font-semibold tracking-wider">
-                      LDC
-                    </span>
-                  </div>
                 </div>
                 
-                <div className="p-6">
-                  <h3 className="font-serif text-2xl font-semibold text-charcoal mb-3 group-hover:text-gold transition-colors">
+                <h3 className="font-serif text-xl font-semibold text-charcoal mb-3 group-hover:text-gold transition-colors">
                   {service.title}
                 </h3>
-                  <p className="text-slate leading-relaxed mb-4">
+                <p className="text-slate leading-relaxed mb-4 text-sm">
                   {service.description}
                 </p>
                 <span className="inline-flex items-center gap-2 text-gold font-medium text-sm group-hover:gap-3 transition-all duration-300">
@@ -345,7 +282,6 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </span>
-                </div>
               </Link>
             ))}
           </div>

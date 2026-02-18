@@ -194,28 +194,45 @@ export default function AvisPage() {
         </div>
       </section>
 
-      {/* Pourquoi un carreleur pro */}
+      {/* Pourquoi L'as Du Carreau */}
       <section className="py-16 lg:py-20 bg-gold">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-6">
-              Pourquoi faire appel à un carreleur professionnel à Grenoble et alentours ?
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-8">
+              Pourquoi faire appel à L&apos;as Du Carreau
             </h2>
-            <div className="space-y-4 text-white/90 leading-relaxed text-left md:text-center">
-              <p>
-                Faire appel à un carreleur professionnel à Grenoble, basé à Saint-Égrève, permet de garantir 
-                une pose de carrelage soignée, durable et conforme aux normes. Spécialisé dans la pose de 
-                carrelage intérieur et extérieur, j&apos;interviens sur Grenoble et l&apos;ensemble de son 
-                agglomération pour assurer un <strong className="text-white">alignement précis</strong>, des 
-                <strong className="text-white"> joints réguliers et étanches</strong> et des 
-                <strong className="text-white"> finitions de qualité</strong>.
-              </p>
-              <p>
-                Dans le bassin grenoblois, où le climat peut être humide, des techniques de pose adaptées 
-                sont essentielles pour prévenir les risques de fissures, de décollements et d&apos;infiltrations. 
-                Faire appel à un artisan carreleur à Saint-Égrève intervenant à Grenoble et alentours, 
-                c&apos;est choisir un travail <strong className="text-white">fiable, esthétique et durable</strong>.
-              </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+              {[
+                'Travail soigné & Finitions professionnelles',
+                'Respect des délais',
+                'Devis clair et prix transparents',
+                'Conseils personnalisés selon votre projet',
+                'Nombreuses réalisations visibles dans notre galerie',
+                'Artisan local',
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 text-left">
+                  <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-white font-medium text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-white/90 italic text-lg max-w-3xl mx-auto mb-10">
+              Votre satisfaction est notre priorité : chaque chantier est réalisé avec sérieux, propreté et précision.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {[
+                { title: 'Expertise artisanale', icon: '◆' },
+                { title: 'Finitions premium', icon: '◆' },
+                { title: 'Conseils personnalisés', icon: '◆' },
+                { title: 'Accompagnement complet', icon: '◆' },
+              ].map((item, index) => (
+                <div key={index} className="bg-white/15 backdrop-blur-sm p-4 text-center">
+                  <span className="text-white/60 text-xs block mb-2">{item.icon}</span>
+                  <p className="text-white font-semibold text-sm">{item.title}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -233,7 +250,7 @@ export default function AvisPage() {
               <p className="text-slate text-sm">Note moyenne</p>
             </div>
             <div>
-              <p className="text-3xl font-serif font-bold text-gold">{reviews.length}</p>
+              <p className="text-3xl font-serif font-bold text-gold">+40</p>
               <p className="text-slate text-sm">Avis 5 étoiles</p>
             </div>
             <div>
@@ -336,7 +353,7 @@ export default function AvisPage() {
       </section>
 
       {/* Partenaires */}
-      <section className="py-24 lg:py-32 bg-charcoal">
+      <section id="partenaires" className="py-24 lg:py-32 bg-charcoal">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">

@@ -37,12 +37,8 @@ const types = [
 ];
 
 const galleryPhotos = [
-  { src: '/photo/pose-credence-mosaique.jpg', alt: 'Pose crédence mosaïque' },
-  { src: '/photo/credence-sur-mesure.jpg', alt: 'Crédence sur mesure' },
-  { src: '/photo/zellige.jpg', alt: 'Zellige artisanal' },
-  { src: '/photo/zellige2.jpg', alt: 'Pose de zellige' },
-  { src: '/photo/faience-metro.jpg', alt: 'Faïence métro' },
-  { src: '/photo/faience-metro-blanc.jpg', alt: 'Faïence métro blanc' },
+  { src: '/photo/pose-credence-mosaique.jpg', alt: 'Crédence en mosaïque' },
+  { src: '/photo/credence-sur-mesure.jpg', alt: 'Création crédence sur mesure' },
 ];
 
 export default function MosaiquePage() {
@@ -170,7 +166,7 @@ export default function MosaiquePage() {
             <div className="separator separator-center"></div>
           </div>
 
-          <PhotoGallery photos={galleryPhotos} columns={3} />
+          <PhotoGallery photos={galleryPhotos} columns={2} />
 
           <div className="text-center mt-12">
             <Link href="/realisations" className="btn-secondary">

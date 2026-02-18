@@ -43,18 +43,8 @@ const process = [
 ];
 
 const galleryPhotos = [
-  { src: '/photo/sdb.jpg', alt: 'Salle de bain moderne' },
   { src: '/photo/sdb8.jpg', alt: 'Douche à l\'italienne' },
-  { src: '/photo/sdb9.jpg', alt: 'Faïence contemporaine' },
-  { src: '/photo/sdb10.jpg', alt: 'Carrelage grand format' },
-  { src: '/photo/sdb11.jpg', alt: 'Rénovation salle de bain' },
-  { src: '/photo/sdb12.jpg', alt: 'Douche design' },
-  { src: '/photo/sdb13.jpg', alt: 'Salle d\'eau moderne' },
-  { src: '/photo/sdb14.jpg', alt: 'Finitions soignées' },
-  { src: '/photo/sdb15.jpg', alt: 'Carrelage mural' },
-  { src: '/photo/sdb16.jpg', alt: 'Espace douche' },
-  { src: '/photo/sdb17.jpg', alt: 'Salle de bain rénovée' },
-  { src: '/photo/sdb18.jpg', alt: 'Design contemporain' },
+  { src: '/photo/sdb17.jpg', alt: 'Salle de bain complète' },
 ];
 
 export default function SallesDeBainPage() {
@@ -183,7 +173,7 @@ export default function SallesDeBainPage() {
             <div className="separator separator-center"></div>
           </div>
 
-          <PhotoGallery photos={galleryPhotos} columns={3} />
+          <PhotoGallery photos={galleryPhotos} columns={2} />
 
           <div className="text-center mt-12">
             <Link href="/realisations" className="btn-secondary">

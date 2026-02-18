@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "D\u00e9couvrez les r\u00e9alisations de L'as Du Carreau : transformations avant/apr\u00e8s spectaculaires, salles de bain, carrelage, mosa\u00efque. Plus de 20 ans de savoir-faire.",
 };
 
-const beforeAfterProjects = [
+const beforeAfterLandscape = [
   {
     id: 1,
     before: '/avant-apres/avant1.jpg',
@@ -22,13 +22,6 @@ const beforeAfterProjects = [
     after: '/avant-apres/apres2.jpg',
     title: 'R\u00e9novation moderne',
     description: 'Un espace repens\u00e9 avec des finitions contemporaines',
-  },
-  {
-    id: 3,
-    before: '/avant-apres/avant3.jpg',
-    after: '/avant-apres/apres3.jpg',
-    title: 'Pose soign\u00e9e',
-    description: 'Mise en valeur des surfaces avec un carrelage raffin\u00e9',
   },
   {
     id: 4,
@@ -45,12 +38,22 @@ const beforeAfterProjects = [
     description: 'Un espace plus clair et plus chaleureux',
   },
   {
-    id: 6,
-    before: '/avant-apres/avant6.jpg',
-    after: '/avant-apres/apres6.jpg',
-    title: 'Carrelage contemporain',
-    description: 'Un style actuel et des finitions pr\u00e9cises',
+    id: 10,
+    before: '/avant-apres/avant10.jpg',
+    after: '/avant-apres/apres10.jpg',
+    title: 'Finitions impeccables',
+    description: 'Un rendu propre et parfaitement align\u00e9',
   },
+  {
+    id: 14,
+    before: '/avant-apres/avant14.jpg',
+    after: '/avant-apres/apres14.jpg',
+    title: 'Carrelage haut de gamme',
+    description: 'Pose de carrelage pour un espace lumineux et contemporain',
+  },
+];
+
+const beforeAfterPortrait = [
   {
     id: 7,
     before: '/avant-apres/avant7.jpg',
@@ -73,20 +76,6 @@ const beforeAfterProjects = [
     description: 'Le d\u00e9tail qui fait toute la diff\u00e9rence',
   },
   {
-    id: 10,
-    before: '/avant-apres/avant10.jpg',
-    after: '/avant-apres/apres10.jpg',
-    title: 'Finitions impeccables',
-    description: 'Un rendu propre et parfaitement align\u00e9',
-  },
-  {
-    id: 11,
-    before: '/avant-apres/avant11.jpg',
-    after: '/avant-apres/apres11.jpg',
-    title: 'Transformation r\u00e9ussie',
-    description: 'Des joints ma\u00eetris\u00e9s pour un r\u00e9sultat premium',
-  },
-  {
     id: 12,
     before: '/avant-apres/avant12.jpg',
     after: '/avant-apres/apres12.jpg',
@@ -99,13 +88,6 @@ const beforeAfterProjects = [
     after: '/avant-apres/apres13.jpg',
     title: 'Espace repens\u00e9',
     description: 'Un r\u00e9sultat net et durable, du sol aux d\u00e9tails',
-  },
-  {
-    id: 14,
-    before: '/avant-apres/avant14.jpg',
-    after: '/avant-apres/apres14.jpg',
-    title: 'Carrelage haut de gamme',
-    description: 'Pose de carrelage pour un espace lumineux et contemporain',
   },
   {
     id: 15,
@@ -247,8 +229,8 @@ export default function RealisationsPage() {
         </div>
       </section>
 
-      {/* Section Avant/Apr&#232;s */}
-      <section className="py-24 lg:py-32 bg-cream">
+      {/* Section Avant/Après */}
+      <section id="avant-apres" className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
@@ -264,14 +246,38 @@ export default function RealisationsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {beforeAfterProjects.map((project) => (
+          {/* Paysages */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {beforeAfterLandscape.map((project) => (
               <div key={project.id} className="bg-white p-4 shadow-lg hover-lift">
                 <BeforeAfterSlider
                   beforeImage={project.before}
                   afterImage={project.after}
                   beforeAlt={`${project.title} - Avant`}
-                  afterAlt={`${project.title} - Apr\u00e8s`}
+                  afterAlt={`${project.title} - Après`}
+                />
+                <div className="pt-4">
+                  <h3 className="font-serif text-xl font-semibold text-charcoal mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate text-sm">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Portraits */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {beforeAfterPortrait.map((project) => (
+              <div key={project.id} className="bg-white p-4 shadow-lg hover-lift">
+                <BeforeAfterSlider
+                  beforeImage={project.before}
+                  afterImage={project.after}
+                  beforeAlt={`${project.title} - Avant`}
+                  afterAlt={`${project.title} - Après`}
+                  portrait
                 />
                 <div className="pt-4">
                   <h3 className="font-serif text-xl font-semibold text-charcoal mb-2">

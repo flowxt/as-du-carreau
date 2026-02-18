@@ -9,6 +9,7 @@ interface BeforeAfterSliderProps {
   beforeAlt?: string;
   afterAlt?: string;
   className?: string;
+  portrait?: boolean;
 }
 
 export default function BeforeAfterSlider({
@@ -17,6 +18,7 @@ export default function BeforeAfterSlider({
   beforeAlt = 'Avant',
   afterAlt = 'Après',
   className = '',
+  portrait = false,
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -78,7 +80,7 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className={`relative aspect-[4/3] overflow-hidden cursor-ew-resize select-none group ${className}`}
+      className={`relative ${portrait ? 'aspect-[3/4]' : 'aspect-[4/3]'} overflow-hidden cursor-ew-resize select-none group ${className}`}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
     >

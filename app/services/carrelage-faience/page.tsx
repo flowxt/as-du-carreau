@@ -49,15 +49,8 @@ const applications = [
 ];
 
 const galleryPhotos = [
-  { src: '/photo/carreaux-80-80.jpg', alt: 'Carrelage grand format 80x80' },
-  { src: '/photo/carreau-80_80.jpg', alt: 'Pose carreaux 80x80' },
-  { src: '/photo/carrelage-effet-carreau-de-ciment.jpg', alt: 'Carrelage effet carreau de ciment' },
-  { src: '/parement.png', alt: 'Parement mural' },
   { src: '/photo/zellige.jpg', alt: 'Zellige artisanal' },
-  { src: '/photo/zellige2.jpg', alt: 'Pose de zellige' },
-  { src: '/photo/faience-gres-cerame.jpg', alt: 'Faïence grès cérame' },
-  { src: '/photo/faience-metro-blanc.jpg', alt: 'Faïence métro blanc' },
-  { src: '/photo/faience-metro.jpg', alt: 'Faïence métro' },
+  { src: '/photo/carreaux-80-80.jpg', alt: 'Carrelage grand format 80x80' },
 ];
 
 export default function CarrelageFaiencePage() {
@@ -237,7 +230,7 @@ export default function CarrelageFaiencePage() {
             <div className="separator separator-center"></div>
           </div>
 
-          <PhotoGallery photos={galleryPhotos} columns={3} />
+          <PhotoGallery photos={galleryPhotos} columns={2} />
 
           <div className="text-center mt-12">
             <Link href="/realisations" className="btn-secondary">

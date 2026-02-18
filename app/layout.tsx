@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cinzel, Libre_Baskerville } from "next/font/google";
+import { Cinzel, Libre_Baskerville, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -17,6 +17,13 @@ const baskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal", "italic"],
+  display: "swap",
+});
+
+const dancingScript = Dancing_Script({
+  variable: "--font-signature",
+  subsets: ["latin"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -40,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${cinzel.variable} ${baskerville.variable} font-sans antialiased`}>
+      <body className={`${cinzel.variable} ${baskerville.variable} ${dancingScript.variable} font-sans antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

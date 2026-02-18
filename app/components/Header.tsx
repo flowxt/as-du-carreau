@@ -11,15 +11,31 @@ const navigation = [
     name: 'Services',
     href: '/services',
     submenu: [
-      { name: 'Carrelage & Faïence', href: '/services/carrelage-faience' },
-      { name: 'Mosaïque', href: '/services/mosaique' },
-      { name: 'Salles de Bain', href: '/services/salles-de-bain' },
-      { name: 'Terrasses & Extérieurs', href: '/services/exterieurs' },
-      { name: 'Travaux de Préparation', href: '/services/preparation' },
+      { name: 'Salles de bain & Douches à l\'italienne', href: '/services/salles-de-bain' },
+      { name: 'Carrelages & Faïences', href: '/services/carrelage-faience' },
+      { name: 'Mosaïques et créations personnalisées', href: '/services/mosaique' },
+      { name: 'Revêtements de sols', href: '/services/revetements-sols' },
+      { name: 'Travaux de préparation', href: '/services/preparation' },
+      { name: 'Terrasses, Piscines et Extérieurs', href: '/services/exterieurs' },
     ],
   },
-  { name: 'Réalisations', href: '/realisations' },
-  { name: 'Avis', href: '/avis' },
+  {
+    name: 'Réalisations',
+    href: '/realisations',
+    submenu: [
+      { name: 'Avant / Après', href: '/realisations#avant-apres' },
+      { name: 'Nos Réalisations', href: '/realisations' },
+    ],
+  },
+  {
+    name: 'Avis & FAQ',
+    href: '/avis',
+    submenu: [
+      { name: 'Avis Clients', href: '/avis' },
+      { name: 'Partenaires', href: '/avis#partenaires' },
+      { name: 'FAQ', href: '/faq' },
+    ],
+  },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -29,12 +45,12 @@ export default function Header() {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const pathname = usePathname();
 
-  // Vérifie si un lien est actif
   const isActive = (href: string) => {
-    if (href === '/') {
+    const basePath = href.split('#')[0];
+    if (basePath === '/') {
       return pathname === '/';
     }
-    return pathname.startsWith(href);
+    return pathname.startsWith(basePath);
   };
 
   useEffect(() => {
@@ -104,7 +120,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className={`px-5 py-2 text-sm font-medium tracking-wide uppercase transition-all duration-300 relative group ${
+                  className={`px-4 py-2 text-xs font-medium tracking-wide uppercase transition-all duration-300 relative group whitespace-nowrap ${
                     isScrolled
                       ? isActive(item.href)
                         ? 'text-gold'
@@ -114,7 +130,14 @@ export default function Header() {
                         : 'text-white/90 hover:text-white'
                   }`}
                 >
-                  {item.name}
+                  <span className="flex items-center gap-1">
+                    {item.name}
+                    {item.submenu && (
+                      <svg className="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
+                  </span>
                   <span
                     className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 transition-all duration-300 ${
                       isActive(item.href) 
@@ -129,7 +152,7 @@ export default function Header() {
                 {/* Submenu */}
                 {item.submenu && activeSubmenu === item.name && (
                   <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                    <div className="bg-white shadow-xl border border-gray-100 py-3 min-w-[240px]">
+                    <div className="bg-white shadow-xl border border-gray-100 py-3 min-w-[280px]">
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
@@ -152,7 +175,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="ml-6 btn-primary text-xs py-3 px-6"
+              className="ml-6 btn-primary text-xs py-3 px-6 whitespace-nowrap"
             >
               Devis Gratuit
             </Link>

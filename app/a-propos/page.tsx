@@ -224,6 +224,9 @@ export default function AProposPage() {
               reconnue et d&apos;un engagement constant : sublimer vos espaces, carreau après carreau, 
               avec élégance et précision.&rdquo;
             </p>
+            <p className="text-right mt-6 text-3xl text-gold" style={{ fontFamily: 'var(--font-signature)' }}>
+              Michaël
+            </p>
           </div>
         </div>
       </section>
