@@ -23,7 +23,7 @@ const navigation = [
     name: 'Réalisations',
     href: '/realisations',
     submenu: [
-      { name: 'Nos Réalisations', href: '/realisations' },
+      { name: 'Nos Réalisations', href: '/realisations#galerie' },
       { name: 'Avant / Après', href: '/realisations#avant-apres' },
     ],
   },
@@ -68,41 +68,14 @@ export default function Header() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="relative">
-              <div
-                className={`w-11 h-11 flex items-center justify-center border-2 transition-all duration-300 ${
-                  isScrolled
-                    ? 'border-gold bg-gold/5'
-                    : 'border-gold-light bg-white/10'
-                }`}
-              >
-                <span
-                  className={`font-serif text-xl font-bold transition-colors duration-300 ${
-                    isScrolled ? 'text-gold' : 'text-gold-light'
-                  }`}
-                >
-                  A
-                </span>
-              </div>
-              <div className="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-gold opacity-60"></div>
-            </div>
-            <div className="flex flex-col">
-              <span
-                className={`font-serif text-lg font-semibold tracking-wide transition-colors duration-300 leading-tight ${
-                  isScrolled ? 'text-charcoal' : 'text-white'
-                }`}
-              >
-                L&apos;as Du Carreau
-              </span>
-              <span
-                className={`text-[10px] tracking-[0.2em] uppercase transition-colors duration-300 ${
-                  isScrolled ? 'text-slate' : 'text-white/70'
-                }`}
-              >
-                Carreleur Mosaïste
-              </span>
-            </div>
+          <Link href="/" className="shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-degrade-fonce.png"
+              alt="L'as Du Carreau - Carreleur Mosaïste"
+              className="h-16 w-auto transition-all duration-300"
+              style={isScrolled ? {} : { filter: 'invert(1) brightness(1.8)' }}
+            />
           </Link>
 
           {/* Navigation Desktop */}

@@ -92,9 +92,9 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center py-20">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8" style={{ background: 'rgba(201, 169, 98, 0.1)', border: '1px solid rgba(201, 169, 98, 0.3)' }}>
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#C9A962' }}></span>
-            <span className="text-sm font-medium tracking-wide" style={{ color: '#C9A962' }}>Artisan à Saint-Égrève (Isère)</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8" style={{ background: 'rgba(250, 249, 246, 0.08)', border: '1px solid rgba(250, 249, 246, 0.25)' }}>
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#9CA3AF' }}></span>
+            <span className="text-sm font-medium tracking-wide" style={{ color: '#D1D5DB' }}>Artisan à Saint-Égrève (Isère)</span>
           </div>
 
           {/* Titre principal */}
@@ -113,15 +113,15 @@ export default function Home() {
           <p className="text-lg max-w-2xl mx-auto mb-4" style={{ color: 'rgba(156, 163, 175, 0.8)' }}>
             Carrelage, faïence, mosaïque, douches à l&apos;italienne, salles de bain et extérieurs.
           </p>
-          <p className="text-xl md:text-2xl font-serif italic mb-6" style={{ color: '#C9A962' }}>
+          <p className="text-xl md:text-2xl font-serif italic mb-6" style={{ color: '#6B7280' }}>
             La précision d&apos;un artisan, la passion d&apos;un métier.
           </p>
 
           {/* Badge Pro & Particuliers */}
-          <div className="inline-flex items-center gap-4 mb-12 px-6 py-3 bg-gold/10 border border-gold/30">
-            <span className="text-gold font-medium">Professionnels</span>
-            <span className="text-gold/50">&</span>
-            <span className="text-gold font-medium">Particuliers</span>
+          <div className="inline-flex items-center gap-4 mb-12 px-6 py-3" style={{ background: 'rgba(250, 249, 246, 0.08)', border: '1px solid rgba(250, 249, 246, 0.25)' }}>
+            <span className="font-medium" style={{ color: '#D1D5DB' }}>Professionnels</span>
+            <span style={{ color: 'rgba(209, 213, 219, 0.5)' }}>&amp;</span>
+            <span className="font-medium" style={{ color: '#D1D5DB' }}>Particuliers</span>
           </div>
 
           {/* CTAs */}
@@ -184,10 +184,14 @@ export default function Home() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 {/* Filigrane LDC */}
-                <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded">
-                  <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">
-                    LDC
-                  </span>
+                <div className="absolute bottom-3 right-3">
+                  <Image
+                    src="/monogramme-blanc.png"
+                    alt="LDC"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 opacity-60 drop-shadow-md"
+                  />
                 </div>
                 {/* Cadre décoratif */}
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 -z-10"></div>
@@ -439,7 +443,7 @@ export default function Home() {
       {/* Section CTA Final */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
         {/* Background décoratif */}
-        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #C9A962, transparent)' }}></div>
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="quote-mark block mb-4">&ldquo;</span>

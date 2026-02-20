@@ -108,10 +108,14 @@ export default function PhotoGallery({
             </div>
             
             {/* Filigrane LDC */}
-            <div className="absolute bottom-3 right-3 bg-black/30 backdrop-blur-sm px-2.5 py-1 rounded">
-              <span className="text-white/80 font-serif text-xs font-semibold tracking-wider">
-                LDC
-              </span>
+            <div className="absolute bottom-3 right-3">
+              <Image
+                src="/monogramme-blanc.png"
+                alt="LDC"
+                width={32}
+                height={32}
+                className="w-8 h-8 opacity-60 drop-shadow-md"
+              />
             </div>
           </div>
         ))}
@@ -182,10 +186,14 @@ export default function PhotoGallery({
             />
             
             {/* Filigrane LDC en grand */}
-            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-black/40 backdrop-blur-sm px-4 py-2 rounded">
-              <span className="text-white/90 font-serif text-lg font-semibold tracking-wider">
-                LDC
-              </span>
+            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6">
+              <Image
+                src="/monogramme-blanc.png"
+                alt="LDC"
+                width={48}
+                height={48}
+                className="w-12 h-12 opacity-70 drop-shadow-lg"
+              />
             </div>
           </div>
           

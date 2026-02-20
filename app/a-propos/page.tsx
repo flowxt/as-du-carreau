@@ -46,7 +46,7 @@ export default function AProposPage() {
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#C9A962' }}>
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               À Propos
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
@@ -100,17 +100,21 @@ export default function AProposPage() {
             <div className="relative lg:sticky lg:top-32">
               <div className="aspect-[3/4] relative overflow-hidden shadow-xl">
                 <Image
-                  src="/photo/mickael.jpg"
+                  src="/mickael.jpeg"
                   alt="Mickael, fondateur de L'as Du Carreau"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 {/* Filigrane LDC */}
-                <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded">
-                  <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">
-                    LDC
-                  </span>
+                <div className="absolute bottom-3 right-3">
+                  <Image
+                    src="/monogramme-blanc.png"
+                    alt="LDC"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 opacity-60 drop-shadow-md"
+                  />
                 </div>
               </div>
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/20 -z-10"></div>
@@ -225,7 +229,7 @@ export default function AProposPage() {
               avec élégance et précision.&rdquo;
             </p>
             <p className="text-right mt-6 text-3xl text-gold" style={{ fontFamily: 'var(--font-signature)' }}>
-              Michaël
+              Mickaël
             </p>
           </div>
         </div>
@@ -234,7 +238,7 @@ export default function AProposPage() {
       {/* CTA */}
       <section className="py-24 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
         <div className="absolute inset-0  opacity-30"></div>
-        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #C9A962, transparent)' }}></div>
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>

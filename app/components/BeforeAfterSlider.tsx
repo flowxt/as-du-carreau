@@ -95,10 +95,8 @@ export default function BeforeAfterSlider({
           draggable={false}
         />
         {/* Filigrane LDC */}
-        <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded z-10">
-          <span className="text-white/80 font-serif text-sm font-semibold tracking-wider">
-            LDC
-          </span>
+        <div className="absolute bottom-3 right-3 z-10">
+          <img src="/monogramme-blanc.png" alt="LDC" className="w-8 h-8 opacity-60 drop-shadow-md" />
         </div>
       </div>
 

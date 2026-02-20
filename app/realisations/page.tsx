@@ -1,12 +1,9 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import PhotoGallery from '../components/PhotoGallery';
-
-export const metadata: Metadata = {
-  title: "Nos R\u00e9alisations | L'as Du Carreau - Avant/Apr\u00e8s & Galerie Photos",
-  description: "D\u00e9couvrez les r\u00e9alisations de L'as Du Carreau : transformations avant/apr\u00e8s spectaculaires, salles de bain, carrelage, mosa\u00efque. Plus de 20 ans de savoir-faire.",
-};
 
 const beforeAfterLandscape = [
   {
@@ -112,75 +109,89 @@ const beforeAfterPortrait = [
   },
 ];
 
+const galleryCategories = [
+  'Tout',
+  'Salles de bain & Douches',
+  'Carrelages & Fa\u00efences',
+  'Mosa\u00efques & Cr\u00e9ations',
+  'Rev\u00eatements de sols',
+  'Terrasses, Piscines & Ext\u00e9rieurs',
+];
+
 const galleryPhotos = [
-  // Salles de bain & Douches
-  { src: '/realisation/1000007080.jpg', alt: 'Salle de bain travertin et mosa\u00efque', category: 'Salles de bain' },
-  { src: '/realisation/1000069749.jpg', alt: 'Salle de bain avec douche et frise', category: 'Salles de bain' },
-  { src: '/realisation/1000069750.jpg', alt: 'Douche sous combles', category: 'Salles de bain' },
-  { src: '/realisation/1000069751.jpg', alt: 'Salle de bain carreaux de ciment', category: 'Salles de bain' },
-  { src: '/realisation/1000069752.jpg', alt: 'Vasque et cr\u00e9dence m\u00e9tro blanc', category: 'Salles de bain' },
-  { src: '/realisation/1000069753.jpg', alt: 'Baignoire fa\u00efence m\u00e9tro', category: 'Salles de bain' },
-  { src: '/realisation/1000069761.jpg', alt: 'Baignoire \u00eelot anthracite', category: 'Salles de bain' },
-  { src: '/realisation/1000069762.jpg', alt: 'Meuble vasque et fa\u00efence moderne', category: 'Salles de bain' },
-  { src: '/realisation/1000069764.jpg', alt: 'Douche \u00e0 l\'italienne grise', category: 'Salles de bain' },
-  { src: '/realisation/1000069766.jpg', alt: 'Salle de bain baignoire et douche', category: 'Salles de bain' },
-  { src: '/realisation/1000069769.jpg', alt: 'Salle de bain fa\u00efence 3D', category: 'Salles de bain' },
-  { src: '/realisation/1000069774.jpg', alt: 'Fa\u00efence avec frise mosa\u00efque', category: 'Salles de bain' },
-  { src: '/realisation/1000069775.jpg', alt: 'Salle de bain travertin et bois', category: 'Salles de bain' },
-  { src: '/realisation/1000069784.jpg', alt: 'Salle d\'eau douche et WC', category: 'Salles de bain' },
-  { src: '/realisation/1000069789.jpg', alt: 'Douche italienne carrelage bois', category: 'Salles de bain' },
-  { src: '/realisation/1000069793.jpg', alt: 'Baignoire fa\u00efence et mosa\u00efque', category: 'Salles de bain' },
-  { src: '/realisation/1000069814.jpg', alt: 'Salle de bain sol imitation bois', category: 'Salles de bain' },
-  { src: '/realisation/1000070534.jpg', alt: 'Douche pierre naturelle', category: 'Salles de bain' },
-  { src: '/realisation/1000074368.jpg', alt: 'Grande douche italienne anthracite', category: 'Salles de bain' },
-  { src: '/realisation/1000074371.jpg', alt: 'Salle de bain classique', category: 'Salles de bain' },
-  { src: '/realisation/1000074372.jpg', alt: 'Douche moderne paroi vitr\u00e9e', category: 'Salles de bain' },
-  { src: '/realisation/1000074373.jpg', alt: 'Am\u00e9nagement salle de bain complet', category: 'Salles de bain' },
-  { src: '/realisation/1000074376.jpg', alt: 'Salle de bain r\u00e9nov\u00e9e', category: 'Salles de bain' },
-  { src: '/realisation/1000074379.jpg', alt: 'Espace douche contemporain', category: 'Salles de bain' },
-  { src: '/realisation/1000074381.jpg', alt: 'Douche et vasque design', category: 'Salles de bain' },
-  { src: '/realisation/1000074382.jpg', alt: 'Salle d\'eau finitions soign\u00e9es', category: 'Salles de bain' },
-  { src: '/realisation/1000074384.jpg', alt: 'Douche \u00e0 l\'italienne moderne', category: 'Salles de bain' },
-  // WC
-  { src: '/realisation/1000069765.jpg', alt: 'WC suspendu carrelage grand format', category: 'WC' },
-  // Cuisines & Cr\u00e9dences
-  { src: '/realisation/1000008431.jpg', alt: 'Cr\u00e9dence noire brillante', category: 'Cuisines' },
-  { src: '/realisation/1000069760.jpg', alt: '\u00celot cuisine fa\u00efence noire', category: 'Cuisines' },
-  { src: '/realisation/1000069767.jpg', alt: 'Cr\u00e9dence marbre noir cuisine', category: 'Cuisines' },
-  { src: '/realisation/1000074416.jpg', alt: 'Cuisine cr\u00e9dence et plan de travail', category: 'Cuisines' },
-  { src: '/realisation/1000074488.png', alt: 'Am\u00e9nagement cuisine carrel\u00e9e', category: 'Cuisines' },
-  { src: '/realisation/1000074490.png', alt: 'Cr\u00e9dence cuisine design', category: 'Cuisines' },
-  { src: '/realisation/1000074493.png', alt: 'Cuisine fa\u00efence et finitions', category: 'Cuisines' },
-  // Carrelage int\u00e9rieur & Sols
-  { src: '/realisation/1000069771.jpg', alt: 'Sol carreaux de ciment d\u00e9coratifs', category: 'Sols' },
-  { src: '/realisation/1000069785.jpg', alt: 'Carrelage grand format pi\u00e8ce \u00e0 vivre', category: 'Sols' },
-  { src: '/realisation/1000070335.jpg', alt: 'Sol grand format gris', category: 'Sols' },
-  { src: '/realisation/1000070338.jpg', alt: 'Carrelage int\u00e9rieur moderne', category: 'Sols' },
-  { src: '/realisation/1000070339.jpg', alt: 'Pose carrelage grand format', category: 'Sols' },
-  { src: '/realisation/1000070340.jpg', alt: 'Sol carrelage finitions soign\u00e9es', category: 'Sols' },
-  { src: '/realisation/1000070352.jpg', alt: 'Carrelage pi\u00e8ce de vie', category: 'Sols' },
-  { src: '/realisation/1000070353.jpg', alt: 'Sol carrelage pose experte', category: 'Sols' },
-  { src: '/realisation/1000070357.jpg', alt: 'Carrelage int\u00e9rieur lumineux', category: 'Sols' },
-  { src: '/realisation/1000070359.jpg', alt: 'Sol contemporain', category: 'Sols' },
-  { src: '/realisation/1000070361.jpg', alt: 'Carrelage tendance', category: 'Sols' },
-  { src: '/realisation/1000070362.jpg', alt: 'Pose carrelage soign\u00e9e', category: 'Sols' },
-  { src: '/realisation/1000070367.jpg', alt: 'Carrelage artisanal', category: 'Sols' },
-  { src: '/realisation/1000070368.jpg', alt: 'R\u00e9novation sol compl\u00e8te', category: 'Sols' },
-  { src: '/realisation/1000070378.jpg', alt: 'Pose professionnelle carrelage', category: 'Sols' },
-  // Rev\u00eatements de sol (parquet / PVC)
-  { src: '/realisation/1000069768.jpg', alt: 'Sol PVC imitation bois', category: 'Rev\u00eatements' },
-  { src: '/realisation/1000074356.jpg', alt: 'Parquet contrecoll\u00e9 chambre', category: 'Rev\u00eatements' },
-  { src: '/realisation/1000074360.jpg', alt: 'Parquet massif ch\u00eane palier', category: 'Rev\u00eatements' },
-  { src: '/realisation/1000074494.jpg', alt: 'Pose rev\u00eatement de sol', category: 'Rev\u00eatements' },
-  { src: '/realisation/1000074505.jpg', alt: 'Sol stratifi\u00e9 finitions', category: 'Rev\u00eatements' },
-  { src: '/realisation/1000074506.jpg', alt: 'Rev\u00eatement sol int\u00e9rieur', category: 'Rev\u00eatements' },
-  // Ext\u00e9rieur & Parement
-  { src: '/realisation/1000033744.jpg', alt: 'Carrelage balcon ext\u00e9rieur', category: 'Ext\u00e9rieurs' },
-  { src: '/realisation/1000007218.jpg', alt: 'Parement pierre ext\u00e9rieur piscine', category: 'Ext\u00e9rieurs' },
-  { src: '/realisation/1000069794.jpg', alt: 'Muret parement pierre naturelle', category: 'Ext\u00e9rieurs' },
+  // Salles de bain & Douches à l'italienne
+  { src: '/realisation/1000007080.jpg', alt: 'Salle de bain travertin et mosa\u00efque', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069749.jpg', alt: 'Salle de bain avec douche et frise', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069750.jpg', alt: 'Douche sous combles', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069751.jpg', alt: 'Salle de bain carreaux de ciment', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069752.jpg', alt: 'Vasque et cr\u00e9dence m\u00e9tro blanc', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069753.jpg', alt: 'Baignoire fa\u00efence m\u00e9tro', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069761.jpg', alt: 'Baignoire \u00eelot anthracite', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069762.jpg', alt: 'Meuble vasque et fa\u00efence moderne', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069764.jpg', alt: 'Douche \u00e0 l\'italienne grise', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069765.jpg', alt: 'WC suspendu carrelage grand format', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069766.jpg', alt: 'Salle de bain baignoire et douche', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069769.jpg', alt: 'Salle de bain fa\u00efence 3D', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069774.jpg', alt: 'Fa\u00efence avec frise mosa\u00efque', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069775.jpg', alt: 'Salle de bain travertin et bois', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069784.jpg', alt: 'Salle d\'eau douche et WC', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069789.jpg', alt: 'Douche italienne carrelage bois', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069793.jpg', alt: 'Baignoire fa\u00efence et mosa\u00efque', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069814.jpg', alt: 'Salle de bain sol imitation bois', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000070534.jpg', alt: 'Douche pierre naturelle', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000074368.jpg', alt: 'Grande douche italienne anthracite', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000074371.jpg', alt: 'Salle de bain classique', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000074372.jpg', alt: 'Douche moderne paroi vitr\u00e9e', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000074373.jpg', alt: 'Am\u00e9nagement salle de bain complet', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000074376.jpg', alt: 'Salle de bain r\u00e9nov\u00e9e', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000074379.jpg', alt: 'Espace douche contemporain', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000074381.jpg', alt: 'Douche et vasque design', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000074382.jpg', alt: 'Salle d\'eau finitions soign\u00e9es', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000074384.jpg', alt: 'Douche \u00e0 l\'italienne moderne', category: 'Salles de bain & Douches' },
+  // Carrelages & Fa\u00efences
+  { src: '/realisation/1000069771.jpg', alt: 'Sol carreaux de ciment d\u00e9coratifs', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000069785.jpg', alt: 'Carrelage grand format pi\u00e8ce \u00e0 vivre', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070335.jpg', alt: 'Sol grand format gris', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070338.jpg', alt: 'Carrelage int\u00e9rieur moderne', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070339.jpg', alt: 'Pose carrelage grand format', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070340.jpg', alt: 'Sol carrelage finitions soign\u00e9es', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070352.jpg', alt: 'Carrelage pi\u00e8ce de vie', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070353.jpg', alt: 'Sol carrelage pose experte', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070357.jpg', alt: 'Carrelage int\u00e9rieur lumineux', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070359.jpg', alt: 'Sol contemporain', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070361.jpg', alt: 'Carrelage tendance', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070362.jpg', alt: 'Pose carrelage soign\u00e9e', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070367.jpg', alt: 'Carrelage artisanal', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000070368.jpg', alt: 'R\u00e9novation sol compl\u00e8te', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000070378.jpg', alt: 'Pose professionnelle carrelage', category: 'Carrelages & Fa\u00efences' },
+  // Mosa\u00efques & Cr\u00e9ations personnalis\u00e9es
+  { src: '/realisation/1000008431.jpg', alt: 'Cr\u00e9dence noire brillante', category: 'Mosa\u00efques & Cr\u00e9ations' },
+  { src: '/realisation/1000069760.jpg', alt: '\u00celot cuisine fa\u00efence noire', category: 'Mosa\u00efques & Cr\u00e9ations' },
+  { src: '/realisation/1000069767.jpg', alt: 'Cr\u00e9dence marbre noir cuisine', category: 'Mosa\u00efques & Cr\u00e9ations' },
+  { src: '/realisation/1000074416.jpg', alt: 'Cuisine cr\u00e9dence et plan de travail', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000074488.png', alt: 'Am\u00e9nagement cuisine carrel\u00e9e', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000074490.png', alt: 'Cr\u00e9dence cuisine design', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000074493.png', alt: 'Cuisine fa\u00efence et finitions', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  // Rev\u00eatements de sols
+  { src: '/realisation/1000069768.jpg', alt: 'Sol PVC imitation bois', category: 'Rev\u00eatements de sols' },
+  { src: '/realisation/1000074356.jpg', alt: 'Parquet contrecoll\u00e9 chambre', category: 'Rev\u00eatements de sols' },
+  { src: '/realisation/1000074360.jpg', alt: 'Parquet massif ch\u00eane palier', category: 'Rev\u00eatements de sols' },
+  { src: '/realisation/1000074494.jpg', alt: 'Pose rev\u00eatement de sol', category: 'Rev\u00eatements de sols' },
+  { src: '/realisation/1000074505.jpg', alt: 'Sol stratifi\u00e9 finitions', category: 'Rev\u00eatements de sols' },
+  { src: '/realisation/1000074506.jpg', alt: 'Rev\u00eatement sol int\u00e9rieur', category: 'Rev\u00eatements de sols' },
+  // Terrasses, Piscines & Ext\u00e9rieurs
+  { src: '/realisation/1000033744.jpg', alt: 'Carrelage balcon ext\u00e9rieur', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000007218.jpg', alt: 'Parement pierre ext\u00e9rieur piscine', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  { src: '/realisation/1000069794.jpg', alt: 'Muret parement pierre naturelle', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
 ];
 
 export default function RealisationsPage() {
+  const [activeCategory, setActiveCategory] = useState('Tout');
+
+  const filteredPhotos = activeCategory === 'Tout'
+    ? galleryPhotos
+    : galleryPhotos.filter(p => p.category === activeCategory);
+
   return (
     <>
       {/* Hero Section */}
@@ -189,7 +200,7 @@ export default function RealisationsPage() {
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#C9A962' }}>
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               Nos R&#233;alisations
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
@@ -294,7 +305,7 @@ export default function RealisationsPage() {
       </section>
 
       {/* Galerie Photos */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section id="galerie" className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
@@ -310,14 +321,31 @@ export default function RealisationsPage() {
             </p>
           </div>
 
-          <PhotoGallery photos={galleryPhotos} columns={3} />
+          {/* Filtres par catégorie */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {galleryCategories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
+                  activeCategory === cat
+                    ? 'bg-charcoal text-white shadow-md'
+                    : 'bg-white text-slate border border-gray-200 hover:border-charcoal hover:text-charcoal'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          <PhotoGallery photos={filteredPhotos} columns={3} />
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
         <div className="absolute inset-0 opacity-30"></div>
-        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #C9A962, transparent)' }}></div>
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>

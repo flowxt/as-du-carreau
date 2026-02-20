@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const services = [
   { name: 'Carrelage & Faïence', href: '/services/carrelage-faience' },
@@ -49,18 +50,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 flex items-center justify-center border-2 border-gold bg-gold/10">
-                <span className="font-serif text-2xl font-bold text-gold">A</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-xl font-semibold tracking-wide text-cream">
-                  L&apos;as Du Carreau
-                </span>
-                <span className="text-xs tracking-[0.2em] uppercase text-warm-gray">
-                  Artisan Carreleur
-                </span>
-              </div>
+            <div className="mb-6">
+              <Image
+                src="/logo-degrade-noir.png"
+                alt="L'as Du Carreau - Carreleur Mosaïste"
+                width={200}
+                height={65}
+                className="h-14 w-auto brightness-0 invert opacity-90"
+              />
             </div>
             <p className="text-warm-gray leading-relaxed mb-6">
               Artisan carreleur mosaïste depuis 2011, fort de plus de 20 ans d&apos;expérience, 

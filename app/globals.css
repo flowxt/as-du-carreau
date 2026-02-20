@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  /* Palette principale - Élégance artisanale */
-  --charcoal: #2C2C2C;
-  --charcoal-light: #3D3D3D;
+  /* Palette principale - Élégance sobre */
+  --charcoal: #1A1A1A;
+  --charcoal-light: #2D2D2D;
   --slate: #4A5568;
   --warm-gray: #9CA3AF;
-  --cream: #FAF9F6;
+  --cream: #FAFAFA;
   --white: #FFFFFF;
   
-  /* Accent doré/bronze - Touche premium */
-  --gold: #C9A962;
-  --gold-light: #D4BC7A;
-  --gold-dark: #A88B4A;
-  --bronze: #B08D57;
+  /* Accent gris raffiné */
+  --gold: #6B7280;
+  --gold-light: #9CA3AF;
+  --gold-dark: #4B5563;
+  --bronze: #6B7280;
   
   /* États */
   --success: #10B981;
   --error: #EF4444;
   
   /* Background & Foreground */
-  --background: var(--cream);
+  --background: var(--white);
   --foreground: var(--charcoal);
 }
 
@@ -127,11 +127,11 @@ p, li, span, a, label, input, textarea, select, blockquote {
 .delay-500 { animation-delay: 500ms; }
 .delay-600 { animation-delay: 600ms; }
 
-/* Pattern de fond subtil (carrelage) */
+/* Pattern de fond subtil */
 .bg-tile-pattern {
   background-image: 
-    linear-gradient(90deg, rgba(201, 169, 98, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(201, 169, 98, 0.03) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(107, 114, 128, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(107, 114, 128, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -142,10 +142,11 @@ p, li, span, a, label, input, textarea, select, blockquote {
   background-size: 60px 60px;
 }
 
-/* Bordure dorée subtile */
+/* Bordure accent subtile */
 .border-gold-gradient {
   border-image: linear-gradient(135deg, var(--gold-light), var(--gold-dark)) 1;
 }
+
 
 /* Effet de survol élégant */
 .hover-lift {
@@ -188,7 +189,7 @@ p, li, span, a, label, input, textarea, select, blockquote {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(201, 169, 98, 0.3);
+  box-shadow: 0 10px 30px rgba(75, 85, 99, 0.3);
 }
 
 /* Supprime tout soulignement/barré sur les boutons */
@@ -237,7 +238,7 @@ p, li, span, a, label, input, textarea, select, blockquote {
 /* Card élégante */
 .card-elegant {
   background: white;
-  border: 1px solid rgba(201, 169, 98, 0.1);
+  border: 1px solid rgba(107, 114, 128, 0.1);
   transition: all 0.4s ease;
 }
 
@@ -280,7 +281,7 @@ input, textarea, select {
 .input-elegant:focus {
   outline: none;
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201, 169, 98, 0.1);
+  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.1);
 }
 
 /* Liste avec puces dorées */
