@@ -203,8 +203,8 @@ function FAQCategorySection({ category, openItems, toggleItem }: {
     <div className="bg-white shadow-lg overflow-hidden">
       {/* Category Header */}
       <div className="px-6 py-4 flex items-center gap-4" style={{ background: '#2C2C2C' }}>
-        <div className="w-10 h-10 flex items-center justify-center" style={{ background: 'rgba(201, 169, 98, 0.2)' }}>
-          <span className="text-gold">{category.icon}</span>
+        <div className="w-10 h-10 flex items-center justify-center" style={{ background: 'rgba(107, 114, 128, 0.2)' }}>
+          <span style={{ color: '#9CA3AF' }}>{category.icon}</span>
         </div>
         <h2 className="font-serif text-xl font-semibold" style={{ color: '#FAF9F6' }}>
           {category.title}

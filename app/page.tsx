@@ -238,7 +238,7 @@ export default function Home() {
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto" staggerDelay={0.08}>
             {savoirFaire.map((item, index) => (
               <StaggerItem key={index}>
-                <div className="flex items-center gap-3 p-4 bg-cream border border-gold/20 hover:border-gold/40 transition-colors">
+                <div className="flex items-center gap-3 p-4 bg-cream border border-gold/20 hover:border-gold/40 transition-colors h-full">
                   <div className="w-2 h-2 bg-gold flex-shrink-0"></div>
                   <span className="text-charcoal font-medium">{item}</span>
                 </div>
@@ -330,9 +330,9 @@ export default function Home() {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16" staggerDelay={0.08}>
             {engagements.map((item, index) => (
               <StaggerItem key={index}>
-                <div className="flex items-center gap-4 p-5 border border-white/10 hover:border-gold/30 transition-all duration-300">
-                  <div className="w-8 h-8 bg-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                <div className="group/eng flex items-center gap-4 p-5 border border-white/10 hover:border-gold/30 transition-all duration-300 cursor-default">
+                  <div className="w-8 h-8 bg-gold/20 group-hover/eng:bg-gold flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                    <svg className="w-5 h-5 text-gold group-hover/eng:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -350,9 +350,9 @@ export default function Home() {
               'Intervention pour professionnels & particuliers',
             ].map((item, index) => (
               <StaggerItem key={index}>
-                <div className="flex items-center gap-4 text-cream/90">
-                  <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                <div className="group/eng2 flex items-center gap-4 text-cream/90 cursor-default">
+                  <div className="w-6 h-6 bg-gold/20 group-hover/eng2:bg-gold flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                    <svg className="w-4 h-4 text-gold group-hover/eng2:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
