@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import PhotoGallery from '../components/PhotoGallery';
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '../components/animations';
 
 const beforeAfterLandscape = [
   {
@@ -199,19 +200,21 @@ export default function RealisationsPage() {
         <div className="absolute inset-0 opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
-              Nos R&#233;alisations
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
-              Plus de 20 ans de savoir-faire
-            </h1>
-            <div className="separator mb-8"></div>
-            <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
-              D&#233;couvrez quelques-unes de nos r&#233;alisations et transformations.
-              Chaque projet t&#233;moigne de notre passion pour le m&#233;tier et notre souci du d&#233;tail.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="max-w-3xl">
+              <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+                Nos R&#233;alisations
+              </span>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+                Plus de 20 ans de savoir-faire
+              </h1>
+              <div className="separator mb-8"></div>
+              <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+                D&#233;couvrez quelques-unes de nos r&#233;alisations et transformations.
+                Chaque projet t&#233;moigne de notre passion pour le m&#233;tier et notre souci du d&#233;tail.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -243,7 +246,7 @@ export default function RealisationsPage() {
       {/* Section Avant/Après */}
       <section id="avant-apres" className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Transformations
             </span>
@@ -255,12 +258,13 @@ export default function RealisationsPage() {
               Glissez le curseur sur les images pour d&#233;couvrir les transformations spectaculaires
               r&#233;alis&#233;es par L&apos;as Du Carreau.
             </p>
-          </div>
+          </FadeIn>
 
           {/* Paysages */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <StaggerContainer className="grid md:grid-cols-2 gap-8 mb-8" staggerDelay={0.15}>
             {beforeAfterLandscape.map((project) => (
-              <div key={project.id} className="bg-white p-4 shadow-lg hover-lift">
+              <StaggerItem key={project.id}>
+              <div className="bg-white p-4 shadow-lg hover-lift">
                 <BeforeAfterSlider
                   beforeImage={project.before}
                   afterImage={project.after}
@@ -276,13 +280,15 @@ export default function RealisationsPage() {
                   </p>
                 </div>
               </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           {/* Portraits */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
             {beforeAfterPortrait.map((project) => (
-              <div key={project.id} className="bg-white p-4 shadow-lg hover-lift">
+              <StaggerItem key={project.id}>
+              <div className="bg-white p-4 shadow-lg hover-lift">
                 <BeforeAfterSlider
                   beforeImage={project.before}
                   afterImage={project.after}
@@ -299,15 +305,16 @@ export default function RealisationsPage() {
                   </p>
                 </div>
               </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Galerie Photos */}
       <section id="galerie" className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Galerie
             </span>
@@ -319,7 +326,7 @@ export default function RealisationsPage() {
               Un aper&#231;u de la qualit&#233; et du soin apport&#233;s &#224; chaque r&#233;alisation.
               Cliquez sur une image pour l&apos;agrandir et naviguez avec les fl&#232;ches.
             </p>
-          </div>
+          </FadeIn>
 
           {/* Filtres par catégorie */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">

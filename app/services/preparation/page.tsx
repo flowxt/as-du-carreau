@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
   title: "Travaux de Préparation | L'as Du Carreau - Ragréage, Chapes, Étanchéité",
@@ -83,7 +84,7 @@ export default function PreparationPage() {
             Retour aux services
           </Link>
           
-          <div className="max-w-3xl">
+          <FadeIn className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               Service
             </span>
@@ -95,7 +96,7 @@ export default function PreparationPage() {
               La qualité d&apos;une pose de carrelage repose avant tout sur une préparation soignée : 
               la base indispensable d&apos;un résultat fiable et pérenne.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -103,6 +104,7 @@ export default function PreparationPage() {
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
                 La base d&apos;un travail réussi
@@ -126,7 +128,9 @@ export default function PreparationPage() {
                 </p>
               </div>
             </div>
+            </SlideIn>
 
+            <SlideIn direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
               <Image
                 src="/photo/chape.jpg"
@@ -139,6 +143,7 @@ export default function PreparationPage() {
                 <img src="/monogramme-blanc.png" alt="LDC" className="w-8 h-8 opacity-60 drop-shadow-md" />
               </div>
             </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -146,7 +151,7 @@ export default function PreparationPage() {
       {/* Services */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Prestations
             </span>
@@ -154,11 +159,11 @@ export default function PreparationPage() {
               Des solutions adaptées à chaque situation
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div key={service.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
+              <StaggerItem key={service.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
                 <div className="w-2 h-8 bg-gold mb-6"></div>
                 <h3 className="font-serif text-xl font-semibold text-charcoal mb-3">
                   {service.title}
@@ -166,16 +171,16 @@ export default function PreparationPage() {
                 <p className="text-slate leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Services Spécialisés */}
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Prestations Spécialisées
             </span>
@@ -187,11 +192,11 @@ export default function PreparationPage() {
               Chaque chantier débute par une analyse technique du support afin de déterminer 
               la méthode de préparation la plus adaptée, en conformité avec les normes en vigueur.
             </p>
-          </div>
+          </FadeIn>
 
-          <div className="space-y-8 max-w-4xl mx-auto">
+          <StaggerContainer className="space-y-8 max-w-4xl mx-auto">
             {specializedServices.map((service, index) => (
-              <div key={service.title} className="bg-white p-8 shadow-lg border-l-4 border-gold">
+              <StaggerItem key={service.title} className="bg-white p-8 shadow-lg border-l-4 border-gold">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gold/10 flex items-center justify-center flex-shrink-0">
                     <span className="font-serif text-xl font-bold text-gold">0{index + 1}</span>
@@ -208,25 +213,25 @@ export default function PreparationPage() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           {/* Texte de conclusion */}
-          <div className="mt-16 p-8 bg-white shadow-lg max-w-4xl mx-auto text-center">
+          <FadeIn className="mt-16 p-8 bg-white shadow-lg max-w-4xl mx-auto text-center">
             <p className="font-serif text-xl text-charcoal leading-relaxed">
               Grâce à une maîtrise complète des techniques de préparation des sols et murs, 
               <span className="text-gold font-semibold"> L&apos;as Du Carreau</span> garantit des réalisations 
               durables, esthétiques et adaptées aux exigences des projets les plus haut de gamme.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Galerie */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               En Images
             </span>
@@ -234,7 +239,7 @@ export default function PreparationPage() {
               Travaux de préparation
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
           <PhotoGallery photos={galleryPhotos} columns={2} />
         </div>
@@ -244,6 +249,7 @@ export default function PreparationPage() {
       <section className="py-24 lg:py-32 section-dark ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
             <div>
               <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                 Pourquoi c&apos;est essentiel
@@ -258,26 +264,27 @@ export default function PreparationPage() {
                 d&apos;un résultat parfait et pérenne.
               </p>
             </div>
+            </SlideIn>
 
-            <div className="space-y-4">
+            <StaggerContainer className="space-y-4">
               {importance.map((item, index) => (
-                <div key={index} className="flex items-center gap-4 p-4 border border-white/10 hover:border-gold/30 transition-colors">
+                <StaggerItem key={index} className="flex items-center gap-4 p-4 border border-white/10 hover:border-gold/30 transition-colors">
                   <div className="w-8 h-8 bg-gold/10 flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <span className="text-cream">{item}</span>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 bg-cream">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeIn className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
             Besoin d&apos;un diagnostic ?
           </h2>
@@ -293,7 +300,7 @@ export default function PreparationPage() {
               Voir tous les services
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

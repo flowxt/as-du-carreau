@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem, ScaleIn } from '../components/animations';
 
 export const metadata: Metadata = {
   title: "Nos Prestations | L'as Du Carreau - Carrelage, Mosaïque, Salles de Bain",
@@ -79,6 +80,7 @@ export default function ServicesPage() {
       {/* Badge Pro & Particuliers */}
       <section className="py-6 bg-gold">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ScaleIn>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,6 +100,7 @@ export default function ServicesPage() {
               Agences, syndics, copropriétés bienvenues
             </p>
           </div>
+          </ScaleIn>
         </div>
       </section>
 
@@ -113,7 +116,7 @@ export default function ServicesPage() {
                 }`}
               >
                 {/* Image */}
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                <SlideIn direction={index % 2 === 1 ? 'left' : 'right'} delay={0.1} className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="relative aspect-[4/3] overflow-hidden shadow-xl group">
                     <Image
                       src={service.image}
@@ -127,10 +130,10 @@ export default function ServicesPage() {
                       <img src="/monogramme-blanc.png" alt="LDC" className="w-8 h-8 opacity-60 drop-shadow-md" />
                     </div>
                   </div>
-                </div>
+                </SlideIn>
 
                 {/* Content */}
-                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                <SlideIn direction={index % 2 === 1 ? 'right' : 'left'} className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                   <span className="text-gold text-sm font-semibold tracking-wide">
                     0{index + 1}
                   </span>
@@ -142,16 +145,16 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                   
-                  <ul className="grid grid-cols-2 gap-3 mb-8">
+                  <StaggerContainer className="grid grid-cols-2 gap-3 mb-8" staggerDelay={0.1}>
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-charcoal">
+                      <StaggerItem key={feature} className="flex items-center gap-2 text-charcoal">
                         <svg className="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                         <span className="text-sm">{feature}</span>
-                      </li>
+                      </StaggerItem>
                     ))}
-                  </ul>
+                  </StaggerContainer>
 
                   <Link
                     href={service.href}
@@ -162,7 +165,7 @@ export default function ServicesPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </Link>
-                </div>
+                </SlideIn>
               </div>
             ))}
           </div>
@@ -173,6 +176,7 @@ export default function ServicesPage() {
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
             <div>
               <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                 Prestation complémentaire
@@ -199,26 +203,28 @@ export default function ServicesPage() {
                 </p>
               </div>
             </div>
+            </SlideIn>
 
+            <SlideIn direction="right" delay={0.2}>
             <div className="bg-cream p-8 md:p-12">
               <h3 className="font-serif text-xl font-bold text-charcoal mb-6">Avantages</h3>
-              <ul className="space-y-4">
+              <StaggerContainer className="space-y-4">
                 {[
                   'Réduction des bruits d\'impact',
                   'Amélioration du confort acoustique',
                   'Compatible chauffage au sol',
                   'Pose durable et conforme aux normes',
                 ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3">
+                  <StaggerItem key={index} className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
                       <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
                     <span className="text-charcoal">{item}</span>
-                  </li>
+                  </StaggerItem>
                 ))}
-              </ul>
+              </StaggerContainer>
               
               <div className="mt-8 pt-8 border-t border-gold/20">
                 <h4 className="font-semibold text-charcoal mb-2">Pose professionnelle</h4>
@@ -228,6 +234,7 @@ export default function ServicesPage() {
                 </p>
               </div>
             </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -235,7 +242,7 @@ export default function ServicesPage() {
       {/* Process Section */}
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Ma Méthode
             </span>
@@ -243,24 +250,24 @@ export default function ServicesPage() {
               Comment je travaille
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <StaggerContainer className="grid md:grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Échange', desc: 'Discussion de votre projet, vos envies et contraintes' },
               { step: '02', title: 'Conseil', desc: 'Recommandations techniques et esthétiques personnalisées' },
               { step: '03', title: 'Devis', desc: 'Proposition détaillée, transparente et sans engagement' },
               { step: '04', title: 'Réalisation', desc: 'Exécution soignée dans le respect des délais' },
             ].map((item) => (
-              <div key={item.step} className="text-center">
+              <StaggerItem key={item.step} className="text-center">
                 <div className="w-16 h-16 bg-gold/10 flex items-center justify-center mx-auto mb-4">
                   <span className="font-serif text-2xl font-bold text-gold">{item.step}</span>
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="text-slate text-sm">{item.desc}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -269,7 +276,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0  opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeIn className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
             Un projet en tête ?
           </h2>
@@ -285,7 +292,7 @@ export default function ServicesPage() {
               Voir nos réalisations
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

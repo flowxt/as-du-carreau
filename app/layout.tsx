@@ -58,7 +58,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${cinzel.variable} ${baskerville.variable} ${dancingScript.variable} font-sans antialiased`}>
         <Header />
-        <main>{children}</main>
+        <main className="overflow-x-hidden">{children}</main>
         <Footer />
         <FloatingFAQButton />
       </body>

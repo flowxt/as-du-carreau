@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../components/animations';
 
 export const metadata: Metadata = {
   title: "Contact & Devis Gratuit | L'as Du Carreau",
@@ -27,7 +28,7 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <FadeIn className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               Contact
             </span>
@@ -39,7 +40,7 @@ export default function ContactPage() {
               Vous avez un projet de carrelage, une rénovation ou une création de salle de bain ? 
               Je suis à votre écoute pour vous conseiller et vous accompagner.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -48,7 +49,8 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Formulaire */}
-            <div>
+            <SlideIn direction="left" className="">
+              <div>
               <h2 className="font-serif text-3xl font-bold text-charcoal mb-6">
                 Demander un devis gratuit
               </h2>
@@ -180,9 +182,10 @@ export default function ContactPage() {
                 </button>
               </form>
             </div>
+            </SlideIn>
 
             {/* Informations */}
-            <div className="lg:pl-8">
+            <SlideIn direction="right" className="lg:pl-8">
               <div className="sticky top-32">
                 <h2 className="font-serif text-3xl font-bold text-charcoal mb-6">
                   Me contacter
@@ -238,9 +241,9 @@ export default function ContactPage() {
                   <h3 className="font-serif text-xl font-semibold text-charcoal mb-6">
                     Pourquoi me contacter ?
                   </h3>
-                  <div className="space-y-6">
+                  <StaggerContainer className="space-y-6" staggerDelay={0.15}>
                     {reasons.map((reason) => (
-                      <div key={reason.title} className="flex items-start gap-4">
+                      <StaggerItem key={reason.title} className="flex items-start gap-4">
                         <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <svg className="w-3 h-3 text-gold" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -250,9 +253,9 @@ export default function ContactPage() {
                           <p className="font-semibold text-charcoal">{reason.title}</p>
                           <p className="text-sm text-slate">{reason.description}</p>
                         </div>
-                      </div>
+                      </StaggerItem>
                     ))}
-                  </div>
+                  </StaggerContainer>
                 </div>
 
                 {/* Quote */}
@@ -263,7 +266,7 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -307,43 +310,43 @@ export default function ContactPage() {
             </div>
 
             {/* Voironnais & Nord Isère */}
-            <div className="bg-cream p-6 border-l-4 border-gold">
+            <StaggerItem className="bg-cream p-6 border-l-4 border-gold">
               <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Voironnais & Nord Isère</h3>
               <p className="text-slate text-sm leading-relaxed">
                 Voiron, Voreppe, Moirans, Saint-Jean-de-Moirans, Tullins, Rives, Vinay et communes environnantes.
               </p>
-            </div>
+            </StaggerItem>
 
             {/* Sud Grenoblois */}
-            <div className="bg-cream p-6 border-l-4 border-gold">
+            <StaggerItem className="bg-cream p-6 border-l-4 border-gold">
               <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Sud Grenoblois</h3>
               <p className="text-slate text-sm leading-relaxed">
                 Claix, Varces-Allières-et-Risset, Vif, Vizille, Jarrie, Champagnier, Saint-Paul-de-Varces, 
                 Saint-Georges-de-Commiers, Vaulnaveys-le-Haut, Vaulnaveys-le-Bas.
               </p>
-            </div>
+            </StaggerItem>
 
             {/* Chartreuse & Vercors */}
-            <div className="bg-cream p-6 border-l-4 border-gold">
+            <StaggerItem className="bg-cream p-6 border-l-4 border-gold">
               <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Chartreuse & Vercors</h3>
               <p className="text-slate text-sm leading-relaxed">
                 Quaix-en-Chartreuse, Le Sappey-en-Chartreuse, Proveysieux, Engins, Saint-Nizier-du-Moucherotte, 
                 Villard-de-Lans.
               </p>
-            </div>
+            </StaggerItem>
 
             {/* Hors Secteur */}
-            <div className="bg-gold/10 p-6 border-l-4 border-gold">
+            <StaggerItem className="bg-gold/10 p-6 border-l-4 border-gold">
               <h3 className="font-serif text-lg font-semibold text-charcoal mb-3">Hors Secteur</h3>
               <p className="text-slate text-sm leading-relaxed">
                 Votre commune n&apos;est pas mentionnée ? Des interventions sont possibles au-delà de 50 km 
                 (Annecy, Chambéry, Valence, Gap...). Étude personnalisée sur demande.
               </p>
-            </div>
+            </StaggerItem>
           </div>
 
           {/* Hors secteur détaillé */}
-          <div className="bg-white border border-gold/20 p-8 max-w-4xl mx-auto">
+          <FadeIn delay={0.2} className="bg-white border border-gold/20 p-8 max-w-4xl mx-auto">
             <h3 className="font-serif text-xl font-semibold text-charcoal mb-4 text-center">Intervention Hors Secteur</h3>
             <p className="text-slate text-sm mb-6 text-center">
               Pour tout chantier situé au-delà des secteurs listés, une étude personnalisée sera réalisée 
@@ -394,7 +397,7 @@ export default function ContactPage() {
             <p className="text-slate text-xs text-center italic">
               Les frais de déplacement et d&apos;hébergement éventuels seront pris en compte lors de l&apos;étude et du devis.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
     </>

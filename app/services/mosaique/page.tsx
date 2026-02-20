@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
   title: "Mosaïque & Créations Personnalisées | L'as Du Carreau",
@@ -65,7 +66,7 @@ export default function MosaiquePage() {
             Retour aux services
           </Link>
           
-          <div className="max-w-3xl">
+          <FadeIn className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               Service
             </span>
@@ -77,7 +78,7 @@ export default function MosaiquePage() {
               Décorative ou technique, la mosaïque apporte une touche unique à vos espaces. 
               Créations personnalisées pour sublimer votre intérieur et extérieur.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -85,6 +86,7 @@ export default function MosaiquePage() {
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
                 L&apos;art de la mosaïque au service de votre créativité
@@ -107,7 +109,9 @@ export default function MosaiquePage() {
                 </p>
               </div>
             </div>
+            </SlideIn>
 
+            <SlideIn direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
               <Image
                 src="/photo/credence-sur-mesure.jpg"
@@ -120,6 +124,7 @@ export default function MosaiquePage() {
                 <img src="/monogramme-blanc.png" alt="LDC" className="w-8 h-8 opacity-60 drop-shadow-md" />
               </div>
             </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -127,7 +132,7 @@ export default function MosaiquePage() {
       {/* Applications */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Applications
             </span>
@@ -135,11 +140,11 @@ export default function MosaiquePage() {
               Des possibilités infinies
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 gap-8">
             {applications.map((app) => (
-              <div key={app.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
+              <StaggerItem key={app.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
                 <div className="w-2 h-8 bg-gold mb-6"></div>
                 <h3 className="font-serif text-xl font-semibold text-charcoal mb-3">
                   {app.title}
@@ -147,9 +152,9 @@ export default function MosaiquePage() {
                 <p className="text-slate leading-relaxed">
                   {app.description}
                 </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -180,6 +185,7 @@ export default function MosaiquePage() {
       <section className="py-24 lg:py-32 section-dark ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
             <div>
               <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                 Matériaux
@@ -194,22 +200,23 @@ export default function MosaiquePage() {
                 en tenant compte de l&apos;usage, du style recherché et de votre budget.
               </p>
             </div>
+            </SlideIn>
 
-            <div className="grid grid-cols-2 gap-4">
+            <StaggerContainer className="grid grid-cols-2 gap-4">
               {types.map((type) => (
-                <div key={type} className="flex items-center gap-3 p-4 border border-white/10 hover:border-gold/30 transition-colors">
+                <StaggerItem key={type} className="flex items-center gap-3 p-4 border border-white/10 hover:border-gold/30 transition-colors">
                   <div className="w-2 h-2 bg-gold"></div>
                   <span className="text-cream">{type}</span>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 bg-cream">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeIn className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
             Envie d&apos;une création unique ?
           </h2>
@@ -224,7 +231,7 @@ export default function MosaiquePage() {
               Voir tous les services
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

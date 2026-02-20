@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { HeroFadeIn, FadeIn, SlideIn, StaggerContainer, StaggerItem, ScaleIn } from './components/animations';
 
 const services = [
   {
@@ -91,48 +92,56 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#2C2C2C' }}>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center py-20">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8" style={{ background: 'rgba(250, 249, 246, 0.08)', border: '1px solid rgba(250, 249, 246, 0.25)' }}>
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#9CA3AF' }}></span>
-            <span className="text-sm font-medium tracking-wide" style={{ color: '#D1D5DB' }}>Artisan à Saint-Égrève (Isère)</span>
-          </div>
+          <HeroFadeIn delay={0.2}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-8" style={{ background: 'rgba(250, 249, 246, 0.08)', border: '1px solid rgba(250, 249, 246, 0.25)' }}>
+              <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#9CA3AF' }}></span>
+              <span className="text-sm font-medium tracking-wide" style={{ color: '#D1D5DB' }}>Artisan à Saint-Égrève (Isère)</span>
+            </div>
+          </HeroFadeIn>
 
-          {/* Titre principal */}
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
-            L&apos;as Du Carreau
-          </h1>
+          <HeroFadeIn delay={0.4} y={30}>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+              L&apos;as Du Carreau
+            </h1>
+          </HeroFadeIn>
 
-          {/* Séparateur */}
-          <div className="separator separator-center mb-8"></div>
+          <HeroFadeIn delay={0.6}>
+            <div className="separator separator-center mb-8"></div>
+          </HeroFadeIn>
 
-          {/* Sous-titre */}
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-4 font-light" style={{ color: '#9CA3AF' }}>
-            Plus de 20 ans d&apos;expérience au service de vos projets.
-          </p>
+          <HeroFadeIn delay={0.8}>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-4 font-light" style={{ color: '#9CA3AF' }}>
+              Plus de 20 ans d&apos;expérience au service de vos projets.
+            </p>
+          </HeroFadeIn>
 
-          <p className="text-lg max-w-2xl mx-auto mb-4" style={{ color: 'rgba(156, 163, 175, 0.8)' }}>
-            Carrelage, faïence, mosaïque, douches à l&apos;italienne, salles de bain et extérieurs.
-          </p>
-          <p className="text-xl md:text-2xl font-serif italic mb-6" style={{ color: '#6B7280' }}>
-            La précision d&apos;un artisan, la passion d&apos;un métier.
-          </p>
+          <HeroFadeIn delay={1.0}>
+            <p className="text-lg max-w-2xl mx-auto mb-4" style={{ color: 'rgba(156, 163, 175, 0.8)' }}>
+              Carrelage, faïence, mosaïque, douches à l&apos;italienne, salles de bain et extérieurs.
+            </p>
+            <p className="text-xl md:text-2xl font-serif italic mb-6" style={{ color: '#6B7280' }}>
+              La précision d&apos;un artisan, la passion d&apos;un métier.
+            </p>
+          </HeroFadeIn>
 
-          {/* Badge Pro & Particuliers */}
-          <div className="inline-flex items-center gap-4 mb-12 px-6 py-3" style={{ background: 'rgba(250, 249, 246, 0.08)', border: '1px solid rgba(250, 249, 246, 0.25)' }}>
-            <span className="font-medium" style={{ color: '#D1D5DB' }}>Professionnels</span>
-            <span style={{ color: 'rgba(209, 213, 219, 0.5)' }}>&amp;</span>
-            <span className="font-medium" style={{ color: '#D1D5DB' }}>Particuliers</span>
-          </div>
+          <HeroFadeIn delay={1.2}>
+            <div className="inline-flex items-center gap-4 mb-12 px-6 py-3" style={{ background: 'rgba(250, 249, 246, 0.08)', border: '1px solid rgba(250, 249, 246, 0.25)' }}>
+              <span className="font-medium" style={{ color: '#D1D5DB' }}>Professionnels</span>
+              <span style={{ color: 'rgba(209, 213, 219, 0.5)' }}>&amp;</span>
+              <span className="font-medium" style={{ color: '#D1D5DB' }}>Particuliers</span>
+            </div>
+          </HeroFadeIn>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Demander un Devis Gratuit
-            </Link>
-            <Link href="/realisations" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
-              Voir nos réalisations
-            </Link>
-          </div>
+          <HeroFadeIn delay={1.4}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary">
+                Demander un Devis Gratuit
+              </Link>
+              <Link href="/realisations" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+                Voir nos réalisations
+              </Link>
+            </div>
+          </HeroFadeIn>
         </div>
       </section>
 
@@ -140,69 +149,70 @@ export default function Home() {
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Texte */}
-            <div>
-              <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
-                Qui suis-je
-              </span>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">
-                La passion du métier,<br />l&apos;excellence du résultat
-              </h2>
-              <div className="separator mb-8"></div>
-              <div className="space-y-4 text-slate leading-relaxed">
-                <p>
-                  Depuis plus de vingt ans, je mets mon expertise de carreleur mosaïste au service de chaque chantier. 
-                  Formé dès le début de ma carrière avec un CAP et un Brevet Professionnel, j&apos;ai acquis une maîtrise 
-                  complète des techniques de pose de carrelage et de mosaïque, en neuf comme en rénovation.
-                </p>
-                <p>
-                  Depuis 2011, je poursuis cette passion en tant qu&apos;artisan indépendant avec <strong className="text-charcoal">L&apos;as Du Carreau</strong>, 
-                  garantissant des réalisations précises, durables et sur mesure.
-              </p>
-                <p>
-                  Le carrelage est mon unique métier, celui que j&apos;ai choisi et auquel je me consacre pleinement, 
-                  chantier après chantier. Chaque projet est conçu comme une réalisation sur mesure, avec un objectif 
-                  constant : un rendu esthétique, durable et parfaitement exécuté, à la hauteur de votre confiance.
-              </p>
-              </div>
-              <Link href="/a-propos" className="inline-flex items-center gap-2 text-gold font-semibold hover:gap-4 transition-all duration-300 mt-8">
-                En savoir plus sur mon parcours
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
-
-            {/* Image */}
-            <div className="relative">
-              <div className="aspect-[4/5] relative overflow-hidden shadow-xl">
-                <Image
-                  src="/photo/sdb21.jpg"
-                  alt="Salle de bain - L'as Du Carreau"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                {/* Filigrane LDC */}
-                <div className="absolute bottom-3 right-3">
-                  <Image
-                    src="/monogramme-blanc.png"
-                    alt="LDC"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8 opacity-60 drop-shadow-md"
-                  />
+            <SlideIn direction="left">
+              <div>
+                <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+                  Qui suis-je
+                </span>
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">
+                  La passion du métier,<br />l&apos;excellence du résultat
+                </h2>
+                <div className="separator mb-8"></div>
+                <div className="space-y-4 text-slate leading-relaxed">
+                  <p>
+                    Depuis plus de vingt ans, je mets mon expertise de carreleur mosaïste au service de chaque chantier. 
+                    Formé dès le début de ma carrière avec un CAP et un Brevet Professionnel, j&apos;ai acquis une maîtrise 
+                    complète des techniques de pose de carrelage et de mosaïque, en neuf comme en rénovation.
+                  </p>
+                  <p>
+                    Depuis 2011, je poursuis cette passion en tant qu&apos;artisan indépendant avec <strong className="text-charcoal">L&apos;as Du Carreau</strong>, 
+                    garantissant des réalisations précises, durables et sur mesure.
+                  </p>
+                  <p>
+                    Le carrelage est mon unique métier, celui que j&apos;ai choisi et auquel je me consacre pleinement, 
+                    chantier après chantier. Chaque projet est conçu comme une réalisation sur mesure, avec un objectif 
+                    constant : un rendu esthétique, durable et parfaitement exécuté, à la hauteur de votre confiance.
+                  </p>
                 </div>
-                {/* Cadre décoratif */}
-                <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 -z-10"></div>
+                <Link href="/a-propos" className="inline-flex items-center gap-2 text-gold font-semibold hover:gap-4 transition-all duration-300 mt-8">
+                  En savoir plus sur mon parcours
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
               </div>
+            </SlideIn>
 
-              {/* Badge flottant */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl">
-                <p className="font-serif text-4xl font-bold text-gold">20+</p>
-                <p className="text-charcoal font-medium">Années d&apos;expérience</p>
+            <SlideIn direction="right" delay={0.2}>
+              <div className="relative">
+                <div className="aspect-[4/5] relative overflow-hidden shadow-xl">
+                  <Image
+                    src="/photo/sdb21.jpg"
+                    alt="Salle de bain - L'as Du Carreau"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  <div className="absolute bottom-3 right-3">
+                    <Image
+                      src="/monogramme-blanc.png"
+                      alt="LDC"
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 opacity-60 drop-shadow-md"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 -z-10"></div>
+                </div>
+
+                <ScaleIn delay={0.6}>
+                  <div className="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl">
+                    <p className="font-serif text-4xl font-bold text-gold">20+</p>
+                    <p className="text-charcoal font-medium">Années d&apos;expérience</p>
+                  </div>
+                </ScaleIn>
               </div>
-            </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -210,7 +220,7 @@ export default function Home() {
       {/* Section Savoir-Faire */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Expertise
             </span>
@@ -223,31 +233,34 @@ export default function Home() {
               mosaïque, travertin, zellige et grands formats, ainsi que dans l&apos;aménagement d&apos;espaces 
               techniques et décoratifs, intérieurs comme extérieurs.
             </p>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto" staggerDelay={0.08}>
             {savoirFaire.map((item, index) => (
-              <div key={index} className="flex items-center gap-3 p-4 bg-cream border border-gold/20 hover:border-gold/40 transition-colors">
-                <div className="w-2 h-2 bg-gold flex-shrink-0"></div>
-                <span className="text-charcoal font-medium">{item}</span>
-              </div>
+              <StaggerItem key={index}>
+                <div className="flex items-center gap-3 p-4 bg-cream border border-gold/20 hover:border-gold/40 transition-colors">
+                  <div className="w-2 h-2 bg-gold flex-shrink-0"></div>
+                  <span className="text-charcoal font-medium">{item}</span>
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
-          <p className="text-center text-slate mt-12 max-w-3xl mx-auto">
-            Chaque matériau, chaque format et chaque configuration nécessitent une approche spécifique. 
-            J&apos;accorde une attention particulière à la préparation des supports, à la précision des découpes, 
-            à l&apos;alignement parfait et à la qualité des finitions, éléments essentiels à la durabilité et 
-            à l&apos;esthétique de l&apos;ouvrage.
-          </p>
+          <FadeIn delay={0.3}>
+            <p className="text-center text-slate mt-12 max-w-3xl mx-auto">
+              Chaque matériau, chaque format et chaque configuration nécessitent une approche spécifique. 
+              J&apos;accorde une attention particulière à la préparation des supports, à la précision des découpes, 
+              à l&apos;alignement parfait et à la qualité des finitions, éléments essentiels à la durabilité et 
+              à l&apos;esthétique de l&apos;ouvrage.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
       {/* Section Services */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Mes Prestations
             </span>
@@ -259,51 +272,48 @@ export default function Home() {
               De la préparation du support à la finition la plus minutieuse, 
               je vous accompagne à chaque étape de votre projet.
             </p>
-          </div>
+          </FadeIn>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Link
-                key={service.title}
-                href={service.href}
-                className="card-elegant group overflow-hidden hover-lift p-8 text-center"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-16 h-16 mx-auto mb-6 bg-gold/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all duration-300">
-                  {service.icon}
-                </div>
-                
-                <h3 className="font-serif text-xl font-semibold text-charcoal mb-3 group-hover:text-gold transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-slate leading-relaxed mb-4 text-sm">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-gold font-medium text-sm group-hover:gap-3 transition-all duration-300">
-                  En savoir plus
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </Link>
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.1}>
+            {services.map((service) => (
+              <StaggerItem key={service.title}>
+                <Link
+                  href={service.href}
+                  className="card-elegant group overflow-hidden hover-lift p-8 text-center block"
+                >
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gold/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all duration-300">
+                    {service.icon}
+                  </div>
+                  
+                  <h3 className="font-serif text-xl font-semibold text-charcoal mb-3 group-hover:text-gold transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate leading-relaxed mb-4 text-sm">
+                    {service.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-gold font-medium text-sm group-hover:gap-3 transition-all duration-300">
+                    En savoir plus
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
-          {/* CTA */}
-          <div className="text-center mt-16">
+          <FadeIn delay={0.3} className="text-center mt-16">
             <Link href="/services" className="btn-secondary">
               Voir tous les services
             </Link>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Section Engagements */}
       <section className="py-24 lg:py-32 section-dark">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Mes Engagements
             </span>
@@ -315,40 +325,42 @@ export default function Home() {
               Mon objectif est simple : concevoir avec vous un espace qui vous ressemble, 
               fonctionnel, esthétique et réalisé dans les règles de l&apos;art.
             </p>
-          </div>
+          </FadeIn>
 
-          {/* Engagements */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16" staggerDelay={0.08}>
             {engagements.map((item, index) => (
-              <div key={index} className="flex items-center gap-4 p-5 border border-white/10 hover:border-gold/30 transition-all duration-300">
-                <div className="w-8 h-8 bg-gold/20 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+              <StaggerItem key={index}>
+                <div className="flex items-center gap-4 p-5 border border-white/10 hover:border-gold/30 transition-all duration-300">
+                  <div className="w-8 h-8 bg-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-cream font-medium">{item}</span>
                 </div>
-                <span className="text-cream font-medium">{item}</span>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
-          {/* Avantages supplémentaires */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" staggerDelay={0.08}>
             {[
               'Accompagnement personnalisé de A à Z',
               'Conseils techniques et esthétiques',
               'Devis gratuit et transparent',
               'Intervention pour professionnels & particuliers',
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-4 text-cream/90">
-                <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+              <StaggerItem key={index}>
+                <div className="flex items-center gap-4 text-cream/90">
+                  <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span>{item}</span>
                 </div>
-                <span>{item}</span>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -356,8 +368,7 @@ export default function Home() {
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Carte */}
-            <div className="relative order-2 lg:order-1">
+            <SlideIn direction="left" className="relative order-2 lg:order-1">
               <div className="bg-white shadow-lg overflow-hidden" style={{ aspectRatio: '4/3' }}>
                 <iframe
                   src="https://www.openstreetmap.org/export/embed.html?bbox=5.4%2C45.1%2C5.9%2C45.35&layer=mapnik&marker=45.2333%2C5.6833"
@@ -370,12 +381,10 @@ export default function Home() {
                   title="Zone d'intervention - Saint-Égrève et région Grenobloise"
                 ></iframe>
               </div>
-              {/* Décoration */}
               <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-gold/20 -z-10"></div>
-            </div>
+            </SlideIn>
 
-            {/* Texte */}
-            <div className="order-1 lg:order-2">
+            <SlideIn direction="right" delay={0.15} className="order-1 lg:order-2">
               <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                 Zone d&apos;intervention
               </span>
@@ -388,43 +397,22 @@ export default function Home() {
                 la région pour vos projets de carrelage et de mosaïque, en neuf comme en rénovation.
               </p>
 
-              {/* Zones compactes */}
               <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
-                  <div>
-                    <span className="font-semibold text-charcoal">Agglomération Grenobloise : </span>
-                    <span className="text-slate text-sm">Grenoble, Saint-Égrève, Fontaine, Sassenage, Échirolles, Eybens...</span>
+                {[
+                  { zone: 'Agglomération Grenobloise', villes: 'Grenoble, Saint-Égrève, Fontaine, Sassenage, Échirolles, Eybens...' },
+                  { zone: 'Grésivaudan & Vallée de l\'Isère', villes: 'Meylan, Gières, Crolles, Pontcharra, La Terrasse...' },
+                  { zone: 'Voironnais & Nord Isère', villes: 'Voiron, Voreppe, Moirans, Tullins, Rives...' },
+                  { zone: 'Sud Grenoblois', villes: 'Claix, Vif, Vizille, Jarrie, Champagnier...' },
+                  { zone: 'Chartreuse & Vercors', villes: 'Le Sappey, Villard-de-Lans, Saint-Nizier...' },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
+                    <div>
+                      <span className="font-semibold text-charcoal">{item.zone} : </span>
+                      <span className="text-slate text-sm">{item.villes}</span>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
-                  <div>
-                    <span className="font-semibold text-charcoal">Grésivaudan & Vallée de l&apos;Isère : </span>
-                    <span className="text-slate text-sm">Meylan, Gières, Crolles, Pontcharra, La Terrasse...</span>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
-                  <div>
-                    <span className="font-semibold text-charcoal">Voironnais & Nord Isère : </span>
-                    <span className="text-slate text-sm">Voiron, Voreppe, Moirans, Tullins, Rives...</span>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
-                  <div>
-                    <span className="font-semibold text-charcoal">Sud Grenoblois : </span>
-                    <span className="text-slate text-sm">Claix, Vif, Vizille, Jarrie, Champagnier...</span>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-gold mt-2 flex-shrink-0"></div>
-                  <div>
-                    <span className="font-semibold text-charcoal">Chartreuse & Vercors : </span>
-                    <span className="text-slate text-sm">Le Sappey, Villard-de-Lans, Saint-Nizier...</span>
-                  </div>
-                </div>
+                ))}
               </div>
 
               <p className="text-slate text-sm mb-6 p-4 bg-white border-l-4 border-gold">
@@ -435,35 +423,40 @@ export default function Home() {
               <Link href="/contact" className="btn-primary">
                 Demander un Devis
               </Link>
-            </div>
+            </SlideIn>
           </div>
         </div>
       </section>
 
       {/* Section CTA Final */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
-        {/* Background décoratif */}
         <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="quote-mark block mb-4">&ldquo;</span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight" style={{ color: '#FAF9F6' }}>
-            L&apos;as Du Carreau, c&apos;est la promesse d&apos;un artisanat authentique, 
-            d&apos;un travail précis et d&apos;un accompagnement sérieux.
-          </h2>
-          <div className="separator separator-center mb-8"></div>
-          <p className="text-xl mb-10 max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
-            Vous avez un projet de carrelage, une rénovation ou la création d&apos;une salle de bain ? 
-            Confiez-le à un artisan carreleur mosaïste expérimenté, à l&apos;écoute et exigeant.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Demander un Devis Gratuit
-            </Link>
-            <Link href="/services" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
-              Découvrir mes services
-            </Link>
-          </div>
+          <FadeIn>
+            <span className="quote-mark block mb-4">&ldquo;</span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight" style={{ color: '#FAF9F6' }}>
+              L&apos;as Du Carreau, c&apos;est la promesse d&apos;un artisanat authentique, 
+              d&apos;un travail précis et d&apos;un accompagnement sérieux.
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <div className="separator separator-center mb-8"></div>
+            <p className="text-xl mb-10 max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+              Vous avez un projet de carrelage, une rénovation ou la création d&apos;une salle de bain ? 
+              Confiez-le à un artisan carreleur mosaïste expérimenté, à l&apos;écoute et exigeant.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.4}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary">
+                Demander un Devis Gratuit
+              </Link>
+              <Link href="/services" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+                Découvrir mes services
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </>

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem, ScaleIn } from '../components/animations';
 
 const reviews = [
   {
@@ -178,7 +179,7 @@ export default function AvisPage() {
         <div className="absolute inset-0 opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <FadeIn className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               Témoignages
             </span>
@@ -190,7 +191,7 @@ export default function AvisPage() {
               Découvrez ce que nos clients disent de L&apos;as Du Carreau et nos partenaires 
               de confiance pour vos projets.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -198,10 +199,12 @@ export default function AvisPage() {
       <section className="py-16 lg:py-20 bg-gold">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-8">
-              Pourquoi faire appel à L&apos;as Du Carreau
-            </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <FadeIn>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-8">
+                Pourquoi faire appel à L&apos;as Du Carreau
+              </h2>
+            </FadeIn>
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8" staggerDelay={0.15}>
               {[
                 'Travail soigné & Finitions professionnelles',
                 'Respect des délais',
@@ -210,30 +213,32 @@ export default function AvisPage() {
                 'Nombreuses réalisations visibles dans notre galerie',
                 'Artisan local',
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 text-left">
+                <StaggerItem key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 text-left">
                   <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   <span className="text-white font-medium text-sm">{item}</span>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
-            <p className="text-white/90 italic text-lg max-w-3xl mx-auto mb-10">
-              Votre satisfaction est notre priorité : chaque chantier est réalisé avec sérieux, propreté et précision.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            </StaggerContainer>
+            <FadeIn delay={0.2}>
+              <p className="text-white/90 italic text-lg max-w-3xl mx-auto mb-10">
+                Votre satisfaction est notre priorité : chaque chantier est réalisé avec sérieux, propreté et précision.
+              </p>
+            </FadeIn>
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto" staggerDelay={0.1}>
               {[
                 { title: 'Expertise artisanale', icon: '◆' },
                 { title: 'Finitions premium', icon: '◆' },
                 { title: 'Conseils personnalisés', icon: '◆' },
                 { title: 'Accompagnement complet', icon: '◆' },
               ].map((item, index) => (
-                <div key={index} className="bg-white/15 backdrop-blur-sm p-4 text-center">
+                <StaggerItem key={index} className="bg-white/15 backdrop-blur-sm p-4 text-center">
                   <span className="text-white/60 text-xs block mb-2">{item.icon}</span>
                   <p className="text-white font-semibold text-sm">{item.title}</p>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </div>
       </section>
@@ -242,25 +247,33 @@ export default function AvisPage() {
       <section className="py-12 bg-cream border-b border-gold/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="flex justify-center mb-2">
-                <StarRating rating={5} />
+            <ScaleIn delay={0}>
+              <div>
+                <div className="flex justify-center mb-2">
+                  <StarRating rating={5} />
+                </div>
+                <p className="text-3xl font-serif font-bold text-charcoal">5/5</p>
+                <p className="text-slate text-sm">Note moyenne</p>
               </div>
-              <p className="text-3xl font-serif font-bold text-charcoal">5/5</p>
-              <p className="text-slate text-sm">Note moyenne</p>
-            </div>
-            <div>
-              <p className="text-3xl font-serif font-bold text-gold">+40</p>
-              <p className="text-slate text-sm">Avis 5 étoiles</p>
-            </div>
-            <div>
-              <p className="text-3xl font-serif font-bold text-charcoal">+20 ans</p>
-              <p className="text-slate text-sm">D&apos;expérience</p>
-            </div>
-            <div>
-              <p className="text-3xl font-serif font-bold text-charcoal">{partners.length}</p>
-              <p className="text-slate text-sm">Partenaires de confiance</p>
-            </div>
+            </ScaleIn>
+            <ScaleIn delay={0.1}>
+              <div>
+                <p className="text-3xl font-serif font-bold text-gold">+40</p>
+                <p className="text-slate text-sm">Avis 5 étoiles</p>
+              </div>
+            </ScaleIn>
+            <ScaleIn delay={0.2}>
+              <div>
+                <p className="text-3xl font-serif font-bold text-charcoal">+20 ans</p>
+                <p className="text-slate text-sm">D&apos;expérience</p>
+              </div>
+            </ScaleIn>
+            <ScaleIn delay={0.3}>
+              <div>
+                <p className="text-3xl font-serif font-bold text-charcoal">{partners.length}</p>
+                <p className="text-slate text-sm">Partenaires de confiance</p>
+              </div>
+            </ScaleIn>
           </div>
         </div>
       </section>
@@ -268,7 +281,7 @@ export default function AvisPage() {
       {/* Avis Clients - Carousel Infini */}
       <section className="py-24 lg:py-32 bg-cream overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Ce qu&apos;ils disent de nous
             </span>
@@ -280,7 +293,7 @@ export default function AvisPage() {
               La satisfaction de nos clients est notre priorité. Voici quelques témoignages 
               de personnes ayant fait confiance à L&apos;as Du Carreau.
             </p>
-          </div>
+          </FadeIn>
         </div>
 
         {/* Carousel Mobile - Swipe manuel */}
@@ -292,16 +305,17 @@ export default function AvisPage() {
           <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-cream to-transparent z-10 pointer-events-none"></div>
 
           {/* Carousel avec scroll snap */}
-          <div 
+          <StaggerContainer
             className="flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            staggerDelay={0.1}
           >
             {reviews.map((review, index) => (
-              <div key={index} className="snap-center">
+              <StaggerItem key={index} className="snap-center flex-shrink-0">
                 <ReviewCard review={review} />
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
           
           {/* Indicateur swipe */}
           <p className="text-center text-slate text-sm mt-4">
@@ -327,7 +341,7 @@ export default function AvisPage() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Google Reviews Link */}
-          <div className="text-center mt-16">
+          <FadeIn delay={0.1} className="text-center mt-16">
             <a 
               href="https://www.google.com/search?q=L%27as+du+Carreau+Saint-Egreve+avis"
               target="_blank"
@@ -348,14 +362,14 @@ export default function AvisPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Partenaires */}
       <section id="partenaires" className="py-24 lg:py-32 bg-charcoal">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Nos Fournisseurs
             </span>
@@ -367,12 +381,12 @@ export default function AvisPage() {
               Je travaille avec des fournisseurs de qualité pour vous garantir les meilleurs 
               matériaux pour vos projets de carrelage.
             </p>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.15}>
             {partners.map((partner, index) => (
-              <div 
-                key={index} 
+              <StaggerItem
+                key={index}
                 className="bg-white rounded-lg p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Logo */}
@@ -430,9 +444,9 @@ export default function AvisPage() {
                     </a>
                   )}
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -440,7 +454,7 @@ export default function AvisPage() {
       <section className="py-24 relative overflow-hidden bg-cream">
         <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeIn className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
             Rejoignez nos clients satisfaits
           </h2>
@@ -456,7 +470,7 @@ export default function AvisPage() {
               Voir nos réalisations
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* CSS pour l'animation et le carousel */}

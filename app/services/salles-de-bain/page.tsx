@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
   title: "Salles de Bain & Douches à l'Italienne | L'as Du Carreau",
@@ -71,7 +72,7 @@ export default function SallesDeBainPage() {
             Retour aux services
           </Link>
           
-          <div className="max-w-3xl">
+          <FadeIn className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               Service
             </span>
@@ -83,7 +84,7 @@ export default function SallesDeBainPage() {
               Conception complète ou rénovation, création de douches à l&apos;italienne avec étanchéité 
               parfaite. Possibilité de salles de bain clé en main.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -91,6 +92,7 @@ export default function SallesDeBainPage() {
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
                 La salle de bain, un espace d&apos;exception
@@ -114,7 +116,9 @@ export default function SallesDeBainPage() {
                 </p>
               </div>
             </div>
+            </SlideIn>
 
+            <SlideIn direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
               <Image
                 src="/photo/douche.jpg"
@@ -127,6 +131,7 @@ export default function SallesDeBainPage() {
                 <img src="/monogramme-blanc.png" alt="LDC" className="w-8 h-8 opacity-60 drop-shadow-md" />
               </div>
             </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -134,7 +139,7 @@ export default function SallesDeBainPage() {
       {/* Services */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Prestations
             </span>
@@ -142,11 +147,11 @@ export default function SallesDeBainPage() {
               Une offre complète pour votre salle de bain
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div key={service.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
+              <StaggerItem key={service.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
                 <div className="w-2 h-8 bg-gold mb-6"></div>
                 <h3 className="font-serif text-xl font-semibold text-charcoal mb-3">
                   {service.title}
@@ -154,16 +159,16 @@ export default function SallesDeBainPage() {
                 <p className="text-slate leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Galerie */}
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Nos Réalisations
             </span>
@@ -171,7 +176,7 @@ export default function SallesDeBainPage() {
               Salles de bain réalisées
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
           <PhotoGallery photos={galleryPhotos} columns={2} />
 
@@ -186,7 +191,7 @@ export default function SallesDeBainPage() {
       {/* Process */}
       <section className="py-24 lg:py-32 section-dark ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Méthodologie
             </span>
@@ -194,25 +199,26 @@ export default function SallesDeBainPage() {
               Une réalisation dans les règles de l&apos;art
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <StaggerContainer className="grid md:grid-cols-4 gap-8">
             {process.map((item) => (
-              <div key={item.step} className="text-center">
+              <StaggerItem key={item.step} className="text-center">
                 <div className="w-16 h-16 border border-gold/30 flex items-center justify-center mx-auto mb-4">
                   <span className="font-serif text-2xl font-bold text-gold">{item.step}</span>
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-cream mb-2">{item.title}</h3>
                 <p className="text-warm-gray text-sm">{item.desc}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Étanchéité */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <FadeIn>
           <div className="bg-cream p-8 md:p-12 shadow-lg border-l-4 border-gold">
             <h3 className="font-serif text-2xl font-bold text-charcoal mb-4">
               L&apos;importance de l&apos;étanchéité
@@ -227,6 +233,7 @@ export default function SallesDeBainPage() {
               de mes prestations pour vous assurer un résultat sans compromis.
             </p>
           </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -235,7 +242,7 @@ export default function SallesDeBainPage() {
         <div className="absolute inset-0  opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeIn className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
             Projet de salle de bain ?
           </h2>
@@ -251,7 +258,7 @@ export default function SallesDeBainPage() {
               Voir tous les services
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

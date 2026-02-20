@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
   title: "Revêtements de Sols | L'as Du Carreau - Parquet, PVC Clipsable",
@@ -58,7 +59,7 @@ export default function RevetementsSolsPage() {
             Retour aux services
           </Link>
           
-          <div className="max-w-3xl">
+          <FadeIn className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               Service
             </span>
@@ -70,7 +71,7 @@ export default function RevetementsSolsPage() {
               Pour compléter l&apos;offre de carrelage, je propose également la pose de sols flottants 
               et clipsables, adaptée à tous types d&apos;intérieurs.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -78,6 +79,7 @@ export default function RevetementsSolsPage() {
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
                 Des solutions adaptées à chaque projet
@@ -100,7 +102,9 @@ export default function RevetementsSolsPage() {
                 </p>
               </div>
             </div>
+            </SlideIn>
 
+            <SlideIn direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
               <Image
                 src="/photo/lame-pvc-clipsable.jpg"
@@ -113,6 +117,7 @@ export default function RevetementsSolsPage() {
                 <img src="/monogramme-blanc.png" alt="LDC" className="w-8 h-8 opacity-60 drop-shadow-md" />
               </div>
             </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -120,7 +125,7 @@ export default function RevetementsSolsPage() {
       {/* Types de revêtements */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Types de revêtements
             </span>
@@ -128,12 +133,12 @@ export default function RevetementsSolsPage() {
               Trois solutions pour vos sols
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
           <div className="space-y-12">
             {revetements.map((rev, index) => (
               <div key={rev.title} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                <SlideIn direction={index % 2 === 1 ? 'right' : 'left'} delay={index * 0.1} className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="bg-cream p-8 md:p-12">
                     <span className="text-gold text-sm font-semibold mb-4 block">0{index + 1}</span>
                     <h3 className="font-serif text-2xl font-bold text-charcoal mb-4">
@@ -151,8 +156,8 @@ export default function RevetementsSolsPage() {
                       ))}
                     </div>
                   </div>
-                </div>
-                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                </SlideIn>
+                <SlideIn direction={index % 2 === 1 ? 'left' : 'right'} delay={0.2} className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                   <div className="h-64 bg-charcoal/5 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-16 h-16 bg-gold/10 flex items-center justify-center mx-auto mb-4">
@@ -161,7 +166,7 @@ export default function RevetementsSolsPage() {
                       <p className="text-charcoal font-medium">{rev.title.split(' ')[0]}</p>
                     </div>
                   </div>
-                </div>
+                </SlideIn>
               </div>
             ))}
           </div>
@@ -171,7 +176,7 @@ export default function RevetementsSolsPage() {
       {/* Avantages */}
       <section className="py-24 lg:py-32 section-dark ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Pose professionnelle
             </span>
@@ -179,26 +184,26 @@ export default function RevetementsSolsPage() {
               Pourquoi faire appel à un professionnel ?
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {avantages.map((item, index) => (
-              <div key={index} className="flex items-center gap-4 p-4 border border-white/10 hover:border-gold/30 transition-colors">
+              <StaggerItem key={index} className="flex items-center gap-4 p-4 border border-white/10 hover:border-gold/30 transition-colors">
                 <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
                 <span className="text-cream text-sm">{item}</span>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 bg-cream">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeIn className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
             Un projet de revêtement de sol ?
           </h2>
@@ -214,7 +219,7 @@ export default function RevetementsSolsPage() {
               Voir tous les services
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

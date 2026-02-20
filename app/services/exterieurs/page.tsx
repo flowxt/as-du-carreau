@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import PhotoGallery from '../../components/PhotoGallery';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
   title: "Terrasses, Piscines & Extérieurs | L'as Du Carreau",
@@ -71,7 +72,7 @@ export default function ExterieursPage() {
             Retour aux services
           </Link>
           
-          <div className="max-w-3xl">
+          <FadeIn className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               Service
             </span>
@@ -83,7 +84,7 @@ export default function ExterieursPage() {
               Pose de carrelage extérieur, margelles, escaliers, terrasses et piscines. 
               Solutions adaptées aux contraintes climatiques et de sécurité.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -91,6 +92,7 @@ export default function ExterieursPage() {
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
                 Sublimez vos espaces extérieurs
@@ -113,7 +115,9 @@ export default function ExterieursPage() {
                 </p>
               </div>
             </div>
+            </SlideIn>
 
+            <SlideIn direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
               <Image
                 src="/photo/ext-60_60.jpg"
@@ -126,6 +130,7 @@ export default function ExterieursPage() {
                 <img src="/monogramme-blanc.png" alt="LDC" className="w-8 h-8 opacity-60 drop-shadow-md" />
               </div>
             </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -133,7 +138,7 @@ export default function ExterieursPage() {
       {/* Services */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Prestations
             </span>
@@ -141,11 +146,11 @@ export default function ExterieursPage() {
               Tous vos projets extérieurs
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div key={service.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
+              <StaggerItem key={service.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
                 <div className="w-2 h-8 bg-gold mb-6"></div>
                 <h3 className="font-serif text-xl font-semibold text-charcoal mb-3">
                   {service.title}
@@ -153,16 +158,16 @@ export default function ExterieursPage() {
                 <p className="text-slate leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Galerie */}
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Nos Réalisations
             </span>
@@ -170,7 +175,7 @@ export default function ExterieursPage() {
               Aménagements extérieurs
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
           <PhotoGallery photos={galleryPhotos} columns={2} />
 
@@ -185,7 +190,7 @@ export default function ExterieursPage() {
       {/* Contraintes */}
       <section className="py-24 lg:py-32 section-dark ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Expertise
             </span>
@@ -193,11 +198,11 @@ export default function ExterieursPage() {
               Des solutions adaptées aux contraintes extérieures
             </h2>
             <div className="separator separator-center"></div>
-          </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {constraints.map((item) => (
-              <div key={item.title} className="text-center p-6 border border-white/10 hover:border-gold/30 transition-colors">
+              <StaggerItem key={item.title} className="text-center p-6 border border-white/10 hover:border-gold/30 transition-colors">
                 <div className="w-12 h-12 bg-gold/10 flex items-center justify-center mx-auto mb-4">
                   <svg className="w-6 h-6 text-gold" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -205,15 +210,15 @@ export default function ExterieursPage() {
                 </div>
                 <h3 className="font-serif text-lg font-semibold text-cream mb-2">{item.title}</h3>
                 <p className="text-warm-gray text-sm">{item.desc}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 bg-cream">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeIn className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
             Projet d&apos;aménagement extérieur ?
           </h2>
@@ -229,7 +234,7 @@ export default function ExterieursPage() {
               Voir tous les services
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

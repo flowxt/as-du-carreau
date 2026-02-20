@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { FadeIn, SlideIn, StaggerContainer, StaggerItem, ScaleIn } from '../components/animations';
 
 export const metadata: Metadata = {
   title: "À Propos | L'as Du Carreau - Artisan Carreleur depuis 20 ans",
@@ -46,17 +47,25 @@ export default function AProposPage() {
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
-              À Propos
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
-              Plus qu&apos;un métier,<br />une passion
-            </h1>
-            <div className="separator mb-8"></div>
-            <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
-              Depuis plus de vingt ans, je consacre ma vie professionnelle à un seul et même métier : 
-              carreleur mosaïste. Un métier qui, pour moi, dépasse la simple technique.
-            </p>
+            <FadeIn delay={0}>
+              <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+                À Propos
+              </span>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+                Plus qu&apos;un métier,<br />une passion
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="separator mb-8"></div>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+                Depuis plus de vingt ans, je consacre ma vie professionnelle à un seul et même métier : 
+                carreleur mosaïste. Un métier qui, pour moi, dépasse la simple technique.
+              </p>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -66,13 +75,18 @@ export default function AProposPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Texte principal */}
-            <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-                Un savoir-faire précieux, perfectionné chaque jour
-              </h2>
-              <div className="separator mb-8"></div>
-              
-              <div className="space-y-6 text-slate leading-relaxed">
+            <SlideIn direction="left" delay={0}>
+              <div>
+                <FadeIn delay={0}>
+                  <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                    Un savoir-faire précieux, perfectionné chaque jour
+                  </h2>
+                </FadeIn>
+                <FadeIn delay={0.1}>
+                  <div className="separator mb-8"></div>
+                </FadeIn>
+                
+                <div className="space-y-6 text-slate leading-relaxed">
                 <p>
                   C&apos;est une <strong className="text-charcoal">passion</strong>, un savoir-faire 
                   précieux que je développe et perfectionne chaque jour pour offrir à mes clients 
@@ -94,9 +108,11 @@ export default function AProposPage() {
                   harmonieusement dans votre intérieur ou votre extérieur.
                 </p>
               </div>
-            </div>
+              </div>
+            </SlideIn>
 
             {/* Image */}
+            <SlideIn direction="right" delay={0.1}>
             <div className="relative lg:sticky lg:top-32">
               <div className="aspect-[3/4] relative overflow-hidden shadow-xl">
                 <Image
@@ -107,18 +123,21 @@ export default function AProposPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 {/* Filigrane LDC */}
-                <div className="absolute bottom-3 right-3">
-                  <Image
-                    src="/monogramme-blanc.png"
-                    alt="LDC"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8 opacity-60 drop-shadow-md"
-                  />
-                </div>
+                <ScaleIn delay={0.3}>
+                  <div className="absolute bottom-3 right-3">
+                    <Image
+                      src="/monogramme-blanc.png"
+                      alt="LDC"
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 opacity-60 drop-shadow-md"
+                    />
+                  </div>
+                </ScaleIn>
               </div>
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/20 -z-10"></div>
             </div>
+            </SlideIn>
           </div>
         </div>
       </section>
@@ -126,40 +145,44 @@ export default function AProposPage() {
       {/* Timeline */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
-              Mon Parcours
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-              20 ans d&apos;expérience et de passion
-            </h2>
-            <div className="separator separator-center"></div>
-          </div>
+          <FadeIn delay={0}>
+            <div className="text-center mb-16">
+              <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+                Mon Parcours
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                20 ans d&apos;expérience et de passion
+              </h2>
+              <div className="separator separator-center"></div>
+            </div>
+          </FadeIn>
 
-          <div className="max-w-3xl mx-auto">
+          <StaggerContainer staggerDelay={0.15} className="max-w-3xl mx-auto">
             {timeline.map((item, index) => (
-              <div key={index} className="relative pl-8 pb-12 last:pb-0">
-                {/* Ligne verticale */}
-                {index !== timeline.length - 1 && (
-                  <div className="absolute left-[3px] top-6 bottom-0 w-0.5 bg-gold/20"></div>
-                )}
-                {/* Point */}
-                <div className="absolute left-0 top-1.5 w-2 h-2 bg-gold"></div>
-                
-                <div className="bg-cream p-6 border-l-2 border-gold/30 hover:border-gold transition-colors duration-300">
-                  <span className="text-gold text-sm font-semibold tracking-wide">
-                    {item.year}
-                  </span>
-                  <h3 className="font-serif text-xl font-semibold text-charcoal mt-2 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate leading-relaxed">
-                    {item.description}
-                  </p>
+              <StaggerItem key={index}>
+                <div className="relative pl-8 pb-12 last:pb-0">
+                  {/* Ligne verticale */}
+                  {index !== timeline.length - 1 && (
+                    <div className="absolute left-[3px] top-6 bottom-0 w-0.5 bg-gold/20"></div>
+                  )}
+                  {/* Point */}
+                  <div className="absolute left-0 top-1.5 w-2 h-2 bg-gold"></div>
+                  
+                  <div className="bg-cream p-6 border-l-2 border-gold/30 hover:border-gold transition-colors duration-300">
+                    <span className="text-gold text-sm font-semibold tracking-wide">
+                      {item.year}
+                    </span>
+                    <h3 className="font-serif text-xl font-semibold text-charcoal mt-2 mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-slate leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -167,32 +190,35 @@ export default function AProposPage() {
       <section className="py-24 lg:py-32 section-dark ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
-                Domaines d&apos;expertise
-              </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
-                Une maîtrise complète du carrelage
-              </h2>
-              <div className="separator mb-8"></div>
-              <p className="text-warm-gray leading-relaxed mb-8">
-                Au fil des années, j&apos;ai développé une solide expérience dans de nombreux domaines. 
-                Chaque matériau, chaque format et chaque configuration nécessite une maîtrise précise, 
-                que j&apos;ai acquise au fil de multiples chantiers réalisés avec soin et rigueur.
-              </p>
-            </div>
+            <FadeIn delay={0}>
+              <div>
+                <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+                  Domaines d&apos;expertise
+                </span>
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
+                  Une maîtrise complète du carrelage
+                </h2>
+                <div className="separator mb-8"></div>
+                <p className="text-warm-gray leading-relaxed mb-8">
+                  Au fil des années, j&apos;ai développé une solide expérience dans de nombreux domaines. 
+                  Chaque matériau, chaque format et chaque configuration nécessite une maîtrise précise, 
+                  que j&apos;ai acquise au fil de multiples chantiers réalisés avec soin et rigueur.
+                </p>
+              </div>
+            </FadeIn>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <StaggerContainer staggerDelay={0.1} className="grid sm:grid-cols-2 gap-4">
               {expertise.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 p-4 border border-white/10 hover:border-gold/30 transition-colors duration-300"
-                >
-                  <div className="w-2 h-2 bg-gold flex-shrink-0"></div>
-                  <span className="text-cream/90">{item}</span>
-                </div>
+                <StaggerItem key={index}>
+                  <div
+                    className="flex items-center gap-3 p-4 border border-white/10 hover:border-gold/30 transition-colors duration-300"
+                  >
+                    <div className="w-2 h-2 bg-gold flex-shrink-0"></div>
+                    <span className="text-cream/90">{item}</span>
+                  </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </div>
       </section>
@@ -200,13 +226,19 @@ export default function AProposPage() {
       {/* Accompagnement */}
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
-            Mon Engagement
-          </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-            L&apos;accompagnement au cœur de ma démarche
-          </h2>
-          <div className="separator separator-center mb-8"></div>
+          <FadeIn delay={0}>
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Mon Engagement
+            </span>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              L&apos;accompagnement au cœur de ma démarche
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <div className="separator separator-center mb-8"></div>
+          </FadeIn>
           
           <div className="text-slate leading-relaxed space-y-6 text-left md:text-center">
             <p>
@@ -222,6 +254,7 @@ export default function AProposPage() {
             </p>
           </div>
 
+          <ScaleIn delay={0.2}>
           <div className="mt-12 p-8 bg-white shadow-lg border-l-4 border-gold">
             <p className="font-serif text-2xl text-charcoal italic leading-relaxed">
                     &ldquo;L&apos;as Du Carreau, c&apos;est la promesse d&apos;un artisanat authentique, d&apos;une expertise 
@@ -232,6 +265,7 @@ export default function AProposPage() {
               Mickaël
             </p>
           </div>
+          </ScaleIn>
         </div>
       </section>
 
@@ -241,13 +275,18 @@ export default function AProposPage() {
         <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
-            Prêt à donner vie à votre projet ?
-          </h2>
-          <p className="text-lg mb-8" style={{ color: '#9CA3AF' }}>
-            Toujours disponible pour échanger, conseiller et accompagner, 
-            je vous invite à me contacter pour tout renseignement ou pour obtenir un devis gratuit.
-          </p>
+          <FadeIn delay={0}>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+              Prêt à donner vie à votre projet ?
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="text-lg mb-8" style={{ color: '#9CA3AF' }}>
+              Toujours disponible pour échanger, conseiller et accompagner, 
+              je vous invite à me contacter pour tout renseignement ou pour obtenir un devis gratuit.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary">
               Demander un Devis Gratuit
@@ -256,6 +295,7 @@ export default function AProposPage() {
               Découvrir mes services
             </Link>
           </div>
+          </FadeIn>
         </div>
       </section>
     </>

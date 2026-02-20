@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { FadeIn, StaggerContainer, StaggerItem } from '../components/animations';
 
 interface FAQItem {
   question: string;
@@ -262,7 +263,7 @@ export default function FAQPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <FadeIn className="max-w-3xl">
             <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
               FAQ
             </span>
@@ -274,7 +275,7 @@ export default function FAQPage() {
               Retrouvez les réponses aux questions les plus courantes sur mes prestations 
               de carreleur mosaïste.
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -307,16 +308,17 @@ export default function FAQPage() {
       {/* FAQ Content */}
       <section className="py-16 lg:py-24 bg-cream">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="space-y-8">
+          <StaggerContainer className="space-y-8" staggerDelay={0.15}>
             {faqCategories.map((category) => (
-              <FAQCategorySection
-                key={category.title}
-                category={category}
-                openItems={openItems}
-                toggleItem={toggleItem}
-              />
+              <StaggerItem key={category.title}>
+                <FAQCategorySection
+                  category={category}
+                  openItems={openItems}
+                  toggleItem={toggleItem}
+                />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -324,7 +326,7 @@ export default function FAQPage() {
       <section className="py-24 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
         <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
         
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <FadeIn className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
             Vous avez d&apos;autres questions ?
           </h2>
@@ -340,7 +342,7 @@ export default function FAQPage() {
               Voir mes services
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );
