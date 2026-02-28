@@ -175,19 +175,19 @@ export default function AvisPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="absolute inset-0 opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block text-gold">
               Témoignages
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-charcoal">
               Avis Clients & Partenaires
             </h1>
             <div className="separator mb-8"></div>
-            <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+            <p className="text-xl leading-relaxed text-black">
               Découvrez ce que nos clients disent de L&apos;as Du Carreau et nos partenaires 
               de confiance pour vos projets.
             </p>
@@ -196,11 +196,11 @@ export default function AvisPage() {
       </section>
 
       {/* Pourquoi L'as Du Carreau */}
-      <section className="py-16 lg:py-20 bg-gold">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-8">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-charcoal mb-8">
                 Pourquoi faire appel à L&apos;as Du Carreau
               </h2>
             </FadeIn>
@@ -213,16 +213,16 @@ export default function AvisPage() {
                 'Nombreuses réalisations visibles dans notre galerie',
                 'Artisan local',
               ].map((item, index) => (
-                <StaggerItem key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 text-left">
-                  <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <StaggerItem key={index} className="flex items-center gap-3 bg-cream px-4 py-3 text-left border border-charcoal/10">
+                  <svg className="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-white font-medium text-sm">{item}</span>
+                  <span className="text-charcoal font-medium text-sm">{item}</span>
                 </StaggerItem>
               ))}
             </StaggerContainer>
             <FadeIn delay={0.2}>
-              <p className="text-white/90 italic text-lg max-w-3xl mx-auto mb-10">
+              <p className="text-charcoal/80 italic text-lg max-w-3xl mx-auto mb-10">
                 Votre satisfaction est notre priorité : chaque chantier est réalisé avec sérieux, propreté et précision.
               </p>
             </FadeIn>
@@ -233,9 +233,9 @@ export default function AvisPage() {
                 { title: 'Conseils personnalisés', icon: '◆' },
                 { title: 'Accompagnement complet', icon: '◆' },
               ].map((item, index) => (
-                <StaggerItem key={index} className="bg-white/15 backdrop-blur-sm p-4 text-center">
-                  <span className="text-white/60 text-xs block mb-2">{item.icon}</span>
-                  <p className="text-white font-semibold text-sm">{item.title}</p>
+                <StaggerItem key={index} className="bg-cream p-4 text-center border border-charcoal/10">
+                  <span className="text-gold text-xs block mb-2">{item.icon}</span>
+                  <p className="text-charcoal font-semibold text-sm">{item.title}</p>
                 </StaggerItem>
               ))}
             </StaggerContainer>
@@ -367,17 +367,17 @@ export default function AvisPage() {
       </section>
 
       {/* Partenaires */}
-      <section id="partenaires" className="py-24 lg:py-32 bg-charcoal">
+      <section id="partenaires" className="py-24 lg:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Nos Fournisseurs
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-charcoal">
               Partenaires de Confiance
             </h2>
             <div className="separator separator-center mb-6"></div>
-            <p className="text-warm-gray max-w-2xl mx-auto">
+            <p className="text-black max-w-2xl mx-auto">
               Je travaille avec des fournisseurs de qualité pour vous garantir les meilleurs 
               matériaux pour vos projets de carrelage.
             </p>
@@ -452,7 +452,7 @@ export default function AvisPage() {
 
       {/* CTA */}
       <section className="py-24 relative overflow-hidden bg-cream">
-        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #111212, transparent)' }}></div>
         
         <FadeIn className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">

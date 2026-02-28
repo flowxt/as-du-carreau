@@ -202,11 +202,11 @@ function FAQCategorySection({ category, openItems, toggleItem }: {
   return (
     <div className="bg-white shadow-lg overflow-hidden">
       {/* Category Header */}
-      <div className="px-6 py-4 flex items-center gap-4" style={{ background: '#2C2C2C' }}>
+      <div className="px-6 py-4 flex items-center gap-4 bg-cream">
         <div className="w-10 h-10 flex items-center justify-center" style={{ background: 'rgba(107, 114, 128, 0.2)' }}>
-          <span style={{ color: '#9CA3AF' }}>{category.icon}</span>
+          <span className="text-black">{category.icon}</span>
         </div>
-        <h2 className="font-serif text-xl font-semibold" style={{ color: '#FAF9F6' }}>
+        <h2 className="font-serif text-xl font-semibold text-charcoal">
           {category.title}
         </h2>
       </div>
@@ -261,17 +261,17 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block text-gold">
               FAQ
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-charcoal">
               Questions Fréquentes
             </h1>
             <div className="separator mb-8"></div>
-            <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+            <p className="text-xl leading-relaxed text-black">
               Retrouvez les réponses aux questions les plus courantes sur mes prestations 
               de carreleur mosaïste.
             </p>
@@ -323,14 +323,14 @@ export default function FAQPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
-        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
+      <section className="py-24 relative overflow-hidden bg-cream">
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #111212, transparent)' }}></div>
         
         <FadeIn className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-charcoal">
             Vous avez d&apos;autres questions ?
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-black">
             N&apos;hésitez pas à me contacter pour toute question spécifique à votre projet. 
             Je suis à votre disposition pour vous conseiller.
           </p>
@@ -338,7 +338,7 @@ export default function FAQPage() {
             <Link href="/contact" className="btn-primary">
               Me Contacter
             </Link>
-            <Link href="/services" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+            <Link href="/services" className="btn-secondary">
               Voir mes services
             </Link>
           </div>

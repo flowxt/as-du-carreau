@@ -52,7 +52,7 @@ export default function SallesDeBainPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="absolute inset-0">
           <Image
             src="/photo/sdb17.jpg"
@@ -65,7 +65,7 @@ export default function SallesDeBainPage() {
         <div className="absolute inset-0  opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <Link href="/services" className="inline-flex items-center gap-2 transition-colors mb-8" style={{ color: '#6B7280' }}>
+          <Link href="/services" className="inline-flex items-center gap-2 transition-colors mb-8 text-gold">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -73,14 +73,14 @@ export default function SallesDeBainPage() {
           </Link>
           
           <FadeIn className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block text-gold">
               Service
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-charcoal">
               Douches à l&apos;Italienne & Salles de Bain
             </h1>
             <div className="separator mb-8"></div>
-            <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+            <p className="text-xl leading-relaxed text-black">
               Conception complète ou rénovation, création de douches à l&apos;italienne avec étanchéité 
               parfaite. Possibilité de salles de bain clé en main.
             </p>
@@ -189,13 +189,13 @@ export default function SallesDeBainPage() {
       </section>
 
       {/* Process */}
-      <section className="py-24 lg:py-32 section-dark ">
+      <section className="py-24 lg:py-32 bg-cream ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Méthodologie
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
               Une réalisation dans les règles de l&apos;art
             </h2>
             <div className="separator separator-center"></div>
@@ -207,8 +207,8 @@ export default function SallesDeBainPage() {
                 <div className="w-16 h-16 border border-gold/30 flex items-center justify-center mx-auto mb-4">
                   <span className="font-serif text-2xl font-bold text-gold">{item.step}</span>
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-cream mb-2">{item.title}</h3>
-                <p className="text-warm-gray text-sm">{item.desc}</p>
+                <h3 className="font-serif text-xl font-semibold text-charcoal mb-2">{item.title}</h3>
+                <p className="text-black text-sm">{item.desc}</p>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -238,15 +238,15 @@ export default function SallesDeBainPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="py-24 relative overflow-hidden bg-cream">
         <div className="absolute inset-0  opacity-30"></div>
-        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #111212, transparent)' }}></div>
         
         <FadeIn className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-charcoal">
             Projet de salle de bain ?
           </h2>
-          <p className="text-lg mb-8" style={{ color: '#9CA3AF' }}>
+          <p className="text-lg mb-8 text-black">
             Création ou rénovation, je vous accompagne de A à Z pour créer l&apos;espace 
             dont vous rêvez.
           </p>
@@ -254,7 +254,7 @@ export default function SallesDeBainPage() {
             <Link href="/contact" className="btn-primary">
               Demander un Devis
             </Link>
-            <Link href="/services" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+            <Link href="/services" className="btn-secondary">
               Voir tous les services
             </Link>
           </div>

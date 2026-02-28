@@ -196,20 +196,20 @@ export default function RealisationsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="absolute inset-0 opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn>
             <div className="max-w-3xl">
-              <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+              <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block text-gold">
                 Nos R&#233;alisations
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-charcoal">
                 Plus de 20 ans de savoir-faire
               </h1>
               <div className="separator mb-8"></div>
-              <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+              <p className="text-xl leading-relaxed text-black">
                 D&#233;couvrez quelques-unes de nos r&#233;alisations et transformations.
                 Chaque projet t&#233;moigne de notre passion pour le m&#233;tier et notre souci du d&#233;tail.
               </p>
@@ -219,25 +219,25 @@ export default function RealisationsPage() {
       </section>
 
       {/* Badge Pro & Particuliers */}
-      <section className="py-8 bg-gold">
+      <section className="py-8 bg-white border-y border-charcoal/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
             <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
-              <span className="text-white font-semibold text-lg">Professionnels</span>
+              <span className="text-charcoal font-semibold text-lg">Professionnels</span>
             </div>
-            <span className="hidden md:block text-white/60 text-2xl">&amp;</span>
+            <span className="hidden md:block text-charcoal/40 text-2xl">&amp;</span>
             <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
-              <span className="text-white font-semibold text-lg">Particuliers</span>
+              <span className="text-charcoal font-semibold text-lg">Particuliers</span>
             </div>
-            <span className="hidden md:block text-white/40">|</span>
-            <p className="text-white/90 text-sm md:text-base">
-              Agences immobili&#232;res, syndics, copropri&#233;t&#233;s... Nous intervenons pour tous vos projets
+            <span className="hidden md:block text-charcoal/30">|</span>
+            <p className="text-charcoal/70 text-sm md:text-base">
+              Agences immobilières, syndics, copropriétés... Nous intervenons pour tous vos projets
             </p>
           </div>
         </div>
@@ -350,15 +350,15 @@ export default function RealisationsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="py-24 relative overflow-hidden bg-cream">
         <div className="absolute inset-0 opacity-30"></div>
-        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #111212, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-charcoal">
             Envie d&apos;une transformation similaire ?
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-black">
             Contactez-moi pour discuter de votre projet. Devis gratuit et sans engagement
             pour les professionnels comme pour les particuliers.
           </p>
@@ -366,7 +366,7 @@ export default function RealisationsPage() {
             <Link href="/contact" className="btn-primary">
               Demander un Devis Gratuit
             </Link>
-            <Link href="/services" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+            <Link href="/services" className="btn-secondary">
               D&#233;couvrir nos services
             </Link>
           </div>

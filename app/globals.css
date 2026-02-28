@@ -9,11 +9,11 @@
   --cream: #FAFAFA;
   --white: #FFFFFF;
   
-  /* Accent gris raffiné */
-  --gold: #6B7280;
-  --gold-light: #9CA3AF;
-  --gold-dark: #4B5563;
-  --bronze: #6B7280;
+  /* Accent gris graphiste */
+  --gold: #111212;
+  --gold-light: #333333;
+  --gold-dark: #0A0A0B;
+  --bronze: #111212;
   
   /* États */
   --success: #10B981;
@@ -160,7 +160,7 @@ p, li, span, a, label, input, textarea, select, blockquote {
 
 /* Bouton premium */
 .btn-primary {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  background: #111212;
   color: white;
   padding: 1rem 2.5rem;
   font-weight: 600;
@@ -189,7 +189,7 @@ p, li, span, a, label, input, textarea, select, blockquote {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(75, 85, 99, 0.3);
+  box-shadow: 0 10px 30px rgba(17, 18, 18, 0.3);
 }
 
 /* Supprime tout soulignement/barré sur les boutons */
@@ -200,8 +200,8 @@ p, li, span, a, label, input, textarea, select, blockquote {
 
 .btn-secondary {
   background: transparent;
-  color: var(--charcoal);
-  border: 2px solid var(--charcoal);
+  color: #111212;
+  border: 2px solid #111212;
   padding: 1rem 2.5rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -219,7 +219,7 @@ p, li, span, a, label, input, textarea, select, blockquote {
 }
 
 .btn-secondary:hover {
-  background: var(--charcoal);
+  background: #111212;
   color: white;
 }
 

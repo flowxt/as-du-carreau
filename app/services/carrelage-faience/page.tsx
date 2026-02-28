@@ -250,7 +250,7 @@ export default function CarrelageFaiencePage() {
       </section>
 
       {/* Applications */}
-      <section className="py-24 lg:py-32 section-dark ">
+      <section className="py-24 lg:py-32 bg-cream ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideIn direction="left">
@@ -258,11 +258,11 @@ export default function CarrelageFaiencePage() {
               <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                 Applications
               </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
                 Pour tous vos espaces
               </h2>
               <div className="separator mb-8"></div>
-              <p className="text-warm-gray leading-relaxed mb-8">
+              <p className="text-black leading-relaxed mb-8">
                 Le carrelage et la faïence s&apos;adaptent à tous les espaces de votre habitation. 
                 Je vous conseille sur les meilleurs choix selon l&apos;usage, le style recherché 
                 et les contraintes techniques de chaque pièce.
@@ -272,9 +272,9 @@ export default function CarrelageFaiencePage() {
 
             <StaggerContainer className="grid grid-cols-2 gap-4">
               {applications.map((app) => (
-                <StaggerItem key={app} className="flex items-center gap-3 p-4 border border-white/10 hover:border-gold/30 transition-colors">
+                <StaggerItem key={app} className="flex items-center gap-3 p-4 border border-charcoal/10 hover:border-gold/30 transition-colors">
                   <div className="w-2 h-2 bg-gold"></div>
-                  <span className="text-cream">{app}</span>
+                  <span className="text-charcoal">{app}</span>
                 </StaggerItem>
               ))}
             </StaggerContainer>

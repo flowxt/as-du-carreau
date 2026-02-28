@@ -39,7 +39,7 @@ export default function RevetementsSolsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="absolute inset-0">
           <Image
             src="/photo/parquet-contrecolle-chene-massif.jpg"
@@ -52,7 +52,7 @@ export default function RevetementsSolsPage() {
         <div className="absolute inset-0  opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <Link href="/services" className="inline-flex items-center gap-2 transition-colors mb-8" style={{ color: '#6B7280' }}>
+          <Link href="/services" className="inline-flex items-center gap-2 transition-colors mb-8 text-gold">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -60,14 +60,14 @@ export default function RevetementsSolsPage() {
           </Link>
           
           <FadeIn className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block text-gold">
               Service
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-charcoal">
               Revêtements de Sols
             </h1>
             <div className="separator mb-8"></div>
-            <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+            <p className="text-xl leading-relaxed text-black">
               Pour compléter l&apos;offre de carrelage, je propose également la pose de sols flottants 
               et clipsables, adaptée à tous types d&apos;intérieurs.
             </p>
@@ -174,13 +174,13 @@ export default function RevetementsSolsPage() {
       </section>
 
       {/* Avantages */}
-      <section className="py-24 lg:py-32 section-dark ">
+      <section className="py-24 lg:py-32 bg-cream ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
               Pose professionnelle
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
               Pourquoi faire appel à un professionnel ?
             </h2>
             <div className="separator separator-center"></div>
@@ -188,13 +188,13 @@ export default function RevetementsSolsPage() {
 
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {avantages.map((item, index) => (
-              <StaggerItem key={index} className="flex items-center gap-4 p-4 border border-white/10 hover:border-gold/30 transition-colors">
+              <StaggerItem key={index} className="flex items-center gap-4 p-4 border border-charcoal/10 hover:border-gold/30 transition-colors">
                 <div className="w-6 h-6 bg-gold/20 flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-cream text-sm">{item}</span>
+                <span className="text-charcoal text-sm">{item}</span>
               </StaggerItem>
             ))}
           </StaggerContainer>

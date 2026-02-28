@@ -46,7 +46,7 @@ export default function MosaiquePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="absolute inset-0">
           <Image
             src="/photo/pose-credence-mosaique.jpg"
@@ -59,7 +59,7 @@ export default function MosaiquePage() {
         <div className="absolute inset-0  opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <Link href="/services" className="inline-flex items-center gap-2 transition-colors mb-8" style={{ color: '#6B7280' }}>
+          <Link href="/services" className="inline-flex items-center gap-2 transition-colors mb-8 text-gold">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -67,14 +67,14 @@ export default function MosaiquePage() {
           </Link>
           
           <FadeIn className="max-w-3xl">
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block text-gold">
               Service
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-charcoal">
               Mosaïque
             </h1>
             <div className="separator mb-8"></div>
-            <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+            <p className="text-xl leading-relaxed text-black">
               Décorative ou technique, la mosaïque apporte une touche unique à vos espaces. 
               Créations personnalisées pour sublimer votre intérieur et extérieur.
             </p>
@@ -182,7 +182,7 @@ export default function MosaiquePage() {
       </section>
 
       {/* Types de mosaïque */}
-      <section className="py-24 lg:py-32 section-dark ">
+      <section className="py-24 lg:py-32 bg-cream ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideIn direction="left">
@@ -190,11 +190,11 @@ export default function MosaiquePage() {
               <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                 Matériaux
               </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
                 Une variété de matériaux et de styles
               </h2>
               <div className="separator mb-8"></div>
-              <p className="text-warm-gray leading-relaxed mb-8">
+              <p className="text-black leading-relaxed mb-8">
                 Chaque type de mosaïque offre des propriétés et un rendu esthétique différent. 
                 Je vous guide dans le choix du matériau le plus adapté à votre projet, 
                 en tenant compte de l&apos;usage, du style recherché et de votre budget.
@@ -204,9 +204,9 @@ export default function MosaiquePage() {
 
             <StaggerContainer className="grid grid-cols-2 gap-4">
               {types.map((type) => (
-                <StaggerItem key={type} className="flex items-center gap-3 p-4 border border-white/10 hover:border-gold/30 transition-colors">
+                <StaggerItem key={type} className="flex items-center gap-3 p-4 border border-charcoal/10 hover:border-gold/30 transition-colors">
                   <div className="w-2 h-2 bg-gold"></div>
-                  <span className="text-cream">{type}</span>
+                  <span className="text-charcoal">{type}</span>
                 </StaggerItem>
               ))}
             </StaggerContainer>

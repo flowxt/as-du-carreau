@@ -42,18 +42,18 @@ export default function AProposPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden" style={{ background: '#2C2C2C' }}>
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="absolute inset-0  opacity-30"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <FadeIn delay={0}>
-              <span className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 block" style={{ color: '#6B7280' }}>
+              <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                 À Propos
               </span>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-charcoal">
                 Plus qu&apos;un métier,<br />une passion
               </h1>
             </FadeIn>
@@ -61,7 +61,7 @@ export default function AProposPage() {
               <div className="separator mb-8"></div>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
+              <p className="text-xl leading-relaxed text-black">
                 Depuis plus de vingt ans, je consacre ma vie professionnelle à un seul et même métier : 
                 carreleur mosaïste. Un métier qui, pour moi, dépasse la simple technique.
               </p>
@@ -187,7 +187,7 @@ export default function AProposPage() {
       </section>
 
       {/* Expertise */}
-      <section className="py-24 lg:py-32 section-dark ">
+      <section className="py-24 lg:py-32 bg-cream ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn delay={0}>
@@ -195,11 +195,11 @@ export default function AProposPage() {
                 <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
                   Domaines d&apos;expertise
                 </span>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
                   Une maîtrise complète du carrelage
                 </h2>
                 <div className="separator mb-8"></div>
-                <p className="text-warm-gray leading-relaxed mb-8">
+                <p className="text-black leading-relaxed mb-8">
                   Au fil des années, j&apos;ai développé une solide expérience dans de nombreux domaines. 
                   Chaque matériau, chaque format et chaque configuration nécessite une maîtrise précise, 
                   que j&apos;ai acquise au fil de multiples chantiers réalisés avec soin et rigueur.
@@ -211,10 +211,10 @@ export default function AProposPage() {
               {expertise.map((item, index) => (
                 <StaggerItem key={index}>
                   <div
-                    className="flex items-center gap-3 p-4 border border-white/10 hover:border-gold/30 transition-colors duration-300"
+                    className="flex items-center gap-3 p-4 border border-charcoal/10 hover:border-gold/30 transition-colors duration-300"
                   >
                     <div className="w-2 h-2 bg-gold flex-shrink-0"></div>
-                    <span className="text-cream/90">{item}</span>
+                    <span className="text-charcoal">{item}</span>
                   </div>
                 </StaggerItem>
               ))}
@@ -270,18 +270,17 @@ export default function AProposPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative overflow-hidden" style={{ background: '#2C2C2C' }}>
-        <div className="absolute inset-0  opacity-30"></div>
-        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #6B7280, transparent)' }}></div>
+      <section className="py-24 relative overflow-hidden bg-cream">
+        <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'linear-gradient(90deg, transparent, #111212, transparent)' }}></div>
         
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <FadeIn delay={0}>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-charcoal">
               Prêt à donner vie à votre projet ?
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-lg mb-8" style={{ color: '#9CA3AF' }}>
+            <p className="text-lg mb-8 text-black">
               Toujours disponible pour échanger, conseiller et accompagner, 
               je vous invite à me contacter pour tout renseignement ou pour obtenir un devis gratuit.
             </p>
@@ -291,7 +290,7 @@ export default function AProposPage() {
             <Link href="/contact" className="btn-primary">
               Demander un Devis Gratuit
             </Link>
-            <Link href="/services" className="btn-secondary" style={{ borderColor: 'rgba(250, 249, 246, 0.3)', color: '#FAF9F6' }}>
+            <Link href="/services" className="btn-secondary">
               Découvrir mes services
             </Link>
           </div>
