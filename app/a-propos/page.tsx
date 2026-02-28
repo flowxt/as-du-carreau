@@ -108,6 +108,9 @@ export default function AProposPage() {
                   harmonieusement dans votre intérieur ou votre extérieur.
                 </p>
               </div>
+              <p className="text-right mt-8 text-3xl text-gold" style={{ fontFamily: 'var(--font-signature)' }}>
+                Mickaël
+              </p>
               </div>
             </SlideIn>
 

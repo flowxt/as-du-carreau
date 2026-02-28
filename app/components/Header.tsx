@@ -59,9 +59,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-charcoal ${
         isScrolled
-          ? 'shadow-md py-2'
+          ? 'shadow-lg py-2'
           : 'py-4'
       }`}
     >
@@ -73,7 +73,7 @@ export default function Header() {
             <img
               src="/logo-degrade-noir.png"
               alt="L'as Du Carreau - Carreleur Mosaïste"
-              className="h-16 w-auto transition-all duration-300"
+              className="h-16 w-auto transition-all duration-300 brightness-0 invert"
             />
           </Link>
 
@@ -90,8 +90,8 @@ export default function Header() {
                   href={item.href}
                   className={`inline-flex items-center gap-1 px-4 xl:px-5 py-2 text-[13px] font-medium transition-all duration-300 relative group whitespace-nowrap ${
                     isActive(item.href)
-                      ? 'text-gold'
-                      : 'text-charcoal hover:text-gold'
+                      ? 'text-white'
+                      : 'text-white/80 hover:text-white'
                   }`}
                 >
                   {item.name}
@@ -103,7 +103,7 @@ export default function Header() {
                   <span
                     className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 transition-all duration-300 ${
                       isActive(item.href) ? 'w-3/4' : 'w-0 group-hover:w-3/4'
-                    } bg-gold`}
+                    } bg-white`}
                   ></span>
                 </Link>
 
@@ -111,7 +111,7 @@ export default function Header() {
                 {item.submenu && activeSubmenu === item.name && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 animate-fade-in">
                     <div className="bg-white shadow-2xl border border-gray-100/80 py-2 min-w-[280px] rounded-sm">
-                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-gray-300 rotate-45"></div>
+                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45"></div>
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
@@ -132,10 +132,10 @@ export default function Header() {
             ))}
 
             {/* Séparateur + CTA */}
-            <div className="w-px h-6 mx-4 bg-gray-200"></div>
+            <div className="w-px h-6 mx-4 bg-white/20"></div>
             <Link
               href="/contact"
-              className="btn-primary text-[12px] py-2.5 px-5 whitespace-nowrap"
+              className="text-[12px] py-2.5 px-5 whitespace-nowrap bg-white text-charcoal font-semibold uppercase tracking-wider hover:bg-white/90 transition-all duration-300"
             >
               Devis Gratuit
             </Link>
@@ -144,7 +144,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-charcoal"
+            className="lg:hidden p-2 text-white"
             aria-label="Menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -10,10 +10,10 @@
   --white: #FFFFFF;
   
   /* Accent gris graphiste */
-  --gold: #111212;
-  --gold-light: #333333;
-  --gold-dark: #0A0A0B;
-  --bronze: #111212;
+  --gold: #7F7F7F;
+  --gold-light: #999999;
+  --gold-dark: #666666;
+  --bronze: #7F7F7F;
   
   /* États */
   --success: #10B981;
@@ -160,7 +160,7 @@ p, li, span, a, label, input, textarea, select, blockquote {
 
 /* Bouton premium */
 .btn-primary {
-  background: #111212;
+  background: rgb(127, 127, 127);
   color: white;
   padding: 1rem 2.5rem;
   font-weight: 600;
@@ -189,7 +189,7 @@ p, li, span, a, label, input, textarea, select, blockquote {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(17, 18, 18, 0.3);
+  box-shadow: 0 10px 30px rgba(127, 127, 127, 0.4);
 }
 
 /* Supprime tout soulignement/barré sur les boutons */
@@ -199,9 +199,8 @@ p, li, span, a, label, input, textarea, select, blockquote {
 }
 
 .btn-secondary {
-  background: transparent;
-  color: #111212;
-  border: 2px solid #111212;
+  background: rgb(127, 127, 127);
+  color: white;
   padding: 1rem 2.5rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -209,6 +208,8 @@ p, li, span, a, label, input, textarea, select, blockquote {
   font-size: 0.875rem;
   transition: all 0.3s ease;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 640px) {
@@ -219,8 +220,8 @@ p, li, span, a, label, input, textarea, select, blockquote {
 }
 
 .btn-secondary:hover {
-  background: #111212;
-  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(127, 127, 127, 0.4);
 }
 
 /* Séparateur élégant */

@@ -59,7 +59,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cream">
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center pt-32 pb-20">
           <HeroFadeIn delay={0.3} y={30}>
             <Image
               src="/logo-degrade-fonce.png"
