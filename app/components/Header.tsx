@@ -135,7 +135,8 @@ export default function Header() {
             <div className="w-px h-6 mx-4 bg-white/20"></div>
             <Link
               href="/contact"
-              className="text-[12px] py-2.5 px-5 whitespace-nowrap bg-white text-charcoal font-semibold uppercase tracking-wider hover:bg-white/90 transition-all duration-300"
+              className="text-[12px] py-2.5 px-5 whitespace-nowrap font-semibold uppercase tracking-wider transition-all duration-300 text-white"
+              style={{ background: 'rgb(127, 127, 127)' }}
             >
               Devis Gratuit
             </Link>
