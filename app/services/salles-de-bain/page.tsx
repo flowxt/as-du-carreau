@@ -77,7 +77,7 @@ export default function SallesDeBainPage() {
               Service
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-charcoal">
-              Douches à l&apos;Italienne & Salles de Bain
+              Salles de Bain & Douches à l&apos;Italienne
             </h1>
             <div className="separator mb-8"></div>
             <p className="text-xl leading-relaxed text-black">
@@ -152,7 +152,7 @@ export default function SallesDeBainPage() {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <StaggerItem key={service.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
-                <div className="w-2 h-8 bg-gold mb-6"></div>
+                <span className="text-gold text-2xl block mb-6">◆</span>
                 <h3 className="font-serif text-xl font-semibold text-charcoal mb-3">
                   {service.title}
                 </h3>

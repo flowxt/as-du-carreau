@@ -164,7 +164,7 @@ export default function PreparationPage() {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <StaggerItem key={service.title} className="p-8 border border-gray-100 hover:border-gold/30 transition-all duration-300 hover-lift">
-                <div className="w-2 h-8 bg-gold mb-6"></div>
+                <span className="text-gold text-2xl block mb-6">◆</span>
                 <h3 className="font-serif text-xl font-semibold text-charcoal mb-3">
                   {service.title}
                 </h3>
@@ -195,12 +195,10 @@ export default function PreparationPage() {
           </FadeIn>
 
           <StaggerContainer className="space-y-8 max-w-4xl mx-auto">
-            {specializedServices.map((service, index) => (
+            {specializedServices.map((service) => (
               <StaggerItem key={service.title} className="bg-white p-8 shadow-lg border-l-4 border-gold">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-xl font-bold text-gold">0{index + 1}</span>
-                  </div>
+                  <span className="text-gold text-2xl flex-shrink-0 mt-1">◆</span>
                   <div>
                     <h3 className="font-serif text-xl font-semibold text-charcoal mb-3">
                       {service.title}

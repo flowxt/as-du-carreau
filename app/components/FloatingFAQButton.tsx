@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 
 export default function FloatingFAQButton() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [hideAtFooter, setHideAtFooter] = useState(false);
   const pathname = usePathname();
 
@@ -36,26 +35,12 @@ export default function FloatingFAQButton() {
   return (
     <Link
       href="/faq"
-      className={`fixed bottom-6 right-6 z-40 flex items-center justify-center gap-2 bg-gold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${
+      className={`fixed bottom-6 right-6 z-40 flex items-center justify-center bg-gold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 px-5 py-3.5 ${
         shouldShow ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0 pointer-events-none'
       }`}
-      style={{ 
-        padding: isHovered ? '14px 20px' : '14px',
-        width: isHovered ? 'auto' : '52px',
-        height: isHovered ? 'auto' : '52px',
-      }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       aria-label="Questions fréquentes"
     >
-      <span className="text-lg font-bold leading-none">?</span>
-      <span 
-        className={`font-medium whitespace-nowrap overflow-hidden transition-all duration-300 ${
-          isHovered ? 'max-w-32 opacity-100' : 'max-w-0 opacity-0'
-        }`}
-      >
-        FAQ
-      </span>
+      <span className="text-sm font-bold tracking-wider">FAQ</span>
     </Link>
   );
 }

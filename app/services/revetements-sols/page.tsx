@@ -135,41 +135,27 @@ export default function RevetementsSolsPage() {
             <div className="separator separator-center"></div>
           </FadeIn>
 
-          <div className="space-y-12">
-            {revetements.map((rev, index) => (
-              <div key={rev.title} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-                <SlideIn direction={index % 2 === 1 ? 'right' : 'left'} delay={index * 0.1} className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="bg-cream p-8 md:p-12">
-                    <span className="text-gold text-sm font-semibold mb-4 block">0{index + 1}</span>
-                    <h3 className="font-serif text-2xl font-bold text-charcoal mb-4">
-                      {rev.title}
-                    </h3>
-                    <p className="text-slate leading-relaxed mb-6">
-                      {rev.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-3">
-                      {rev.features.map((feature) => (
-                        <div key={feature} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-gold"></div>
-                          <span className="text-charcoal text-sm">{feature}</span>
-                        </div>
-                      ))}
+          <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.1}>
+            {revetements.map((rev) => (
+              <StaggerItem key={rev.title} className="bg-cream p-8 md:p-10 border border-gold/10 hover:border-gold/30 transition-all duration-300">
+                <span className="text-gold text-2xl block mb-6">◆</span>
+                <h3 className="font-serif text-xl font-bold text-charcoal mb-4">
+                  {rev.title}
+                </h3>
+                <p className="text-slate leading-relaxed mb-6">
+                  {rev.description}
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  {rev.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2">
+                      <span className="text-gold text-xs flex-shrink-0">◆</span>
+                      <span className="text-charcoal text-sm">{feature}</span>
                     </div>
-                  </div>
-                </SlideIn>
-                <SlideIn direction={index % 2 === 1 ? 'left' : 'right'} delay={0.2} className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="h-64 bg-charcoal/5 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-gold/10 flex items-center justify-center mx-auto mb-4">
-                        <span className="font-serif text-2xl font-bold text-gold">0{index + 1}</span>
-                      </div>
-                      <p className="text-charcoal font-medium">{rev.title.split(' ')[0]}</p>
-                    </div>
-                  </div>
-                </SlideIn>
-              </div>
+                  ))}
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
