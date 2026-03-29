@@ -205,7 +205,7 @@ export default function Home() {
             {savoirFaire.map((item, index) => (
               <StaggerItem key={index}>
                 <div className="flex items-center gap-3 p-4 bg-cream border border-gold/20 hover:border-gold/40 transition-colors h-full">
-                  <div className="w-2 h-2 bg-gold flex-shrink-0"></div>
+                  <span className="text-gold text-xs flex-shrink-0">◆</span>
                   <span className="text-charcoal font-medium">{item}</span>
                 </div>
               </StaggerItem>

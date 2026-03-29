@@ -243,74 +243,6 @@ export default function RealisationsPage() {
         </div>
       </section>
 
-      {/* Section Avant/Après */}
-      <section id="avant-apres" className="py-24 lg:py-32 bg-cream">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <FadeIn className="text-center mb-16">
-            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
-              Transformations
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-              Avant / Apr&#232;s
-            </h2>
-            <div className="separator separator-center mb-6"></div>
-            <p className="text-slate max-w-2xl mx-auto">
-              Glissez le curseur sur les images pour d&#233;couvrir les transformations spectaculaires
-              r&#233;alis&#233;es par L&apos;as Du Carreau.
-            </p>
-          </FadeIn>
-
-          {/* Paysages */}
-          <StaggerContainer className="grid md:grid-cols-2 gap-8 mb-8" staggerDelay={0.15}>
-            {beforeAfterLandscape.map((project) => (
-              <StaggerItem key={project.id}>
-              <div className="bg-white p-4 shadow-lg hover-lift">
-                <BeforeAfterSlider
-                  beforeImage={project.before}
-                  afterImage={project.after}
-                  beforeAlt={`${project.title} - Avant`}
-                  afterAlt={`${project.title} - Après`}
-                />
-                <div className="pt-4">
-                  <h3 className="font-serif text-xl font-semibold text-charcoal mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate text-sm">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-
-          {/* Portraits */}
-          <StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
-            {beforeAfterPortrait.map((project) => (
-              <StaggerItem key={project.id}>
-              <div className="bg-white p-4 shadow-lg hover-lift">
-                <BeforeAfterSlider
-                  beforeImage={project.before}
-                  afterImage={project.after}
-                  beforeAlt={`${project.title} - Avant`}
-                  afterAlt={`${project.title} - Après`}
-                  portrait
-                />
-                <div className="pt-4">
-                  <h3 className="font-serif text-xl font-semibold text-charcoal mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate text-sm">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
       {/* Galerie Photos */}
       <section id="galerie" className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -346,6 +278,58 @@ export default function RealisationsPage() {
           </div>
 
           <PhotoGallery photos={filteredPhotos} columns={3} />
+        </div>
+      </section>
+
+      {/* Section Avant/Après */}
+      <section id="avant-apres" className="py-24 lg:py-32 bg-cream">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <FadeIn className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
+              Transformations
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              Avant / Apr&#232;s
+            </h2>
+            <div className="separator separator-center mb-6"></div>
+            <p className="text-slate max-w-2xl mx-auto">
+              Glissez le curseur sur les images pour d&#233;couvrir les transformations spectaculaires
+              r&#233;alis&#233;es par L&apos;as Du Carreau.
+            </p>
+          </FadeIn>
+
+          {/* Paysages */}
+          <StaggerContainer className="grid md:grid-cols-2 gap-8 mb-8" staggerDelay={0.15}>
+            {beforeAfterLandscape.map((project) => (
+              <StaggerItem key={project.id}>
+              <div className="bg-white p-4 shadow-lg hover-lift">
+                <BeforeAfterSlider
+                  beforeImage={project.before}
+                  afterImage={project.after}
+                  beforeAlt="Avant"
+                  afterAlt="Après"
+                />
+              </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          {/* Portraits */}
+          <StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
+            {beforeAfterPortrait.map((project) => (
+              <StaggerItem key={project.id}>
+              <div className="bg-white p-4 shadow-lg hover-lift">
+                <BeforeAfterSlider
+                  beforeImage={project.before}
+                  afterImage={project.after}
+                  beforeAlt="Avant"
+                  afterAlt="Après"
+                  portrait
+                />
+              </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 

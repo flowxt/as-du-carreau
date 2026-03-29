@@ -157,7 +157,7 @@ export default function Footer() {
 
             <Link
               href="/contact"
-              className="mt-8 inline-block text-xs font-semibold uppercase tracking-wider px-6 py-3 bg-white text-charcoal hover:bg-white/90 transition-all duration-300"
+              className="btn-primary mt-8 inline-block text-xs"
             >
               Demander un Devis
             </Link>

@@ -117,12 +117,12 @@ export default function AProposPage() {
             {/* Image */}
             <SlideIn direction="right" delay={0.1}>
             <div className="relative lg:sticky lg:top-32">
-              <div className="aspect-[3/4] relative overflow-hidden shadow-xl">
+              <div className="aspect-[4/5] relative overflow-hidden shadow-xl">
                 <Image
                   src="/mickael.jpeg"
                   alt="Mickael, fondateur de L'as Du Carreau"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 {/* Filigrane LDC */}
@@ -164,12 +164,10 @@ export default function AProposPage() {
             {timeline.map((item, index) => (
               <StaggerItem key={index}>
                 <div className="relative pl-8 pb-12 last:pb-0">
-                  {/* Ligne verticale */}
                   {index !== timeline.length - 1 && (
                     <div className="absolute left-[3px] top-6 bottom-0 w-0.5 bg-gold/20"></div>
                   )}
-                  {/* Point */}
-                  <div className="absolute left-0 top-1.5 w-2 h-2 bg-gold"></div>
+                  <span className="absolute left-[-2px] top-1 text-gold text-xs">◆</span>
                   
                   <div className="bg-cream p-6 border-l-2 border-gold/30 hover:border-gold transition-colors duration-300">
                     <span className="text-gold text-sm font-semibold tracking-wide">
@@ -216,7 +214,7 @@ export default function AProposPage() {
                   <div
                     className="flex items-center gap-3 p-4 border border-charcoal/10 hover:border-gold/30 transition-colors duration-300"
                   >
-                    <div className="w-2 h-2 bg-gold flex-shrink-0"></div>
+                    <span className="text-gold text-xs flex-shrink-0">◆</span>
                     <span className="text-charcoal">{item}</span>
                   </div>
                 </StaggerItem>
