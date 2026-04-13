@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  verification: {
+    google: 'F27JpaaDJmnP7MihLhzj0lHqgCCbfJIykSS3DMluM78',
+  },
   alternates: {
     canonical: 'https://las-du-carreau.fr',
   },
