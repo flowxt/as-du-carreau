@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../components/animations';
+import ContactForm from '../components/ContactForm';
 
 export const metadata: Metadata = {
   title: "Contact & Devis Gratuit | L'as Du Carreau",
@@ -56,131 +57,7 @@ export default function ContactPage() {
               </h2>
               <div className="separator mb-8"></div>
               
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-charcoal mb-2">
-                      Prénom *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="input-elegant"
-                      placeholder="Votre prénom"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-charcoal mb-2">
-                      Nom *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="input-elegant"
-                      placeholder="Votre nom"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="input-elegant"
-                      placeholder="votre@email.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
-                      Téléphone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="input-elegant"
-                      placeholder="06 00 00 00 00"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="city" className="block text-sm font-medium text-charcoal mb-2">
-                    Ville / Commune
-                  </label>
-                  <input
-                    type="text"
-                    id="city"
-                    name="city"
-                    className="input-elegant"
-                    placeholder="Votre ville"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-charcoal mb-2">
-                    Type de projet
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="input-elegant cursor-pointer"
-                  >
-                    <option value="">Sélectionnez un service</option>
-                    <option value="carrelage">Carrelage & Faïence</option>
-                    <option value="mosaique">Mosaïque</option>
-                    <option value="sdb">Salle de bain / Douche à l&apos;italienne</option>
-                    <option value="exterieur">Terrasse / Piscine / Extérieur</option>
-                    <option value="preparation">Travaux de préparation</option>
-                    <option value="autre">Autre projet</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                    Décrivez votre projet *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    className="input-elegant resize-none"
-                    placeholder="Décrivez votre projet : type de travaux, surface approximative, délais souhaités..."
-                  ></textarea>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    id="consent"
-                    name="consent"
-                    required
-                    className="mt-1 w-4 h-4 border-gray-300 rounded text-gold focus:ring-gold"
-                  />
-                  <label htmlFor="consent" className="text-sm text-slate">
-                    J&apos;accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande de devis. *
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn-primary w-full md:w-auto"
-                >
-                  Envoyer ma demande
-                </button>
-              </form>
+              <ContactForm />
             </div>
             </SlideIn>
 
