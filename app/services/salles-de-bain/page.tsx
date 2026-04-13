@@ -51,7 +51,7 @@ export default function SallesDeBainPage() {
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="absolute inset-0">
           <Image
-            src="/photo/sdb17.jpg"
+            src="/realisation/1000074371.jpg"
             alt="Salle de bain réalisée par L'as Du Carreau"
             fill
             className="object-cover opacity-20"
@@ -117,8 +117,8 @@ export default function SallesDeBainPage() {
             <SlideIn direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
               <Image
-                src="/photo/douche.jpg"
-                alt="Douche à l'italienne"
+                src="/realisation/1000070534.jpg"
+                alt="Douche pierre naturelle"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

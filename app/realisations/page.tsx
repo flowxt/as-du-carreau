@@ -117,6 +117,7 @@ const galleryCategories = [
   'Mosa\u00efques & Cr\u00e9ations',
   'Rev\u00eatements de sols',
   'Terrasses, Piscines & Ext\u00e9rieurs',
+  'Travaux de pr\u00e9paration',
 ];
 
 const galleryPhotos = [
@@ -125,10 +126,10 @@ const galleryPhotos = [
   { src: '/realisation/1000069749.jpg', alt: 'Salle de bain avec douche et frise', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069750.jpg', alt: 'Douche sous combles', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069751.jpg', alt: 'Salle de bain carreaux de ciment', category: 'Salles de bain & Douches' },
-  { src: '/realisation/1000069752.jpg', alt: 'Vasque et cr\u00e9dence m\u00e9tro blanc', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069752.jpg', alt: 'Vasque et cr\u00e9dence m\u00e9tro blanc', category: 'Carrelages & Fa\u00efences' },
   { src: '/realisation/1000069753.jpg', alt: 'Baignoire fa\u00efence m\u00e9tro', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069761.jpg', alt: 'Baignoire \u00eelot anthracite', category: 'Salles de bain & Douches' },
-  { src: '/realisation/1000069762.jpg', alt: 'Meuble vasque et fa\u00efence moderne', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000069762.jpg', alt: 'Meuble vasque et fa\u00efence moderne', category: 'Carrelages & Fa\u00efences' },
   { src: '/realisation/1000069764.jpg', alt: 'Douche \u00e0 l\'italienne grise', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069766.jpg', alt: 'Salle de bain baignoire et douche', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069769.jpg', alt: 'Salle de bain fa\u00efence 3D', category: 'Salles de bain & Douches' },
@@ -153,7 +154,7 @@ const galleryPhotos = [
   { src: '/realisation/1000069785.jpg', alt: 'Carrelage grand format pi\u00e8ce \u00e0 vivre', category: 'Carrelages & Fa\u00efences' },
   { src: '/realisation/1000069765.jpg', alt: 'WC suspendu carrelage grand format', category: 'Carrelages & Fa\u00efences' },
   { src: '/realisation/1000070335.jpg', alt: 'Sol grand format gris', category: 'Mosa\u00efques & Cr\u00e9ations' },
-  { src: '/realisation/1000070338.jpg', alt: 'Carrelage int\u00e9rieur moderne', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070338.jpg', alt: 'Carrelage int\u00e9rieur moderne', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000070339.jpg', alt: 'Pose carrelage grand format', category: 'Rev\u00eatements de sols' },
   { src: '/realisation/1000070340.jpg', alt: 'Sol carrelage finitions soign\u00e9es', category: 'Carrelages & Fa\u00efences' },
   { src: '/realisation/1000070352.jpg', alt: 'Carrelage pi\u00e8ce de vie', category: 'Mosa\u00efques & Cr\u00e9ations' },
@@ -184,6 +185,12 @@ const galleryPhotos = [
   { src: '/realisation/1000033744.jpg', alt: 'Carrelage balcon ext\u00e9rieur', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
   { src: '/realisation/1000007218.jpg', alt: 'Parement pierre ext\u00e9rieur piscine', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
   { src: '/realisation/1000069794.jpg', alt: 'Muret parement pierre naturelle', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
+  // Carrelages & Faïences (ajouts)
+  { src: '/photo/carreaux-80-80.jpg', alt: 'Carreaux grand format 80x80', category: 'Carrelages & Faïences' },
+  { src: '/photo/faience-metro.jpg', alt: 'Faïence métro', category: 'Carrelages & Faïences' },
+  // Travaux de préparation
+  { src: '/photo/ragréage.jpg', alt: 'Ragréage en cours', category: 'Travaux de préparation' },
+  { src: '/photo/chape.jpg', alt: 'Réalisation de chape', category: 'Travaux de préparation' },
 ];
 
 export default function RealisationsPage() {

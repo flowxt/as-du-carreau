@@ -20,7 +20,7 @@ const services = [
     title: 'Carrelages & Faïences',
     description: 'Pose traditionnelle, grands formats, murs et sols, avec un travail soigné et des conseils personnalisés pour un résultat harmonieux et durable.',
     href: '/services/carrelage-faience',
-    image: '/photo/faience-metro.jpg',
+    image: '/realisation/1000069762.jpg',
     features: ['Pose traditionnelle', 'Grands formats', 'Murs et sols', 'Conseils personnalisés'],
   },
   {

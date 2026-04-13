@@ -110,8 +110,8 @@ export default function MosaiquePage() {
             <SlideIn direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
               <Image
-                src="/photo/credence-sur-mesure.jpg"
-                alt="Crédence mosaïque sur mesure"
+                src="/realisation/1000070352.jpg"
+                alt="Mosaïque pièce de vie"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

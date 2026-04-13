@@ -51,8 +51,8 @@ export default function ExterieursPage() {
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-cream">
         <div className="absolute inset-0">
           <Image
-            src="/photo/ext-60_60.jpg"
-            alt="Carrelage extérieur"
+            src="/realisation/1000074493.png"
+            alt="Terrasse carrelée"
             fill
             className="object-cover opacity-20"
             priority

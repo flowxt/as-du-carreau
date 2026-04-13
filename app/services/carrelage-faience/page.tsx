@@ -122,8 +122,8 @@ export default function CarrelageFaiencePage() {
             <SlideIn direction="right" delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden shadow-xl">
               <Image
-                src="/photo/zellige.jpg"
-                alt="Zellige artisanal"
+                src="/realisation/1000069762.jpg"
+                alt="Meuble vasque et faïence moderne"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
