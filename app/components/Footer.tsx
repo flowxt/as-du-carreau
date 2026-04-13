@@ -175,7 +175,7 @@ export default function Footer() {
             <div className="flex items-center gap-6 text-sm text-white/70">
               <span>Artisan Carreleur Mosaïste</span>
               <span className="hidden md:inline">•</span>
-              <span>+20 ans d&apos;expérience</span>
+              <span className="whitespace-nowrap">+20 ans d&apos;expérience</span>
               <span className="hidden md:inline">•</span>
               <span>Pro & Particuliers</span>
             </div>

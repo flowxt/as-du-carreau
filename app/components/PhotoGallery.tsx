@@ -197,11 +197,6 @@ export default function PhotoGallery({
             </div>
           </div>
           
-          {/* Description de l'image */}
-          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm text-center max-w-md px-4">
-            {selectedPhoto.alt}
-          </p>
-
           {/* Indication navigation clavier (desktop) */}
           <div className="hidden md:flex absolute bottom-4 right-6 items-center gap-3 text-white/40 text-xs">
             <span className="flex items-center gap-1">

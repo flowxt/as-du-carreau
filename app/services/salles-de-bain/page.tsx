@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import PhotoGallery from '../../components/PhotoGallery';
+
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
@@ -43,10 +43,6 @@ const process = [
   { step: '04', title: 'Finitions', desc: 'Joints, silicone, nettoyage et contrôle qualité' },
 ];
 
-const galleryPhotos = [
-  { src: '/photo/sdb8.jpg', alt: 'Douche à l\'italienne' },
-  { src: '/photo/sdb17.jpg', alt: 'Salle de bain complète' },
-];
 
 export default function SallesDeBainPage() {
   return (
@@ -162,29 +158,6 @@ export default function SallesDeBainPage() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-        </div>
-      </section>
-
-      {/* Galerie */}
-      <section className="py-24 lg:py-32 bg-cream">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <FadeIn className="text-center mb-16">
-            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
-              Nos Réalisations
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-              Salles de bain réalisées
-            </h2>
-            <div className="separator separator-center"></div>
-          </FadeIn>
-
-          <PhotoGallery photos={galleryPhotos} columns={2} />
-
-          <div className="text-center mt-12">
-            <Link href="/realisations" className="btn-secondary">
-              Voir toutes nos réalisations
-            </Link>
-          </div>
         </div>
       </section>
 

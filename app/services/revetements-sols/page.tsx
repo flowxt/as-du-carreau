@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 const revetements = [
   {
-    title: 'Parquet Contrecollé en Pose Flottante',
+    title: 'Parquet Contrecollé en Pose Flottante ou Collée',
     description: 'Installation durable et élégante, adaptée à toutes les pièces. Le parquet contrecollé offre un excellent rapport qualité-prix tout en apportant la chaleur du bois à votre intérieur.',
     features: ['Durabilité', 'Élégance', 'Adapté toutes pièces', 'Pose rapide'],
   },
   {
-    title: 'Parquet Massif en Pose Flottante',
+    title: 'Parquet Massif en Pose Flottante ou Collée',
     description: 'Rendu naturel haut de gamme, avec confort et stabilité sans fixation directe au sol. Le parquet massif apporte authenticité et noblesse à vos espaces de vie.',
     features: ['Haut de gamme', 'Rendu naturel', 'Confort optimal', 'Stabilité'],
   },

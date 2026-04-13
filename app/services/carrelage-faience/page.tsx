@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import PhotoGallery from '../../components/PhotoGallery';
+
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
@@ -49,10 +49,6 @@ const applications = [
   'Pièces à vivre',
 ];
 
-const galleryPhotos = [
-  { src: '/photo/zellige.jpg', alt: 'Zellige artisanal' },
-  { src: '/photo/carreaux-80-80.jpg', alt: 'Carrelage grand format 80x80' },
-];
 
 export default function CarrelageFaiencePage() {
   return (
@@ -83,7 +79,7 @@ export default function CarrelageFaiencePage() {
               Service
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#FAF9F6' }}>
-              Carrelage & Faïence
+              Carrelages & Faïences
             </h1>
             <div className="separator mb-8"></div>
             <p className="text-xl leading-relaxed" style={{ color: '#9CA3AF' }}>
@@ -222,29 +218,6 @@ export default function CarrelageFaiencePage() {
               </StaggerContainer>
             </div>
             </SlideIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Galerie */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <FadeIn className="text-center mb-16">
-            <span className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4 block">
-              Nos Réalisations
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-              Carrelages & faïences
-            </h2>
-            <div className="separator separator-center"></div>
-          </FadeIn>
-
-          <PhotoGallery photos={galleryPhotos} columns={2} />
-
-          <div className="text-center mt-12">
-            <Link href="/realisations" className="btn-secondary">
-              Voir toutes nos réalisations
-            </Link>
           </div>
         </div>
       </section>

@@ -10,46 +10,46 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    title: 'Pose de Carrelage & Faïence',
-    description: 'Pose traditionnelle, grands formats, murs et sols, avec un travail soigné et des conseils personnalisés pour un résultat harmonieux et durable.',
-    href: '/services/carrelage-faience',
-    image: '/photo/faience-metro.jpg',
-    features: ['Pose traditionnelle', 'Grands formats', 'Murs et sols', 'Conseils personnalisés'],
-  },
-  {
-    title: 'Revêtements de Sols',
-    description: 'Parquet contrecollé, parquet massif en pose flottante, lames PVC clipsables. Solutions pratiques, résistantes et esthétiques pour tous types d\'intérieurs.',
-    href: '/services/revetements-sols',
-    image: '/photo/parquet-contrecolle-chene-massif.jpg',
-    features: ['Parquet contrecollé', 'Parquet massif', 'Lames PVC clipsables', 'Pose flottante'],
-  },
-  {
-    title: 'Mosaïque & Créations Personnalisées',
-    description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces : salles de bain, cuisines, piscines, crédences et éléments décoratifs sur mesure.',
-    href: '/services/mosaique',
-    image: '/photo/pose-credence-mosaique.jpg',
-    features: ['Créations personnalisées', 'Salles de bain', 'Cuisines & crédences', 'Piscines'],
-  },
-  {
-    title: 'Douches à l\'Italienne & Salles de Bain',
+    title: 'Salles de bain & Douches à l\'italienne',
     description: 'Création ou rénovation complète de salles de bain, conception de douches à l\'italienne, étanchéité, faïence, sols et murs. Possibilité de salle de bain clé en main.',
     href: '/services/salles-de-bain',
     image: '/photo/sdb9.jpg',
     features: ['Douches à l\'italienne', 'Étanchéité garantie', 'Rénovation complète', 'Clé en main'],
   },
   {
-    title: 'Terrasses, Piscines & Extérieurs',
-    description: 'Pose de carrelage extérieur, terrasses, margelles, escaliers, plages de piscine et zones techniques, avec des matériaux adaptés aux contraintes climatiques et de sécurité.',
-    href: '/services/exterieurs',
-    image: '/photo/ext-60_60.jpg',
-    features: ['Terrasses', 'Piscines & margelles', 'Escaliers extérieurs', 'Antidérapant'],
+    title: 'Carrelages & Faïences',
+    description: 'Pose traditionnelle, grands formats, murs et sols, avec un travail soigné et des conseils personnalisés pour un résultat harmonieux et durable.',
+    href: '/services/carrelage-faience',
+    image: '/photo/faience-metro.jpg',
+    features: ['Pose traditionnelle', 'Grands formats', 'Murs et sols', 'Conseils personnalisés'],
   },
   {
-    title: 'Travaux de Préparation',
+    title: 'Mosaïques et créations personnalisées',
+    description: 'Décorative ou technique, la mosaïque apporte une touche unique à vos espaces : salles de bain, cuisines, piscines, crédences et éléments décoratifs sur mesure.',
+    href: '/services/mosaique',
+    image: '/photo/pose-credence-mosaique.jpg',
+    features: ['Créations personnalisées', 'Salles de bain', 'Cuisines & crédences', 'Piscines'],
+  },
+  {
+    title: 'Revêtements de sols',
+    description: 'Parquet contrecollé, parquet massif en pose flottante ou collée, lames PVC clipsables. Solutions pratiques, résistantes et esthétiques pour tous types d\'intérieurs.',
+    href: '/services/revetements-sols',
+    image: '/photo/parquet-contrecolle-chene-massif.jpg',
+    features: ['Parquet contrecollé', 'Parquet massif', 'Lames PVC clipsables', 'Pose flottante ou collée'],
+  },
+  {
+    title: 'Travaux de préparation',
     description: 'Ragréage, réalisation de chapes, étanchéité des surfaces, nivellement précis des supports. La base indispensable d\'un résultat fiable et durable.',
     href: '/services/preparation',
     image: '/photo/ragréage.jpg',
     features: ['Ragréage', 'Chapes', 'Étanchéité', 'Nivellement'],
+  },
+  {
+    title: 'Terrasses, Piscines et Extérieurs',
+    description: 'Pose de carrelage extérieur, terrasses, margelles, escaliers, plages de piscine et zones techniques, avec des matériaux adaptés aux contraintes climatiques et de sécurité.',
+    href: '/services/exterieurs',
+    image: '/photo/ext-60_60.jpg',
+    features: ['Terrasses', 'Piscines & margelles', 'Escaliers extérieurs', 'Antidérapant'],
   },
 ];
 
@@ -132,9 +132,7 @@ export default function ServicesPage() {
 
                 {/* Content */}
                 <SlideIn direction={index % 2 === 1 ? 'right' : 'left'} className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <span className="text-gold text-sm font-semibold tracking-wide">
-                    0{index + 1}
-                  </span>
+                  <span className="text-gold text-2xl">◆</span>
                   <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mt-2 mb-4">
                     {service.title}
                   </h2>

@@ -115,23 +115,23 @@ export default function BeforeAfterSlider({
         />
       </div>
 
-      {/* Label Avant - à gauche, visible uniquement si le slider laisse de la place */}
+      {/* Label Avant */}
       <div 
-        className="absolute bottom-3 left-3 md:bottom-4 md:left-4 bg-red-600/90 backdrop-blur-sm px-2 py-1 md:px-4 md:py-2 z-20 transition-opacity duration-200"
+        className="absolute bottom-3 left-3 md:bottom-4 md:left-4 bg-charcoal/70 backdrop-blur-sm px-3 py-1.5 z-20 transition-opacity duration-200"
         style={{ opacity: sliderPosition > 20 ? 1 : 0 }}
       >
-        <span className="text-white font-semibold text-xs md:text-sm uppercase tracking-wide">Avant</span>
+        <span className="text-white font-medium text-xs uppercase tracking-wider">Avant</span>
       </div>
 
-      {/* Label Après - à droite, visible uniquement si le slider laisse de la place */}
+      {/* Label Après */}
       <div 
-        className="absolute bottom-3 md:bottom-4 bg-green-600/90 backdrop-blur-sm px-2 py-1 md:px-4 md:py-2 z-20 transition-opacity duration-200"
+        className="absolute bottom-3 md:bottom-4 bg-charcoal/70 backdrop-blur-sm px-3 py-1.5 z-20 transition-opacity duration-200"
         style={{ 
           opacity: sliderPosition < 80 ? 1 : 0, 
           right: '70px',
         }}
       >
-        <span className="text-white font-semibold text-xs md:text-sm uppercase tracking-wide">Après</span>
+        <span className="text-white font-medium text-xs uppercase tracking-wider">Après</span>
       </div>
 
       {/* Ligne de séparation */}

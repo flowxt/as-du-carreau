@@ -130,7 +130,6 @@ const galleryPhotos = [
   { src: '/realisation/1000069761.jpg', alt: 'Baignoire \u00eelot anthracite', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069762.jpg', alt: 'Meuble vasque et fa\u00efence moderne', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069764.jpg', alt: 'Douche \u00e0 l\'italienne grise', category: 'Salles de bain & Douches' },
-  { src: '/realisation/1000069765.jpg', alt: 'WC suspendu carrelage grand format', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069766.jpg', alt: 'Salle de bain baignoire et douche', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069769.jpg', alt: 'Salle de bain fa\u00efence 3D', category: 'Salles de bain & Douches' },
   { src: '/realisation/1000069774.jpg', alt: 'Fa\u00efence avec frise mosa\u00efque', category: 'Salles de bain & Douches' },
@@ -152,15 +151,16 @@ const galleryPhotos = [
   // Carrelages & Fa\u00efences
   { src: '/realisation/1000069771.jpg', alt: 'Sol carreaux de ciment d\u00e9coratifs', category: 'Carrelages & Fa\u00efences' },
   { src: '/realisation/1000069785.jpg', alt: 'Carrelage grand format pi\u00e8ce \u00e0 vivre', category: 'Carrelages & Fa\u00efences' },
-  { src: '/realisation/1000070335.jpg', alt: 'Sol grand format gris', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000069765.jpg', alt: 'WC suspendu carrelage grand format', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070335.jpg', alt: 'Sol grand format gris', category: 'Mosa\u00efques & Cr\u00e9ations' },
   { src: '/realisation/1000070338.jpg', alt: 'Carrelage int\u00e9rieur moderne', category: 'Carrelages & Fa\u00efences' },
-  { src: '/realisation/1000070339.jpg', alt: 'Pose carrelage grand format', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070339.jpg', alt: 'Pose carrelage grand format', category: 'Rev\u00eatements de sols' },
   { src: '/realisation/1000070340.jpg', alt: 'Sol carrelage finitions soign\u00e9es', category: 'Carrelages & Fa\u00efences' },
-  { src: '/realisation/1000070352.jpg', alt: 'Carrelage pi\u00e8ce de vie', category: 'Carrelages & Fa\u00efences' },
-  { src: '/realisation/1000070353.jpg', alt: 'Sol carrelage pose experte', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070352.jpg', alt: 'Carrelage pi\u00e8ce de vie', category: 'Mosa\u00efques & Cr\u00e9ations' },
+  { src: '/realisation/1000070353.jpg', alt: 'Sol carrelage pose experte', category: 'Mosa\u00efques & Cr\u00e9ations' },
   { src: '/realisation/1000070357.jpg', alt: 'Carrelage int\u00e9rieur lumineux', category: 'Carrelages & Fa\u00efences' },
   { src: '/realisation/1000070359.jpg', alt: 'Sol contemporain', category: 'Carrelages & Fa\u00efences' },
-  { src: '/realisation/1000070361.jpg', alt: 'Carrelage tendance', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000070361.jpg', alt: 'Carrelage tendance', category: 'Mosa\u00efques & Cr\u00e9ations' },
   { src: '/realisation/1000070362.jpg', alt: 'Pose carrelage soign\u00e9e', category: 'Carrelages & Fa\u00efences' },
   { src: '/realisation/1000070367.jpg', alt: 'Carrelage artisanal', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
   { src: '/realisation/1000070368.jpg', alt: 'R\u00e9novation sol compl\u00e8te', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
@@ -177,9 +177,9 @@ const galleryPhotos = [
   { src: '/realisation/1000069768.jpg', alt: 'Sol PVC imitation bois', category: 'Rev\u00eatements de sols' },
   { src: '/realisation/1000074356.jpg', alt: 'Parquet contrecoll\u00e9 chambre', category: 'Rev\u00eatements de sols' },
   { src: '/realisation/1000074360.jpg', alt: 'Parquet massif ch\u00eane palier', category: 'Rev\u00eatements de sols' },
-  { src: '/realisation/1000074494.jpg', alt: 'Pose rev\u00eatement de sol', category: 'Rev\u00eatements de sols' },
-  { src: '/realisation/1000074505.jpg', alt: 'Sol stratifi\u00e9 finitions', category: 'Rev\u00eatements de sols' },
-  { src: '/realisation/1000074506.jpg', alt: 'Rev\u00eatement sol int\u00e9rieur', category: 'Rev\u00eatements de sols' },
+  { src: '/realisation/1000074494.jpg', alt: 'Pose rev\u00eatement de sol', category: 'Carrelages & Fa\u00efences' },
+  { src: '/realisation/1000074505.jpg', alt: 'Sol stratifi\u00e9 finitions', category: 'Salles de bain & Douches' },
+  { src: '/realisation/1000074506.jpg', alt: 'Rev\u00eatement sol int\u00e9rieur', category: 'Carrelages & Fa\u00efences' },
   // Terrasses, Piscines & Ext\u00e9rieurs
   { src: '/realisation/1000033744.jpg', alt: 'Carrelage balcon ext\u00e9rieur', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
   { src: '/realisation/1000007218.jpg', alt: 'Parement pierre ext\u00e9rieur piscine', category: 'Terrasses, Piscines & Ext\u00e9rieurs' },
@@ -251,7 +251,7 @@ export default function RealisationsPage() {
               Galerie
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">
-              Nos derniers travaux
+              Nos réalisations
             </h2>
             <div className="separator separator-center mb-6"></div>
             <p className="text-slate max-w-2xl mx-auto">

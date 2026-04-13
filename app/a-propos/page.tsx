@@ -117,7 +117,7 @@ export default function AProposPage() {
             {/* Image */}
             <SlideIn direction="right" delay={0.1}>
             <div className="relative lg:sticky lg:top-32">
-              <div className="aspect-[4/5] relative overflow-hidden shadow-xl">
+              <div className="aspect-square relative overflow-hidden shadow-xl">
                 <Image
                   src="/mickael.jpeg"
                   alt="Mickael, fondateur de L'as Du Carreau"
