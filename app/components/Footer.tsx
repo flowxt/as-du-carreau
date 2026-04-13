@@ -60,7 +60,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/85 leading-relaxed mb-8">
-              Artisan carreleur mosaïste depuis 2011, fort de plus de 20 ans d&apos;expérience, 
+              Artisan carreleur mosaïste depuis 2011, fort de plus de <span className="whitespace-nowrap">20 ans</span> d&apos;expérience, 
               je mets un savoir-faire d&apos;exception au service de réalisations élégantes et durables.
             </p>
             <div className="flex items-center gap-2 text-white">
