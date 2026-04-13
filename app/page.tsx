@@ -1,6 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
 import { HeroFadeIn, FadeIn, SlideIn, StaggerContainer, StaggerItem, ScaleIn } from './components/animations';
+
+export const metadata: Metadata = {
+  title: "L'as Du Carreau | Artisan Carreleur Mosaïste à Saint-Égrève (Isère)",
+  description: "Artisan carreleur mosaïste depuis plus de 20 ans à Saint-Égrève. Pose de carrelage, faïence, mosaïque, douches à l'italienne, salles de bain, terrasses. Devis gratuit.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr',
+  },
+};
 
 const services = [
   {

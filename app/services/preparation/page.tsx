@@ -5,8 +5,11 @@ import PhotoGallery from '../../components/PhotoGallery';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
-  title: "Travaux de Préparation | L'as Du Carreau - Ragréage, Chapes, Étanchéité",
+  title: "Travaux de Préparation - Ragréage, Chapes, Étanchéité",
   description: "Préparation des supports : ragréage, chapes, étanchéité, nivellement. La base indispensable d'un résultat fiable et durable par un artisan expert.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr/services/preparation',
+  },
 };
 
 const services = [

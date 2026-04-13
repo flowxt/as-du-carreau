@@ -4,8 +4,11 @@ import { Metadata } from 'next';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem, ScaleIn } from '../components/animations';
 
 export const metadata: Metadata = {
-  title: "Nos Prestations | L'as Du Carreau - Carrelage, Mosaïque, Salles de Bain",
+  title: "Nos Prestations - Carrelage, Mosaïque, Salles de Bain",
   description: "Découvrez toutes les prestations de L'as Du Carreau : pose de carrelage, faïence, mosaïque, isolation phonique, revêtements de sols, douches à l'italienne, terrasses.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr/services',
+  },
 };
 
 const services = [

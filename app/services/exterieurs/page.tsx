@@ -5,8 +5,11 @@ import { Metadata } from 'next';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
-  title: "Terrasses, Piscines & Extérieurs | L'as Du Carreau",
+  title: "Terrasses, Piscines & Extérieurs",
   description: "Pose de carrelage extérieur, terrasses, piscines, margelles et escaliers. Solutions adaptées aux contraintes climatiques par un artisan expert à Saint-Égrève.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr/services/exterieurs',
+  },
 };
 
 const services = [

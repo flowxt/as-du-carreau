@@ -3,8 +3,11 @@ import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../components/an
 import ContactForm from '../components/ContactForm';
 
 export const metadata: Metadata = {
-  title: "Contact & Devis Gratuit | L'as Du Carreau",
+  title: "Contact & Devis Gratuit",
   description: "Contactez L'as Du Carreau pour votre projet de carrelage. Devis gratuit et personnalisé. Artisan carreleur mosaïste à Saint-Égrève et région grenobloise.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr/contact',
+  },
 };
 
 const reasons = [

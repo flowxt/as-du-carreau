@@ -5,8 +5,11 @@ import { Metadata } from 'next';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
-  title: "Mosaïque & Créations Personnalisées | L'as Du Carreau",
+  title: "Mosaïque & Créations Personnalisées",
   description: "Création de mosaïques personnalisées pour salle de bain, cuisine, piscine et éléments décoratifs. Artisan mosaïste expert à Saint-Égrève et région grenobloise.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr/services/mosaique',
+  },
 };
 
 const applications = [

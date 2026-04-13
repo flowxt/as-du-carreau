@@ -5,8 +5,11 @@ import { Metadata } from 'next';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
-  title: "Salles de Bain & Douches à l'Italienne | L'as Du Carreau",
+  title: "Salles de Bain & Douches à l'Italienne",
   description: "Création et rénovation de salles de bain, douches à l'italienne avec étanchéité parfaite. Salles de bain clé en main en partenariat avec plombier professionnel.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr/services/salles-de-bain',
+  },
 };
 
 const services = [

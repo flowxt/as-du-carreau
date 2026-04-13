@@ -4,8 +4,11 @@ import { Metadata } from 'next';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem, ScaleIn } from '../components/animations';
 
 export const metadata: Metadata = {
-  title: "À Propos | L'as Du Carreau - Artisan Carreleur depuis 20 ans",
+  title: "À Propos - Artisan Carreleur depuis 20 ans",
   description: "Découvrez le parcours et l'engagement de L'as Du Carreau, artisan carreleur mosaïste passionné depuis plus de 20 ans à Saint-Égrève.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr/a-propos',
+  },
 };
 
 const timeline = [

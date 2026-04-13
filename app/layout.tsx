@@ -28,10 +28,24 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "L'as Du Carreau | Artisan Carreleur Mosaïste à Saint-Égrève (Isère)",
+  metadataBase: new URL('https://las-du-carreau.fr'),
+  title: {
+    default: "L'as Du Carreau | Artisan Carreleur Mosaïste à Saint-Égrève (Isère)",
+    template: "%s | L'as Du Carreau",
+  },
   description: "Artisan carreleur mosaïste depuis plus de 20 ans à Saint-Égrève. Pose de carrelage, faïence, mosaïque, douches à l'italienne, salles de bain, terrasses. Région Grenobloise.",
   keywords: "carreleur, mosaïste, Saint-Égrève, Grenoble, Isère, carrelage, faïence, mosaïque, douche italienne, salle de bain, terrasse, artisan",
   authors: [{ name: "L'as Du Carreau" }],
+  creator: "L'as Du Carreau",
+  publisher: "L'as Du Carreau",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: 'https://las-du-carreau.fr',
+  },
   icons: {
     icon: [
       { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -43,9 +57,16 @@ export const metadata: Metadata = {
   manifest: '/favicon/site.webmanifest',
   openGraph: {
     title: "L'as Du Carreau | Artisan Carreleur Mosaïste",
-    description: "Plus de 20 ans d'expertise au service de vos projets de carrelage",
+    description: "Plus de 20 ans d'expertise au service de vos projets de carrelage, faïence, mosaïque et salles de bain à Saint-Égrève et région grenobloise.",
+    url: 'https://las-du-carreau.fr',
+    siteName: "L'as Du Carreau",
     locale: "fr_FR",
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "L'as Du Carreau | Artisan Carreleur Mosaïste",
+    description: "Plus de 20 ans d'expertise au service de vos projets de carrelage à Saint-Égrève.",
   },
 };
 

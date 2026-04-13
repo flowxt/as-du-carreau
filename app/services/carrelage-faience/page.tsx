@@ -5,8 +5,11 @@ import { Metadata } from 'next';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '../../components/animations';
 
 export const metadata: Metadata = {
-  title: "Pose de Carrelage & Faïence | L'as Du Carreau - Pose Traditionnelle & Grands Formats",
+  title: "Carrelages & Faïences - Pose Traditionnelle & Grands Formats",
   description: "Pose de carrelage et faïence par un artisan expert. Pose traditionnelle, grands formats, travertin, zellige, isolation phonique. Finitions soignées à Saint-Égrève.",
+  alternates: {
+    canonical: 'https://las-du-carreau.fr/services/carrelage-faience',
+  },
 };
 
 const features = [
